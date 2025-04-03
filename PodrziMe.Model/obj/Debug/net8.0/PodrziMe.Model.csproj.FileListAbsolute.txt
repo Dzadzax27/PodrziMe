@@ -1,0 +1,11 @@
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.deps.json
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.AssemblyInfoInputs.cache
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.AssemblyInfo.cs
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.csproj.CoreCompileInputs.cache
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\refint\PodrziMe.Model.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\ref\PodrziMe.Model.dll

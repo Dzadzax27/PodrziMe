@@ -1,0 +1,15 @@
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.deps.json
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.pdb
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.csproj.AssemblyReference.cache
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.AssemblyInfoInputs.cache
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.AssemblyInfo.cs
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.csproj.CoreCompileInputs.cache
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.D4F4F7A0.Up2Date
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\refint\PodrziMe.Services.dll
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.pdb
+C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\ref\PodrziMe.Services.dll
