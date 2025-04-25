@@ -1,45 +1,185 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.services\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.model\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.services\\iproizvodiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\iproizvodiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\podkategorijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\podkategorijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\donacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\donacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\donorcontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\donorcontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\idonacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\idonacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\idonorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\donorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\donorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\ipodkategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\ipodkategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\podkategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\podkategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\kategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\kategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\itakmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\itakmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\ikategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\ikategorijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\uspjesnapricacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\uspjesnapricacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\uspjesnapricaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\uspjesnapricaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\iuspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\iuspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\podkategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\podkategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\database\\uspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\uspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertuspjesnapricarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertuspjesnapricarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertdonacijerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertdonacijerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\database\\donacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\donacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertdonorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertdonorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\database\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\database\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertkandidatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertkandidatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertkategorijarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertkategorijarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\kategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\requests\\insertpodkategorijarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\requests\\insertpodkategorijarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\donacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\donacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\uspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\uspjesnaprica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\database\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\podrzime.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\podrzime.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\rijad\\source\\repos\\webapplication1\\podrzime.model\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\administrator\\desktop\\webapplication1 (1)\\webapplication1\\podrzime.model\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,89 +190,559 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\appsettings.json",
-              "RelativeToolTip": "WebApplication1\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-03T19:34:08.82Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PodrziMeContext.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMeContext.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\PodrziMeContext.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMeContext.cs",
-              "RelativeToolTip": "PodrziMe.Services\\PodrziMeContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
+              "Title": "DonacijaController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\DonacijaController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DonacijaController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\DonacijaController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\DonacijaController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAB0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T12:44:31.445Z"
+              "WhenOpened": "2025-04-20T20:11:36.183Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Takmicari.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\Takmicari.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\Takmicari.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Takmicari.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\Takmicari.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\Takmicari.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\Takmicari.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAASwBMAAAAbAAAA",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T12:43:42.877Z"
+              "WhenOpened": "2025-02-02T12:43:42.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Takmicari.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\Takmicari.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Model\\Takmicari.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\Takmicari.cs",
-              "RelativeToolTip": "PodrziMe.Model\\Takmicari.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
+              "Title": "Kategorija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\Kategorija.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Kategorija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\Kategorija.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\Kategorija.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T12:42:41.66Z"
+              "WhenOpened": "2025-04-10T18:13:35.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DonorContoller.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\DonorContoller.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DonorContoller.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\DonorContoller.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\DonorContoller.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:23:29.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAASwA8AAAAZAAAA",
+              "Title": "PodKategorijaController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\PodKategorijaController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PodKategorijaController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\PodKategorijaController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\PodKategorijaController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAB8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:37:30.409Z",
+              "WhenOpened": "2025-04-10T19:13:25.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DonacijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\DonacijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\DonacijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\DonacijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\DonacijaService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwC8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:02:18.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDonacijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IDonacijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\IDonacijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IDonacijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\IDonacijaService.cs",
+              "ViewState": "AgIAAAUAAADIzMzMzMwowA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:14:34.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "IDonorService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IDonorService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\IDonorService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IDonorService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\IDonorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwA0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:16:23.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DonorService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\DonorService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\DonorService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\DonorService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\DonorService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:20:35.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IPodKategorijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IPodKategorijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\IPodKategorijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IPodKategorijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\IPodKategorijaService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADgvxAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:30:12.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PodKategorijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodKategorijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\PodKategorijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodKategorijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\PodKategorijaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:31:34.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TakmicariService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\TakmicariService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\TakmicariService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\TakmicariService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\TakmicariService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T14:16:06.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "KategorijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\KategorijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\KategorijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\KategorijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\KategorijaService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:02:58.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITakmicariService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\ITakmicariService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\ITakmicariService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\ITakmicariService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\ITakmicariService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T14:13:01.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IKategorijaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IKategorijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\IKategorijaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IKategorijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\IKategorijaService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAawA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:22:14.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Kandidat.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Kandidat.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Kandidat.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Kandidat.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Kandidat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T17:40:41.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UspjesnaPricaController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\UspjesnaPricaController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UspjesnaPricaController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\UspjesnaPricaController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UspjesnaPricaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:38:54.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UspjesnaPricaService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\UspjesnaPricaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\UspjesnaPricaService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\UspjesnaPricaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\UspjesnaPricaService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAewCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:35:27.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T19:16:39.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUspjesnaPrica.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IUspjesnaPrica.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\IUspjesnaPrica.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\IUspjesnaPrica.cs",
+              "RelativeToolTip": "PodrziMe.Services\\IUspjesnaPrica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:29:47.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PodKategorija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodKategorija.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\PodKategorija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodKategorija.cs",
+              "RelativeToolTip": "PodrziMe.Model\\PodKategorija.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:33:05.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UspjesnaPrica.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\UspjesnaPrica.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\UspjesnaPrica.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\UspjesnaPrica.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\UspjesnaPrica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:32:55.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InsertUspjesnaPricaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:30:36.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\MappingProfile.cs",
+              "RelativeToolTip": "PodrziMe.Services\\MappingProfile.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:36:30.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Donacija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Donacija.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Donacija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Donacija.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Donacija.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:02:42.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "InsertDonacijeRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:00:09.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "InsertDonorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertDonorRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertDonorRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertDonorRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertDonorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:17:30.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Kategorija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Kategorija.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Kategorija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Kategorija.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Kategorija.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:03:30.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Donor.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Donor.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Donor.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Donor.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Donor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:03:17.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Donor.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Donor.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Donor.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Donor.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Donor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:03:14.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "InsertKandidatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T17:40:19.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "InsertKategorijaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:01:28.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Kategorija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Kategorija.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Kategorija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Kategorija.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Kategorija.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:10:00.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "InsertPodKategorijaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:38:16.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Donacija.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Donacija.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Model\\Donacija.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Donacija.cs",
+              "RelativeToolTip": "PodrziMe.Model\\Donacija.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:02:39.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UspjesnaPrica.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\UspjesnaPrica.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\UspjesnaPrica.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\UspjesnaPrica.cs",
+              "RelativeToolTip": "WebApplication1\\UspjesnaPrica.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:18:43.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Kandidat.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Kandidat.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Kandidat.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Database\\Kandidat.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Kandidat.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwB8AAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:01:26.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20250408193227_InitialCreate2.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:32:27.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T19:13:50.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20250408193100_InitialCreate2.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:31:06.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20250408192653_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:26:53.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PodrziMe.csproj",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\PodrziMe.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
+              "RelativeToolTip": "WebApplication1\\PodrziMe.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T19:05:05.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -140,35 +750,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TakmicariService.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\TakmicariService.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\TakmicariService.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\TakmicariService.cs",
-              "RelativeToolTip": "PodrziMe.Services\\TakmicariService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAADgvxAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:16:06.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProizvodiService.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\IProizvodiService.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\IProizvodiService.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\IProizvodiService.cs",
-              "RelativeToolTip": "PodrziMe.Services\\IProizvodiService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:13:01.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 43,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Class1.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Class1.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\Class1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Class1.cs",
               "RelativeToolTip": "PodrziMe.Services\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -176,19 +762,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 44,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Class1.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Class1.cs",
-              "ToolTip": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\Class1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\Class1.cs",
               "RelativeToolTip": "PodrziMe.Model\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T13:55:55.124Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using PodrziMe.Model;
+using PodrziMe.Model.Requests;
 using PodrziMe.Services;
+using WebApplication1.Controllers;
 
-namespace WebApplication1.Controllers
+namespace PodrziMe.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -16,10 +17,21 @@ namespace WebApplication1.Controllers
             _takmicariService = takmicari;
         }
 
-        [HttpGet()]
-        public IEnumerable<Takmicari> Get()
+        [HttpGet]
+        public IList<Model.Kandidat> GetList()
         {
-            return _takmicariService.Get();
+            return _takmicariService.GetList();
+        }
+
+        [HttpPost]
+        public Model.Kandidat Insert(InsertKandidatRequest request)
+        {
+            return _takmicariService.Insert(request);
+        }
+        [HttpPut("{id}")]
+        public Model.Kandidat Update(InsertKandidatRequest request)
+        {
+            return _takmicariService.Insert(request);
         }
     }
 }

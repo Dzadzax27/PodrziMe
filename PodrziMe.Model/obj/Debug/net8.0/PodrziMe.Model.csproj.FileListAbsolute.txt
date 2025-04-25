@@ -9,3 +9,15 @@ C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\Podr
 C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\refint\PodrziMe.Model.dll
 C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.pdb
 C:\Users\Rijad\source\repos\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\ref\PodrziMe.Model.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.deps.json
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\bin\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.sourcelink.json
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\refint\PodrziMe.Model.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Model\obj\Debug\net8.0\ref\PodrziMe.Model.dll

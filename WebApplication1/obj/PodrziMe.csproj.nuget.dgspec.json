@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
         "projectName": "PodrziMe.Model",
-        "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
-        "packagesPath": "C:\\Users\\Rijad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rijad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -60,21 +65,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
         "projectName": "PodrziMe.Services",
-        "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
-        "packagesPath": "C:\\Users\\Rijad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rijad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
-                "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
+              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
               }
             }
           }
@@ -103,12 +112,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -136,21 +150,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
         "projectName": "PodrziMe",
-        "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
-        "packagesPath": "C:\\Users\\Rijad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\WebApplication1\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rijad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,11 +182,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
-                "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
+              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
               },
-              "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
-                "projectPath": "C:\\Users\\Rijad\\source\\repos\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj"
+              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj"
               }
             }
           }
@@ -182,27 +200,32 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SQLServer": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -228,7 +251,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

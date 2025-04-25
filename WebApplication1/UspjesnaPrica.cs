@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PodrziMe.Services;
+namespace PodrziMe;
 
 public partial class UspjesnaPrica
 {
