@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
+using PodrziMe.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,45 +10,26 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class UspjesnaPricaService : IUspjesnaPrica
+    public class UspjesnaPricaService : BaseCRUDService<Model.UspjesnaPrica, UspjesnaPrica, Model.SearchObjects.UspjesnaPricaSearchObject, InsertUspjesnaPricaRequest, UpdateUspjesnaPricaRequest>, IUspjesnaPrica
     {
-        PodrziMeContext _dbContext;
-        public IMapper Mapper { get; set; }
-        public UspjesnaPricaService(PodrziMeContext dbContext, IMapper mapper)
+        public UspjesnaPricaService(PodrziMeContext dbContext, IMapper mapper) :base(dbContext, mapper)
         {
-            _dbContext = dbContext;
-            Mapper = mapper;
         }
 
-        public IList<Model.UspjesnaPrica> GetList()
+        public override IQueryable<UspjesnaPrica> AddFilter(UspjesnaPricaSearchObject? search, IQueryable<UspjesnaPrica> query)
         {
-            var uspjesnaPrica = _dbContext.UspjesnaPricas.ToList();
-            var result = new List<Model.UspjesnaPrica>();
-            result = Mapper.Map(uspjesnaPrica, result);
+            if (!string.IsNullOrWhiteSpace(search?.Ime))
+            {
+                query = query.Where(x => x.NaslovPrice.StartsWith(search.Ime));
+            }
 
-            return result;
+            if (!string.IsNullOrWhiteSpace(search?.FTS))
+            {
+                query = query.Where(x => x.NaslovPrice.Contains(search.FTS));
+            }
+
+            return base.AddFilter(search, query);
         }
 
-        public Model.UspjesnaPrica Insert(InsertUspjesnaPricaRequest request)
-        {
-            var uspjesnaPrica = new UspjesnaPrica();
-            var result = Mapper.Map(request, uspjesnaPrica);
-
-            _dbContext.UspjesnaPricas.Add(result);
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.UspjesnaPrica>(result);
-        }
-
-        public Model.UspjesnaPrica Update(int id, InsertUspjesnaPricaRequest request)
-        {
-            var entity = _dbContext.UspjesnaPricas.Find(id);
-
-            Mapper.Map(request, entity);
-
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.UspjesnaPrica>(entity);
-        }
     }
 }

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using PodrziMe.Model;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
 using PodrziMe.Services;
 using WebApplication1.Controllers;
 
@@ -17,21 +19,26 @@ namespace PodrziMe.Controllers
             _takmicariService = takmicari;
         }
 
-        [HttpGet]
-        public IList<Model.Kandidat> GetList()
+        [HttpGet("{id}")]
+        public async Task<Model.Kandidat> GetById([FromQuery] int id)
         {
-            return _takmicariService.GetList();
+            return await _takmicariService.GetById(id);
+        }
+        [HttpGet()]
+        public async Task<PagedResult<Model.Kandidat>> Get([FromQuery] KandidatiSearchObject? search = null)
+        {
+            return await _takmicariService.Get(search);
         }
 
         [HttpPost]
-        public Model.Kandidat Insert(InsertKandidatRequest request)
+        public Task<Model.Kandidat> Insert(InsertKandidatRequest request)
         {
             return _takmicariService.Insert(request);
         }
         [HttpPut("{id}")]
-        public Model.Kandidat Update(InsertKandidatRequest request)
+        public Task<Model.Kandidat> Update(int id, UpdateKandidatRequest request)
         {
-            return _takmicariService.Insert(request);
+            return _takmicariService.Update(id, request);
         }
     }
 }

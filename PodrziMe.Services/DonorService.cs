@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
+using PodrziMe.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,45 +10,25 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class DonorService : IDonorService
+    public class DonorService : BaseCRUDService<Model.Donor, Database.Donor, Model.SearchObjects.DonorSearchObject, InsertDonorRequest, UpdateDonorRequest>, IDonorService
     {
         PodrziMeContext _dbContext;
         public IMapper Mapper { get; set; }
-        public DonorService(PodrziMeContext dbContext, IMapper mapper)
+        public DonorService(PodrziMeContext dbContext, IMapper mapper) :base(dbContext, mapper)
         {
             _dbContext = dbContext;
             Mapper = mapper;
         }
 
-        public IList<Model.Donor> GetList()
+        public override IQueryable<Donor> AddFilter(DonorSearchObject? search, IQueryable<Donor> query)
         {
-            var donor = _dbContext.Donors.ToList();
-            var result = new List<Model.Donor>();
-            result = Mapper.Map(donor, result);
+            if (!string.IsNullOrWhiteSpace(search?.Ime))
+            {
+                query = query.Where(x => x.Ime.StartsWith(search.Ime));
+            }
 
-            return result;
+            return base.AddFilter(search, query);
         }
 
-        public Model.Donor Insert(InsertDonorRequest request)
-        {
-            var donor = new Donor();
-            var result = Mapper.Map(request, donor);
-
-            _dbContext.Donors.Add(result);
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Donor>(result);
-        }
-
-        public Model.Donor Update(int id, InsertDonorRequest request)
-        {
-            var entity = _dbContext.Donors.Find(id);
-
-            Mapper.Map(request, entity);
-
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Donor>(entity);
-        }
     }
 }

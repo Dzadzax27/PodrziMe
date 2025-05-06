@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
+using PodrziMe.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,43 +10,29 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class PodKategorijaService : IPodKategorijaService
+    public class PodKategorijaService : BaseService<Model.PodKategorija, PodKategorija, Model.SearchObjects.NazivSearchObject>, IPodKategorijaService
     {
         PodrziMeContext _dbContext;
         public IMapper Mapper { get; set; }
 
-        public PodKategorijaService(PodrziMeContext dbContext, IMapper mapper)
+        public PodKategorijaService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {
             _dbContext = dbContext;
             Mapper = mapper;
         }
-        public IList<Model.PodKategorija> GetList()
+        public override IQueryable<PodKategorija> AddFilter(NazivSearchObject? search, IQueryable<PodKategorija> query)
         {
-            var podkategorija = _dbContext.PodKategorijas.ToList();
-            var result = new List<Model.PodKategorija>();
-            result = Mapper.Map(podkategorija, result);
+            if (!string.IsNullOrWhiteSpace(search?.Ime))
+            {
+                query = query.Where(x => x.NazivPodKategorije.StartsWith(search.Ime));
+            }
 
-            return result;
-        }
-        public Model.PodKategorija Insert(InsertPodKategorijaRequest request)
-        {
-            var podkategorija = new PodKategorija();
-            var result = Mapper.Map(request, podkategorija);
+            if (!string.IsNullOrWhiteSpace(search?.FTS))
+            {
+                query = query.Where(x => x.NazivPodKategorije.Contains(search.FTS));
+            }
 
-            _dbContext.PodKategorijas.Add(result);
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.PodKategorija>(result);
-        }
-        public Model.PodKategorija Update(int id, InsertPodKategorijaRequest request)
-        {
-            var entity = _dbContext.PodKategorijas.Find(id);
-
-            Mapper.Map(request, entity);
-
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.PodKategorija>(entity);
+            return base.AddFilter(search, query);
         }
     }
 }

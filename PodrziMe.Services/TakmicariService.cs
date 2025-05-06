@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
+using PodrziMe.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,45 +12,34 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class TakmicariService : ITakmicariService
+    public class TakmicariService : BaseCRUDService<Model.Kandidat, Database.Kandidat, Model.SearchObjects.KandidatiSearchObject, InsertKandidatRequest, UpdateKandidatRequest>, ITakmicariService
     {
-        PodrziMeContext _dbContext;
-        public IMapper Mapper { get; set; }
 
-        public TakmicariService(PodrziMeContext dbContext, IMapper mapper)
+        public TakmicariService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext, mapper)
+        {}
+
+        public override IQueryable<Database.Kandidat> AddFilter(KandidatiSearchObject? search, IQueryable<Database.Kandidat> query)
         {
-            _dbContext = dbContext;
-            Mapper = mapper;
-        }
-        public IList<Model.Kandidat> GetList()
-        {
-            var kandidati = _dbContext.Kandidats.ToList();
-            var result = new List<Model.Kandidat>();
-            result = Mapper.Map(kandidati, result);
+            if (!string.IsNullOrWhiteSpace(search?.Ime))
+            {
+                query = query.Where(x => x.Ime.StartsWith(search.Ime));
+            }
 
-            return result;
-        }
+            if (!string.IsNullOrWhiteSpace(search?.FTS))
+            {
+                query = query.Where(x => x.Ime.Contains(search.FTS));
+            }
 
-        public Model.Kandidat Insert(InsertKandidatRequest request)
-        {
-            var kandidat = new Kandidat();
-            var result = Mapper.Map(request, kandidat);
-
-            _dbContext.Kandidats.Add(result);
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Kandidat>(result);
+            return base.AddFilter(search, query);
         }
 
-        public Model.Kandidat Update(int id, InsertKandidatRequest request)
+        public override IQueryable<Database.Kandidat> AddInclude(IQueryable<Database.Kandidat> query, KandidatiSearchObject? search = null)
         {
-            var entity = _dbContext.Kandidats.Find(id);
-
-            Mapper.Map(request, entity);
-
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Kandidat>(entity);
+            if (search?.isKategorijaIncluded == true)
+            {
+                query = query.Include(x => x.Kategorija);
+            }
+            return base.AddInclude(query, search);
         }
     }
 }

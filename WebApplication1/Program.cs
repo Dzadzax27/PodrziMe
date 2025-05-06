@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using PodrziMe;
+using PodrziMe.Filters;
 using PodrziMe.Services;
+using PodrziMe.Services.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,15 +14,19 @@ builder.Services.AddTransient<IPodKategorijaService, PodKategorijaService>();
 builder.Services.AddTransient<IDonacijaService, DonacijaService>();
 builder.Services.AddTransient<IDonorService, DonorService>();
 builder.Services.AddTransient<IUspjesnaPrica, UspjesnaPricaService>();
+builder.Services.AddTransient<IKorisnikService, KorisnikService>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(x =>
+{
+    x.Filters.Add<ErrorFilter>();
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
 var connectionString = builder.Configuration.GetConnectionString("ePodrziMeConnection");
-builder.Services.AddDbContext<PodrziMeContext>(options =>
+builder.Services.AddDbContext<PodrziMe.Services.Database.PodrziMeContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddAutoMapper(typeof(ITakmicariService));
@@ -37,6 +43,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

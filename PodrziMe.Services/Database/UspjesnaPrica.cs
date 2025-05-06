@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PodrziMe;
+namespace PodrziMe.Services.Database;
 
-public  class UspjesnaPrica
+public partial class UspjesnaPrica
 {
     public int UspjesnaPricaId { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PodrziMe;
+namespace PodrziMe.Services.Database;
 
 public partial class Kategorija
 {

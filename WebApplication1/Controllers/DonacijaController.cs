@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Services;
 using WebApplication1.Controllers;
@@ -15,22 +16,29 @@ namespace PodrziMe.Controllers
             this.donacijeService = donacijeService;
         }
 
-        [HttpGet]
-        public IList<Model.Donacija> GetList()
+        [HttpGet("{id}")]
+        public async Task<Model.Donacija> GetById(int id)
         {
-            return donacijeService.GetList();
+            return await donacijeService.GetById(id);
+        }
+
+        [HttpGet]
+        public async Task<PagedResult<Model.Donacija>> Get([FromQuery] Model.SearchObjects.DonacijaSearchObject request)
+        {
+            return await donacijeService.Get(request);
         }
 
         [HttpPost]
-        public Model.Donacija Insert(InsertDonacijeRequest request)
+        public async Task<Model.Donacija> Insert(InsertDonacijeRequest request)
         {
-            return donacijeService.Insert(request);
+            return await donacijeService.Insert(request);
         }
 
+       
         [HttpPut("{id}")]
-        public Model.Donacija Update(InsertDonacijeRequest request)
+        public async Task<Model.Donacija> Update(int id,InsertDonacijeRequest request)
         {
-            return donacijeService.Insert(request);
+            return await donacijeService.Update(id,request);
         }
     }
 

@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using PodrziMe.Model.Requests;
+using PodrziMe.Services.Database;
 
 namespace PodrziMe.Services
 {
@@ -24,6 +25,9 @@ namespace PodrziMe.Services
             CreateMap<InsertDonorRequest, Donor>();
             CreateMap<UspjesnaPrica, Model.UspjesnaPrica>();
             CreateMap<InsertUspjesnaPricaRequest, UspjesnaPrica>();
+            CreateMap<UpdateDonorRequest, Donor>();
+            CreateMap<Korisnik, Model.Korisnik>();
+            CreateMap<InsertKorisnikRequest, Korisnik>();
         }
     }
 }

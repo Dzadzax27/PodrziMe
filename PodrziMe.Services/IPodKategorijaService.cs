@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public interface IPodKategorijaService
+    public interface IPodKategorijaService : IService<Model.PodKategorija, Model.SearchObjects.NazivSearchObject>
     {
-        IList<Model.PodKategorija> GetList();
-        Model.PodKategorija Insert(InsertPodKategorijaRequest request);
-        Model.PodKategorija Update(int id, InsertPodKategorijaRequest request);
     }
 }

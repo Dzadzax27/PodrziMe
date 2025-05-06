@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Services;
 using WebApplication1.Controllers;
@@ -15,21 +16,27 @@ namespace PodrziMe.Controllers
             this.donorService = donorService;
         }
 
-        [HttpGet]
-        public IList<Model.Donor> GetList()
+        [HttpGet("{id}")]
+        public async Task<Model.Donor> GetById(int id)
         {
-            return donorService.GetList();
+            return await donorService.GetById(id);
+        }
+
+        [HttpGet]
+        public async Task<PagedResult<Model.Donor>> Get([FromQuery] Model.SearchObjects.DonorSearchObject request)
+        {
+            return await donorService.Get(request);
         }
 
         [HttpPost]
-        public Model.Donor Insert(InsertDonorRequest request)
+        public async Task<Model.Donor> Insert(InsertDonorRequest request)
         {
-            return donorService.Insert(request);
+            return await donorService.Insert(request);
         }
         [HttpPut("{id}")]
-        public Model.Donor Update(InsertDonorRequest request)
+        public Task<Model.Donor> Update(int id,UpdateDonorRequest request)
         {
-            return donorService.Insert(request);
+            return donorService.Update(id,request);
         }
     }
 }

@@ -10,7 +10,8 @@ namespace PodrziMe.Model
     {
         public int KandidatId { get; set; }
 
-        public string ImePrezime { get; set; } = null!;
+        public string Ime { get; set; } = null!;
+        public string Prezime { get; set; } = null!;
 
         public string? Email { get; set; }
 

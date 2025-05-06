@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace PodrziMe;
+namespace PodrziMe.Services.Database;
 
 public partial class PodrziMeContext : DbContext
 {
@@ -16,19 +16,16 @@ public partial class PodrziMeContext : DbContext
     }
 
     public virtual DbSet<Donacija> Donacijas { get; set; }
-
     public virtual DbSet<Donor> Donors { get; set; }
-
     public virtual DbSet<Kandidat> Kandidats { get; set; }
-
     public virtual DbSet<Kategorija> Kategorijas { get; set; }
-
     public virtual DbSet<PodKategorija> PodKategorijas { get; set; }
-
     public virtual DbSet<UspjesnaPrica> UspjesnaPricas { get; set; }
+    public virtual DbSet<Korisnik> Korisniks { get; set; }
+    public virtual DbSet<Uloga> Ulogas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148.
         => optionsBuilder.UseSqlServer("Server=localhost;Database=PodrziMe;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -55,7 +52,8 @@ public partial class PodrziMeContext : DbContext
 
             entity.ToTable("Donor");
 
-            entity.Property(e => e.ImePrezime).HasMaxLength(255);
+            entity.Property(e => e.Ime).HasMaxLength(50);
+            entity.Property(e => e.Prezime).HasMaxLength(50);
             entity.Property(e => e.Zanimanje).HasMaxLength(255);
         });
 
@@ -66,9 +64,10 @@ public partial class PodrziMeContext : DbContext
             entity.ToTable("Kandidat");
 
             entity.Property(e => e.Email).HasMaxLength(255);
-            entity.Property(e => e.ImePrezime).HasMaxLength(255);
+            entity.Property(e => e.Ime).HasMaxLength(50);
             entity.Property(e => e.Link).HasMaxLength(255);
             entity.Property(e => e.Omeni).HasMaxLength(255);
+            entity.Property(e => e.Prezime).HasMaxLength(50);
             entity.Property(e => e.Uspjesi).HasMaxLength(255);
 
             entity.HasOne(d => d.Kategorija).WithMany(p => p.Kandidats)
@@ -109,6 +108,32 @@ public partial class PodrziMeContext : DbContext
             entity.HasOne(d => d.Kandidat).WithMany(p => p.UspjesnaPricas)
                 .HasForeignKey(d => d.KandidatId)
                 .HasConstraintName("FK_Kandidat");
+        });
+
+        modelBuilder.Entity<Korisnik>(entity =>
+        {
+            entity.HasKey(e => e.KorisnikId).HasName("PK__Korisnik__80B06D4132BAFC0E");
+
+            entity.ToTable("Korisnik");
+
+            entity.Property(e => e.Email).HasMaxLength(255);
+            entity.Property(e => e.KorisnickoIme).HasMaxLength(100);
+            entity.Property(e => e.LozinkaHash).HasMaxLength(200);
+            entity.Property(e => e.LozinkaSalt).HasMaxLength(200);
+            entity.Property(e => e.Telefon).HasMaxLength(50);
+
+            entity.HasOne(d => d.Uloga).WithMany(p => p.Korisniks)
+                .HasForeignKey(d => d.UlogaId)
+                .HasConstraintName("FK__Korisnik__UlogaI__6383C8BA");
+        });
+
+        modelBuilder.Entity<Uloga>(entity =>
+        {
+            entity.HasKey(e => e.UlogaId).HasName("PK__Uloga__DCAB23CB44AA88F0");
+
+            entity.ToTable("Uloga");
+
+            entity.Property(e => e.NazivUloge).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);

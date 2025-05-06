@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Services;
 using WebApplication1.Controllers;
@@ -15,21 +16,17 @@ namespace PodrziMe.Controllers
             _podkategorijaService = podkategorijaService;
         }
 
-        [HttpGet]
-        public IList<Model.PodKategorija> GetList()
+        [HttpGet("{id}")]
+        public async Task<Model.PodKategorija> GetById(int id)
         {
-            return _podkategorijaService.GetList();
+            return await _podkategorijaService.GetById(id);
         }
 
-        [HttpPost]
-        public Model.PodKategorija Insert(InsertPodKategorijaRequest request)
+        [HttpGet]
+        public async Task<PagedResult<Model.PodKategorija>> Get([FromQuery] Model.SearchObjects.NazivSearchObject request)
         {
-            return _podkategorijaService.Insert(request);
+            return await _podkategorijaService.Get(request);
         }
-        [HttpPut("{id}")]
-        public Model.PodKategorija Update(InsertPodKategorijaRequest request)
-        {
-            return _podkategorijaService.Insert(request);
-        }
+
     }
 }

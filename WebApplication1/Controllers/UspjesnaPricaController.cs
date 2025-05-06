@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Services;
 using WebApplication1.Controllers;
@@ -15,20 +16,26 @@ namespace PodrziMe.Controllers
             _uspjesnaPricaService = uspjesnaPrica;
         }
 
-        [HttpGet]
-        public IList<Model.UspjesnaPrica> GetList()
+        [HttpGet("{id}")]
+        public async Task<Model.UspjesnaPrica> GetById(int id)
         {
-            return _uspjesnaPricaService.GetList();
+            return await _uspjesnaPricaService.GetById(id);
+        }
+
+        [HttpGet]
+        public async Task<PagedResult<Model.UspjesnaPrica>> Get([FromQuery] Model.SearchObjects.UspjesnaPricaSearchObject request)
+        {
+            return await _uspjesnaPricaService.Get(request);
         }
 
         [HttpPost]
-        public Model.UspjesnaPrica Insert(InsertUspjesnaPricaRequest request)
+        public Task<Model.UspjesnaPrica> Insert(InsertUspjesnaPricaRequest request)
         {
             return _uspjesnaPricaService.Insert(request);
         }
 
         [HttpPut("{id}")]
-        public Model.UspjesnaPrica Update(int id, InsertUspjesnaPricaRequest request)
+        public Task<Model.UspjesnaPrica> Update(int id, UpdateUspjesnaPricaRequest request)
         {
             return _uspjesnaPricaService.Update(id, request);
         }

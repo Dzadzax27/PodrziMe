@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PodrziMe;
+namespace PodrziMe.Services.Database;
 
 public partial class Kandidat
 {
     public int KandidatId { get; set; }
-
-    public string ImePrezime { get; set; } = null!;
 
     public string? Email { get; set; }
 
@@ -24,6 +22,10 @@ public partial class Kandidat
     public int? ZeljenaDonacija { get; set; }
 
     public int? KategorijaId { get; set; }
+
+    public string? Ime { get; set; }
+
+    public string? Prezime { get; set; }
 
     public virtual ICollection<Donacija> Donacijas { get; set; } = new List<Donacija>();
 

@@ -170,17 +170,6 @@ C:\Users\Rijad\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\run
 C:\Users\Rijad\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Rijad\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Rijad\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.dll
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\PodrziMe.dll
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.pdb
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.AssemblyReference.cache
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfoInputs.cache
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfo.cs
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.sourcelink.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.staticwebassets.endpoints.json
@@ -189,6 +178,8 @@ C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplicatio
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.runtimeconfig.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.pdb
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\Humanizer.dll
@@ -333,6 +324,14 @@ C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplicatio
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.Services.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.Model.pdb
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\PodrziMe.Services.pdb
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.sourcelink.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\scopedcss\bundle\PodrziMe.styles.css
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.development.json
@@ -344,8 +343,9 @@ C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplicatio
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PodrziMe.props
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.Up2Date
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\PodrziMe.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.pdb
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\PodrziMe.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

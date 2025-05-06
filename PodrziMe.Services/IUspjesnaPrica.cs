@@ -1,4 +1,5 @@
 ﻿using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public interface IUspjesnaPrica
+    public interface IUspjesnaPrica : ICRUDService<Model.UspjesnaPrica, UspjesnaPricaSearchObject, InsertUspjesnaPricaRequest, UpdateUspjesnaPricaRequest>
     {
-        IList<Model.UspjesnaPrica> GetList();
-        Model.UspjesnaPrica Insert(InsertUspjesnaPricaRequest request);
-        Model.UspjesnaPrica Update(int id, InsertUspjesnaPricaRequest request);
     }
 }

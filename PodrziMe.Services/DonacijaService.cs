@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using PodrziMe.Model.Requests;
+using PodrziMe.Model.SearchObjects;
+using PodrziMe.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +12,13 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class DonacijaService : IDonacijaService
+    public class DonacijaService : 
+        BaseCRUDService<Model.Donacija,Donacija, Model.SearchObjects.DonacijaSearchObject, InsertDonacijeRequest, InsertDonacijeRequest>, IDonacijaService 
     {
         PodrziMeContext _dbContext;
         public IMapper Mapper { get; set; }
 
-        public DonacijaService(PodrziMeContext dbContext, IMapper mapper)
+        public DonacijaService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {
             _dbContext = dbContext;
             Mapper = mapper;
@@ -27,25 +32,17 @@ namespace PodrziMe.Services
             return result;
         }
 
-        public Model.Donacija Insert(InsertDonacijeRequest request)
+        public override IQueryable<Donacija> AddInclude(IQueryable<Donacija> query, DonacijaSearchObject? search = null)
         {
-            var donacija = new Donacija();
-            var result = Mapper.Map(request, donacija);
-
-            _dbContext.Donacijas.Add(result);
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Donacija>(result);
-        }
-        public Model.Donacija Update(int id, InsertDonacijeRequest request)
-        {
-            var entity = _dbContext.Donacijas.Find(id);
-
-            Mapper.Map(request, entity);
-
-            _dbContext.SaveChanges();
-
-            return Mapper.Map<Model.Donacija>(entity);
+            if (search?.isDonorIncluded == true)
+            {
+                query = query.Include(x => x.Donor);
+            }
+            if (search?.isKandidatIncluded == true)
+            {
+                query = query.Include(x => x.Kandidat);
+            }
+            return base.AddInclude(query, search);
         }
     }
 }

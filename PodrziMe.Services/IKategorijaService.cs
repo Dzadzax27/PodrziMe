@@ -8,10 +8,6 @@ using PodrziMe.Model;
 
 namespace PodrziMe.Services
 {
-    public interface IKategorijaService 
-    {
-        IList<Model.Kategorija> GetList();
-        Model.Kategorija Insert(InsertKategorijaRequest request);
-        Model.Kategorija Update(int id, InsertKategorijaRequest request);
-    }
+    public interface IKategorijaService : IService<Model.Kategorija,Model.SearchObjects.KategorijaSearchObject>
+    { }
 }
