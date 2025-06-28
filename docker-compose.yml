@@ -1,0 +1,35 @@
+version: '3'
+services:
+#mssql docker
+  podrzime-sql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    expose:
+      - 1433
+    networks:
+      - podrzimenet2023
+
+  podrzime-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:ePodrziMeConnection=Server=podrzime-sql;Database=PodrziMe;User=sa;Password=QWElkj132!;Trusted_Connection=True;TrustServerCertificate=True
+    ports:
+      - 8080:8080
+    networks:
+      - podrzimenet2023
+    links:
+      - podrzime-sql
+    depends_on:
+      - podrzime-sql
+      
+networks:
+  podrzimenet2023:
+    driver: bridge      

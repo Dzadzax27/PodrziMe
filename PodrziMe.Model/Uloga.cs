@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Model
 {
-    public  class Uloga
+    public class Uloga
     {
         public int UlogaId { get; set; }
 

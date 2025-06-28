@@ -349,3 +349,6 @@ C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplicatio
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\PodrziMe.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\PodrziMe.dll
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\EasyNetQ.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\WebApplication1\bin\Debug\net8.0\RabbitMQ.Client.dll

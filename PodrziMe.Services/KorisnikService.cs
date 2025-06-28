@@ -14,8 +14,12 @@ namespace PodrziMe.Services
 {
     public class KorisnikService :BaseCRUDService<Model.Korisnik,Database.Korisnik,KorisnikSearchObject,InsertKorisnikRequest,UpdateKorisnikRequest>, IKorisnikService
     {
+        PodrziMeContext _context;
+        IMapper _mapper;
         public KorisnikService(PodrziMeContext context, IMapper mapper) : base(context, mapper)
         {
+            _context= context;
+            _mapper = mapper;
         }
 
         public override IQueryable<Database.Korisnik> AddFilter(KorisnikSearchObject? search, IQueryable<Database.Korisnik> query)
@@ -78,6 +82,24 @@ namespace PodrziMe.Services
                 entity.LozinkaSalt = GenerateSalt();
                 entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Lozinka);
             }
+        }
+        public async Task<Model.Korisnik> Login(string username, string password)
+        {
+            var entity = await _context.Korisniks.FirstOrDefaultAsync(x => x.KorisnickoIme == username);
+
+            if (entity == null)
+            {
+                return null;
+            }
+
+            var hash = GenerateHash(entity.LozinkaSalt, password);
+
+            if (hash != entity.LozinkaHash)
+            {
+                return null;
+            }
+
+            return _mapper.Map<Model.Korisnik>(entity);
         }
     }
 

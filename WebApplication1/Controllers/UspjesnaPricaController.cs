@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Services;
@@ -8,6 +9,7 @@ namespace PodrziMe.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class UspjesnaPricaController : ControllerBase
     {
         private readonly IUspjesnaPrica _uspjesnaPricaService;

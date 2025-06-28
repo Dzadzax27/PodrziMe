@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PodrziMe.Services.Database;
 
-public partial class Uloga
+public  class Uloga
 {
     public int UlogaId { get; set; }
 

@@ -11,6 +11,6 @@ namespace PodrziMe.Services
 {
     public interface IKorisnikService :ICRUDService<Model.Korisnik,KorisnikSearchObject,InsertKorisnikRequest,UpdateKorisnikRequest>
     {
-
+        public Task<Model.Korisnik> Login(string username, string password);
     }
 }

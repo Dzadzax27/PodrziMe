@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
@@ -9,6 +10,7 @@ namespace PodrziMe.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class TakmicariController : ControllerBase
     {
         private readonly ITakmicariService _takmicariService;
@@ -29,7 +31,7 @@ namespace PodrziMe.Controllers
         {
             return await _takmicariService.Get(search);
         }
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public Task<Model.Kandidat> Insert(InsertKandidatRequest request)
         {
