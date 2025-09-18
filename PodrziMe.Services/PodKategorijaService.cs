@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PodrziMe.Services
+
 {
     public class PodKategorijaService : BaseService<Model.PodKategorija, PodKategorija, Model.SearchObjects.NazivSearchObject>, IPodKategorijaService
     {

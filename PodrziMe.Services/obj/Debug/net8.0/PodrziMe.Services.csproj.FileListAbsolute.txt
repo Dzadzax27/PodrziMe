@@ -31,3 +31,21 @@ C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Serv
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.pdb
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\WebApplication1 (1)\WebApplication1\PodrziMe.Services\obj\Debug\net8.0\ref\PodrziMe.Services.dll
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.deps.json
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.runtimeconfig.json
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.dll
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Services.pdb
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Model.dll
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\bin\Debug\net8.0\PodrziMe.Model.pdb
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.AssemblyInfo.cs
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.sourcelink.json
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.D4F4F7A0.Up2Date
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.dll
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\refint\PodrziMe.Services.dll
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.pdb
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\PodrziMe.Services.genruntimeconfig.cache
+C:\Users\User\Desktop\RS2\PodrziMe\PodrziMe.Services\obj\Debug\net8.0\ref\PodrziMe.Services.dll

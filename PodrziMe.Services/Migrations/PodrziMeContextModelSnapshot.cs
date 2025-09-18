@@ -169,34 +169,40 @@ namespace PodrziMe.Services.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KorisnikId"));
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("KorisnickoIme")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("LozinkaHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("LozinkaSalt")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("Telefon")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("UlogaId")
                         .HasColumnType("int");
 
-                    b.HasKey("KorisnikId");
+                    b.HasKey("KorisnikId")
+                        .HasName("PK__Korisnik__80B06D4132BAFC0E");
 
                     b.HasIndex("UlogaId");
 
-                    b.ToTable("Korisniks");
+                    b.ToTable("Korisnik", (string)null);
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.PodKategorija", b =>
@@ -228,11 +234,13 @@ namespace PodrziMe.Services.Migrations
 
                     b.Property<string>("NazivUloge")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("UlogaId");
+                    b.HasKey("UlogaId")
+                        .HasName("PK__Uloga__DCAB23CB44AA88F0");
 
-                    b.ToTable("Ulogas");
+                    b.ToTable("Uloga", (string)null);
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.UspjesnaPrica", b =>
@@ -307,8 +315,9 @@ namespace PodrziMe.Services.Migrations
             modelBuilder.Entity("PodrziMe.Services.Database.Korisnik", b =>
                 {
                     b.HasOne("PodrziMe.Services.Database.Uloga", "Uloga")
-                        .WithMany()
-                        .HasForeignKey("UlogaId");
+                        .WithMany("Korisniks")
+                        .HasForeignKey("UlogaId")
+                        .HasConstraintName("FK__Korisnik__UlogaI__6383C8BA");
 
                     b.Navigation("Uloga");
                 });
@@ -343,6 +352,11 @@ namespace PodrziMe.Services.Migrations
             modelBuilder.Entity("PodrziMe.Services.Database.PodKategorija", b =>
                 {
                     b.Navigation("Kategorijas");
+                });
+
+            modelBuilder.Entity("PodrziMe.Services.Database.Uloga", b =>
+                {
+                    b.Navigation("Korisniks");
                 });
 #pragma warning restore 612, 618
         }

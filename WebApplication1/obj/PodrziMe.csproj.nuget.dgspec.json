@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {}
+    "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+    "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj",
         "projectName": "PodrziMe.Model",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
+    "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj",
         "projectName": "PodrziMe.Services",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
+              "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj"
               }
             }
           }
@@ -113,7 +113,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -162,24 +162,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj": {
+    "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj",
         "projectName": "PodrziMe",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\PodrziMe.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\WebApplication1\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -194,11 +194,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Model\\PodrziMe.Model.csproj"
+              "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodrziMe.Model.csproj"
               },
-              "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\PodrziMe.Services.csproj"
+              "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj"
               }
             }
           }
@@ -213,7 +213,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -267,7 +267,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,7 +10,6 @@ namespace PodrziMe.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
     public class KorisnikConrtoller
     {
         private readonly IKorisnikService _takmicariService;
