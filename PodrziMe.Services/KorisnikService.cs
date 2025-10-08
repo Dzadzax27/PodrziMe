@@ -96,10 +96,20 @@ namespace PodrziMe.Services
 
             if (hash != entity.LozinkaHash)
             {
+                
                 return null;
             }
 
             return _mapper.Map<Model.Korisnik>(entity);
+        }
+
+        public override IQueryable<Database.Korisnik> AddInclude(IQueryable<Database.Korisnik> query,   KorisnikSearchObject? search = null)
+        {
+            if (search?.isShowingUlogas == true)
+            {
+                query = query.Include(x => x.Uloga);
+            }
+            return base.AddInclude(query, search);
         }
     }
 

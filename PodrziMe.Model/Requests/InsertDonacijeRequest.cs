@@ -15,5 +15,6 @@ namespace PodrziMe.Model.Requests
         [Range(0,10000)]
         public int IznosDonacije { get; set; }
         public int? DonorId { get; set; }
+        public int KandidatId { get; set; }
     }
 }

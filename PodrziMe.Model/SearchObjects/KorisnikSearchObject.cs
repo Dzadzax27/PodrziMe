@@ -10,5 +10,6 @@ namespace PodrziMe.Model.SearchObjects
     {
         public string? KorisnickoIme { get; set; } = null!;
         public string? FTS { get; set; }
+        public bool? isShowingUlogas { get; set; }
     }
 }

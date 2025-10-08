@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PodrziMe;
 using PodrziMe.Services.Database;
 
 #nullable disable
@@ -13,8 +12,8 @@ using PodrziMe.Services.Database;
 namespace PodrziMe.Services.Migrations
 {
     [DbContext(typeof(PodrziMeContext))]
-    [Migration("20250809100615_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20250927151823_AddedKorisnik1")]
+    partial class AddedKorisnik1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,7 +25,7 @@ namespace PodrziMe.Services.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PodrziMe.Donacija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Donacija", b =>
                 {
                     b.Property<int>("DonacijaId")
                         .ValueGeneratedOnAdd()
@@ -56,7 +55,7 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("Donacija", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.Donor", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Donor", b =>
                 {
                     b.Property<int>("DonorId")
                         .ValueGeneratedOnAdd()
@@ -67,10 +66,13 @@ namespace PodrziMe.Services.Migrations
                     b.Property<DateOnly?>("DatumRodjenja")
                         .HasColumnType("date");
 
-                    b.Property<string>("ImePrezime")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<string>("Ime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Prezime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("UkupnoDonacija")
                         .HasColumnType("int");
@@ -85,7 +87,7 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("Donor", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.Kandidat", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kandidat", b =>
                 {
                     b.Property<int>("KandidatId")
                         .ValueGeneratedOnAdd()
@@ -103,10 +105,9 @@ namespace PodrziMe.Services.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("ImePrezime")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<string>("Ime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("KategorijaId")
                         .HasColumnType("int");
@@ -118,6 +119,10 @@ namespace PodrziMe.Services.Migrations
                     b.Property<string>("Omeni")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Prezime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Uspjesi")
                         .HasMaxLength(255)
@@ -134,7 +139,7 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("Kandidat", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.Kategorija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kategorija", b =>
                 {
                     b.Property<int>("KategorijaId")
                         .ValueGeneratedOnAdd()
@@ -158,7 +163,52 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("Kategorija", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.PodKategorija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Korisnik", b =>
+                {
+                    b.Property<int>("KorisnikId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KorisnikId"));
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("KorisnickoIme")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("LozinkaHash")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LozinkaSalt")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Telefon")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("UlogaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KorisnikId")
+                        .HasName("PK__Korisnik__80B06D4132BAFC0E");
+
+                    b.HasIndex("UlogaId");
+
+                    b.ToTable("Korisnik", (string)null);
+                });
+
+            modelBuilder.Entity("PodrziMe.Services.Database.PodKategorija", b =>
                 {
                     b.Property<int>("PodKategorijaId")
                         .ValueGeneratedOnAdd()
@@ -177,7 +227,26 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("PodKategorija", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.UspjesnaPrica", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Uloga", b =>
+                {
+                    b.Property<int>("UlogaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UlogaId"));
+
+                    b.Property<string>("NazivUloge")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("UlogaId")
+                        .HasName("PK__Uloga__DCAB23CB44AA88F0");
+
+                    b.ToTable("Uloga", (string)null);
+                });
+
+            modelBuilder.Entity("PodrziMe.Services.Database.UspjesnaPrica", b =>
                 {
                     b.Property<int>("UspjesnaPricaId")
                         .ValueGeneratedOnAdd()
@@ -208,14 +277,14 @@ namespace PodrziMe.Services.Migrations
                     b.ToTable("UspjesnaPrica", (string)null);
                 });
 
-            modelBuilder.Entity("PodrziMe.Donacija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Donacija", b =>
                 {
-                    b.HasOne("PodrziMe.Donor", "Donor")
+                    b.HasOne("PodrziMe.Services.Database.Donor", "Donor")
                         .WithMany("Donacijas")
                         .HasForeignKey("DonorId")
                         .HasConstraintName("FK_Donor");
 
-                    b.HasOne("PodrziMe.Kandidat", "Kandidat")
+                    b.HasOne("PodrziMe.Services.Database.Kandidat", "Kandidat")
                         .WithMany("Donacijas")
                         .HasForeignKey("KandidatId")
                         .IsRequired()
@@ -226,9 +295,9 @@ namespace PodrziMe.Services.Migrations
                     b.Navigation("Kandidat");
                 });
 
-            modelBuilder.Entity("PodrziMe.Kandidat", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kandidat", b =>
                 {
-                    b.HasOne("PodrziMe.Kategorija", "Kategorija")
+                    b.HasOne("PodrziMe.Services.Database.Kategorija", "Kategorija")
                         .WithMany("Kandidats")
                         .HasForeignKey("KategorijaId")
                         .HasConstraintName("FK_Kategorija");
@@ -236,9 +305,9 @@ namespace PodrziMe.Services.Migrations
                     b.Navigation("Kategorija");
                 });
 
-            modelBuilder.Entity("PodrziMe.Kategorija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kategorija", b =>
                 {
-                    b.HasOne("PodrziMe.PodKategorija", "PodKategorija")
+                    b.HasOne("PodrziMe.Services.Database.PodKategorija", "PodKategorija")
                         .WithMany("Kategorijas")
                         .HasForeignKey("PodKategorijaId")
                         .HasConstraintName("FK_PodKategorija");
@@ -246,9 +315,19 @@ namespace PodrziMe.Services.Migrations
                     b.Navigation("PodKategorija");
                 });
 
-            modelBuilder.Entity("PodrziMe.UspjesnaPrica", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Korisnik", b =>
                 {
-                    b.HasOne("PodrziMe.Kandidat", "Kandidat")
+                    b.HasOne("PodrziMe.Services.Database.Uloga", "Uloga")
+                        .WithMany("Korisniks")
+                        .HasForeignKey("UlogaId")
+                        .HasConstraintName("FK__Korisnik__UlogaI__6383C8BA");
+
+                    b.Navigation("Uloga");
+                });
+
+            modelBuilder.Entity("PodrziMe.Services.Database.UspjesnaPrica", b =>
+                {
+                    b.HasOne("PodrziMe.Services.Database.Kandidat", "Kandidat")
                         .WithMany("UspjesnaPricas")
                         .HasForeignKey("KandidatId")
                         .HasConstraintName("FK_Kandidat");
@@ -256,26 +335,31 @@ namespace PodrziMe.Services.Migrations
                     b.Navigation("Kandidat");
                 });
 
-            modelBuilder.Entity("PodrziMe.Donor", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Donor", b =>
                 {
                     b.Navigation("Donacijas");
                 });
 
-            modelBuilder.Entity("PodrziMe.Kandidat", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kandidat", b =>
                 {
                     b.Navigation("Donacijas");
 
                     b.Navigation("UspjesnaPricas");
                 });
 
-            modelBuilder.Entity("PodrziMe.Kategorija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.Kategorija", b =>
                 {
                     b.Navigation("Kandidats");
                 });
 
-            modelBuilder.Entity("PodrziMe.PodKategorija", b =>
+            modelBuilder.Entity("PodrziMe.Services.Database.PodKategorija", b =>
                 {
                     b.Navigation("Kategorijas");
+                });
+
+            modelBuilder.Entity("PodrziMe.Services.Database.Uloga", b =>
+                {
+                    b.Navigation("Korisniks");
                 });
 #pragma warning restore 612, 618
         }

@@ -31,7 +31,7 @@ namespace PodrziMe.Controllers
         {
             return await _takmicariService.Get(search);
         }
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public Task<Model.Kandidat> Insert(InsertKandidatRequest request)
         {

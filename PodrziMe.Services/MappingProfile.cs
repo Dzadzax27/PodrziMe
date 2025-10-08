@@ -16,6 +16,7 @@ namespace PodrziMe.Services
         public MappingProfile() {
             CreateMap<Kandidat ,Model.Kandidat>();
             CreateMap<Kategorija, Model.Kategorija>();
+            CreateMap<InsertKandidatRequest, Kandidat>();
             CreateMap<PodKategorija, Model.PodKategorija>();
             CreateMap<InsertPodKategorijaRequest, PodKategorija>();
             CreateMap<InsertKategorijaRequest,Kategorija>();
@@ -27,6 +28,7 @@ namespace PodrziMe.Services
             CreateMap<InsertUspjesnaPricaRequest, UspjesnaPrica>();
             CreateMap<UpdateDonorRequest, Donor>();
             CreateMap<Korisnik, Model.Korisnik>();
+            CreateMap<Uloga, Model.Uloga>();
             CreateMap<InsertKorisnikRequest, Korisnik>();
         }
     }

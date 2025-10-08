@@ -1,20 +1,27 @@
-﻿using Azure.Core;
+﻿using AutoMapper;
+using Azure.Core;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using PodrziMe.Services;
+using PodrziMe.Services.Database;
 using System.Net.Http.Headers;
 using System.Security.Claims;
-using System.Text.Encodings.Web;
 using System.Text;
-using PodrziMe.Services;
+using System.Text.Encodings.Web;
 
 namespace PodrziMe
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
         {
             IKorisnikService _korisniciService;
-            public BasicAuthenticationHandler(IKorisnikService korisniciService, IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock) : base(options, logger, encoder, clock)
+            PodrziMeContext _context;
+            IMapper _mapper;
+            public BasicAuthenticationHandler(IKorisnikService korisniciService, IMapper mapper, IOptionsMonitor<AuthenticationSchemeOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock, PodrziMeContext context) : base(options, logger, encoder, clock)
             {
                 _korisniciService = korisniciService;
+                _context = context;
+                _mapper = mapper;
             }
 
             protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
@@ -44,13 +51,25 @@ namespace PodrziMe
                         new Claim(ClaimTypes.NameIdentifier, user.KorisnickoIme)
                     };
 
-                     if (user.Uloga != null)
-                     {
-                          claims.Add(new Claim(ClaimTypes.Role, user.Uloga.NazivUloge));
-                     
-                     }
 
-                var identity = new ClaimsIdentity(claims, Scheme.Name);
+                    if (user.UlogaId.HasValue)
+                    {
+                        var userEntity = await _context.Korisniks
+                        .Include(u => u.Uloga)
+                        .FirstOrDefaultAsync(u => u.KorisnickoIme == username);
+                        var ulogaModel = _mapper.Map<Model.Uloga>(userEntity.Uloga);
+
+                        user.Uloga = ulogaModel;
+
+                    }
+
+                    if (user.Uloga != null)
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, user.Uloga.NazivUloge));
+
+                    }
+
+                    var identity = new ClaimsIdentity(claims, Scheme.Name);
 
                     var principal = new ClaimsPrincipal(identity);
 
