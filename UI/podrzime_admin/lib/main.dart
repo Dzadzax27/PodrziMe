@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:podrzime_admin/models/uspjesnaPrica.dart';
 import 'package:podrzime_admin/providers/donacija_provider.dart';
+import 'package:podrzime_admin/providers/donor_provider.dart';
+import 'package:podrzime_admin/providers/kategorija_provider.dart';
 import 'package:podrzime_admin/providers/podrziMe_base_api.dart';
 import 'package:podrzime_admin/providers/takmicar_provider.dart';
+import 'package:podrzime_admin/providers/uspjesnaPrica_provider.dart';
 import 'package:podrzime_admin/screens/home_page.dart';
+import 'package:podrzime_admin/screens/pocetna.dart';
 import 'package:podrzime_admin/utils/util.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +17,9 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => DonacijaProvider()),
         ChangeNotifierProvider(create: (_) => TakmicarProvider()),
+        ChangeNotifierProvider(create: (_) => KategorijaProvider()),
+        ChangeNotifierProvider(create: (_) => UspjesnaPricaProvider()),
+        ChangeNotifierProvider(create: (_) => DonorProvider()),
       ],
       child: const MyApp(),
     ),
@@ -102,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (context.mounted) {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const HomePageScreen(),
+                          builder: (context) => const PocetnaStranica(),
                         ),
                       );
                     }

@@ -17,4 +17,6 @@ public class UspjesnaPrica
     public int? KandidatId { get; set; }
 
     public virtual Kandidat? Kandidat { get; set; }
+    public byte[]? Slika { get; set; }
+
 }

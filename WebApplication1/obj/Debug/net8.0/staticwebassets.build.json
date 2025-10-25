@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "37dVvJdedHF6vk/qEJo4uS1cmC5VXvjOjiQd7Qo55cU=",
-  "Source": "PodrziMe",
-  "BasePath": "_content/PodrziMe",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"37dVvJdedHF6vk/qEJo4uS1cmC5VXvjOjiQd7Qo55cU=","Source":"PodrziMe","BasePath":"_content/PodrziMe","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

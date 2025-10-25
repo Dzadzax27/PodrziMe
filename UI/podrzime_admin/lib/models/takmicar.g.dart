@@ -10,17 +10,23 @@ Takmicar _$TakmicarFromJson(Map<String, dynamic> json) =>
     Takmicar(
         kandidatId: (json['kandidatId'] as num?)?.toInt(),
         ime: json['ime'] as String?,
+        prezime: json['prezime'] as String?,
+        email: json['email'] as String?,
+        datumRodjenja: json['datumRodjenja'] == null
+            ? null
+            : DateTime.parse(json['datumRodjenja'] as String),
+        omeni: json['omeni'] as String?,
+        uspjesi: json['uspjesi'] as String?,
+        link: json['link'] as String?,
+        brojTelefona: (json['brojTelefona'] as num?)?.toInt(),
+        zeljenaDonacija: (json['zeljenaDonacija'] as num?)?.toInt(),
+        kategorijaId: (json['kategorijaId'] as num?)?.toInt(),
+        slika: json['slika'] as String?,
+        odobren: json['odobren'] as bool?,
       )
-      ..prezime = json['prezime'] as String?
-      ..email = json['email'] as String?
-      ..datumRodjenja = json['datumRodjenja'] == null
+      ..kategorija = json['kategorija'] == null
           ? null
-          : DateTime.parse(json['datumRodjenja'] as String)
-      ..omeni = json['omeni'] as String?
-      ..uspjesi = json['uspjesi'] as String?
-      ..Link = json['Link'] as String?
-      ..brojTelefona = (json['brojTelefona'] as num?)?.toInt()
-      ..zeljenaDonacija = (json['zeljenaDonacija'] as num?)?.toInt();
+          : Kategorija.fromJson(json['kategorija'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$TakmicarToJson(Takmicar instance) => <String, dynamic>{
   'kandidatId': instance.kandidatId,
@@ -30,7 +36,11 @@ Map<String, dynamic> _$TakmicarToJson(Takmicar instance) => <String, dynamic>{
   'datumRodjenja': instance.datumRodjenja?.toIso8601String(),
   'omeni': instance.omeni,
   'uspjesi': instance.uspjesi,
-  'Link': instance.Link,
+  'link': instance.link,
   'brojTelefona': instance.brojTelefona,
   'zeljenaDonacija': instance.zeljenaDonacija,
+  'kategorijaId': instance.kategorijaId,
+  'slika': instance.slika,
+  'odobren': instance.odobren,
+  'kategorija': instance.kategorija,
 };

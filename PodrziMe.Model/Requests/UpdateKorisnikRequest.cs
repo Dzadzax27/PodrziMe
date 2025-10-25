@@ -12,9 +12,12 @@ namespace PodrziMe.Model.Requests
 
         public string? Lozinka { get; set; }
         public string? LozinkaPotvrda { get; set; }
-        public string KorisnickoIme { get; set; } = null!;
+        public string? KorisnickoIme { get; set; } = null!;
 
         public bool? Status { get; set; }
         public string? Email { get; set; }
+
+        public bool? odobren { get; set; }
+
     }
 }

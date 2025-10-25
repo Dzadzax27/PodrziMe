@@ -515,7 +515,6 @@ C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.Gen
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.AssemblyInfo.cs
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.sourcelink.json
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\rjimswa.dswa.cache.json
@@ -533,3 +532,4 @@ C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\refint\Podrz
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.pdb
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.genruntimeconfig.cache
 C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\ref\PodrziMe.dll
+C:\Users\User\Desktop\RS2\PodrziMe\WebApplication1\obj\Debug\net8.0\PodrziMe.MvcApplicationPartsAssemblyInfo.cs

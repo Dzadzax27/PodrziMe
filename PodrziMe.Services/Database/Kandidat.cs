@@ -27,6 +27,12 @@ public partial class Kandidat
 
     public string? Prezime { get; set; }
 
+    public byte[]? SlikaThumb { get; set; }
+
+    public byte[]? Slika { get; set; }
+
+    public bool? Odobren { get; set; }
+
     public virtual ICollection<Donacija> Donacijas { get; set; } = new List<Donacija>();
 
     public virtual Kategorija? Kategorija { get; set; }

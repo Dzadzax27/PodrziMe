@@ -17,5 +17,6 @@ namespace PodrziMe.Model.Requests
         public int? UkupnaDonacija { get; set; }
 
         public int? KandidatId { get; set; }
+        public byte[]? Slika { get; set; }
     }
 }

@@ -30,6 +30,8 @@ namespace PodrziMe.Model.Requests
         public int? ZeljenaDonacija { get; set; }
 
         public int? KategorijaId { get; set; }
+        public byte[]? SlikaThumb { get; set; }
+        public byte[]? Slika { get; set; }
 
     }
 }

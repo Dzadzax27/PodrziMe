@@ -30,6 +30,9 @@ namespace PodrziMe.Model
         public int? KategorijaId { get; set; }
 
         public virtual Kategorija? Kategorija { get; set; }
+        public bool? Odobren { get; set; }
+        public byte[]? SlikaThumb { get; set; }
+        public byte[]? Slika { get; set; }
 
     }
 }

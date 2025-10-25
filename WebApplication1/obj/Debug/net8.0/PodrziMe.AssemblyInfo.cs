@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PodrziMe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16b8bab84c86bc68f2fcf1f78e44bcf1da8c3638")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6786158319e628bfc343cfdc2d79e624f47f7404")]
 [assembly: System.Reflection.AssemblyProductAttribute("PodrziMe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PodrziMe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
