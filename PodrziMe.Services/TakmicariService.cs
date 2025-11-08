@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EasyNetQ;
 using Microsoft.EntityFrameworkCore;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
@@ -14,9 +15,13 @@ namespace PodrziMe.Services
 {
     public class TakmicariService : BaseCRUDService<Model.Kandidat, Database.Kandidat, Model.SearchObjects.KandidatiSearchObject, InsertKandidatRequest, UpdateKandidatRequest>, ITakmicariService
     {
-
+        PodrziMeContext _context;
+        IMapper _mapper;
         public TakmicariService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext, mapper)
-        {}
+        {
+            _context = dbContext;
+            _mapper = mapper;
+        }
 
         public override IQueryable<Database.Kandidat> AddFilter(KandidatiSearchObject? search, IQueryable<Database.Kandidat> query)
         {
@@ -33,11 +38,13 @@ namespace PodrziMe.Services
             return base.AddFilter(search, query);
         }
 
+
         public override IQueryable<Database.Kandidat> AddInclude(IQueryable<Database.Kandidat> query, KandidatiSearchObject? search = null)
         {
             if (search?.isKategorijaIncluded == true)
             {
-                query = query.Include(x => x.Kategorija);
+                query = query
+                    .Include(x => x.Kategorija);
             }
             return base.AddInclude(query, search);
         }

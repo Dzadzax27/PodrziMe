@@ -33,6 +33,10 @@ namespace PodrziMe.Model
         public bool? Odobren { get; set; }
         public byte[]? SlikaThumb { get; set; }
         public byte[]? Slika { get; set; }
+        public int? TakmicarProfilId { get; set; }
+        public virtual TakmicarProfil? TakmicarProfil { get; set; }
+
+        public virtual ICollection<TakmicarProfil> TakmicarProfils { get; set; } = new List<TakmicarProfil>();
 
     }
 }

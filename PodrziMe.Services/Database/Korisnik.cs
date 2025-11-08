@@ -21,5 +21,9 @@ public partial class Korisnik
 
     public int? UlogaId { get; set; }
 
+    public virtual ICollection<Donor> Donors { get; set; } = new List<Donor>();
+
+    public virtual ICollection<TakmicarProfil> TakmicarProfils { get; set; } = new List<TakmicarProfil>();
+
     public virtual Uloga? Uloga { get; set; }
 }

@@ -9,7 +9,6 @@ namespace PodrziMe.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
     public class KategorijaController : ControllerBase
     {
         private readonly IKategorijaService _kategorijaService;

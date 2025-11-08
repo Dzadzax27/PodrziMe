@@ -17,7 +17,9 @@ public partial class Donor
 
     public string? Prezime { get; set; }
 
-    public string? KandidatId { get; set; }
+    public int? KorisnikId { get; set; }
 
     public virtual ICollection<Donacija> Donacijas { get; set; } = new List<Donacija>();
+
+    public virtual Korisnik? Korisnik { get; set; }
 }

@@ -72,6 +72,9 @@ namespace PodrziMe.Services
         public override void BeforeUpdate(UpdateKorisnikRequest request, Database.Korisnik entity)
         {
             base.BeforeUpdate(request, entity);
+
+            
+
             if (request.Lozinka != null)
             {
                 if (request.Lozinka != request.LozinkaPotvrda)

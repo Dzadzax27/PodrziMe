@@ -17,11 +17,15 @@ builder.Services.AddTransient<IDonacijaService, DonacijaService>();
 builder.Services.AddTransient<IDonorService, DonorService>();
 builder.Services.AddTransient<IUspjesnaPrica, UspjesnaPricaService>();
 builder.Services.AddTransient<IKorisnikService, KorisnikService>();
+builder.Services.AddTransient<IUlogaService, UlogaService>();
+builder.Services.AddTransient<ITakmicarProfilService, TakmicarProfilService>();
 
 builder.Services.AddControllers(x =>
 {
     x.Filters.Add<ErrorFilter>();
 });
+
+builder.Services.AddHttpClient();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

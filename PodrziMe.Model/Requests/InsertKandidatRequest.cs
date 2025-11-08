@@ -32,6 +32,7 @@ namespace PodrziMe.Model.Requests
         public int? KategorijaId { get; set; }
         public byte[]? SlikaThumb { get; set; }
         public byte[]? Slika { get; set; }
+        public int? TakmicarProfilId { get; set; }
 
     }
 }

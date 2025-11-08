@@ -22,16 +22,17 @@ namespace PodrziMe.Controllers
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<Model.Kandidat> GetById([FromQuery] int id)
         {
             return await _takmicariService.GetById(id);
         }
         [HttpGet()]
+        [AllowAnonymous]
         public async Task<PagedResult<Model.Kandidat>> Get([FromQuery] KandidatiSearchObject? search = null)
         {
             return await _takmicariService.Get(search);
         }
-        [Authorize(Roles = "admin")]
         [HttpPost]
         public Task<Model.Kandidat> Insert(InsertKandidatRequest request)
         {

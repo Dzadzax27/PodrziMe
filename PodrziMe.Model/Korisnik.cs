@@ -21,5 +21,6 @@ namespace PodrziMe.Model
         public int? UlogaId { get; set; }
 
         public virtual Uloga? Uloga { get; set; }
+
     }
 }

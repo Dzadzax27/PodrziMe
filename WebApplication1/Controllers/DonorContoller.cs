@@ -31,6 +31,7 @@ namespace PodrziMe.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<Model.Donor> Insert(InsertDonorRequest request)
         {
             return await donorService.Insert(request);

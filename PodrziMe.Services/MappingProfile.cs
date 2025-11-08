@@ -32,6 +32,9 @@ namespace PodrziMe.Services
             CreateMap<InsertKorisnikRequest, Korisnik>();
             CreateMap<UpdateKorisnikRequest, Korisnik>();
             CreateMap<UpdateKandidatRequest, Kandidat>();
+            CreateMap<UpdateTakmicarProfileRequest, TakmicarProfil>();
+            CreateMap<InsertTakmicarProfilRequest, TakmicarProfil>();
+            CreateMap<TakmicarProfil, Model.TakmicarProfil>();
         }
     }
 }

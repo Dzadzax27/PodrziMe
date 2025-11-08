@@ -32,6 +32,7 @@ namespace PodrziMe.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public Task<Model.Korisnik> Insert(InsertKorisnikRequest request)
         {
             return _takmicariService.Insert(request);

@@ -19,12 +19,14 @@ namespace PodrziMe.Controllers
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<Model.UspjesnaPrica> GetById(int id)
         {
             return await _uspjesnaPricaService.GetById(id);
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<PagedResult<Model.UspjesnaPrica>> Get([FromQuery] Model.SearchObjects.UspjesnaPricaSearchObject request)
         {
             return await _uspjesnaPricaService.Get(request);

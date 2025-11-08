@@ -33,9 +33,13 @@ public partial class Kandidat
 
     public bool? Odobren { get; set; }
 
+    public int? TakmicarProfilId { get; set; }
+
     public virtual ICollection<Donacija> Donacijas { get; set; } = new List<Donacija>();
 
     public virtual Kategorija? Kategorija { get; set; }
+
+    public virtual TakmicarProfil? TakmicarProfil { get; set; }
 
     public virtual ICollection<UspjesnaPrica> UspjesnaPricas { get; set; } = new List<UspjesnaPrica>();
 }

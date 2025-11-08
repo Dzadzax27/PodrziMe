@@ -18,5 +18,7 @@ namespace PodrziMe.Model
         public int? UkupnoDonacija { get; set; }
 
         public DateOnly? DatumRodjenja { get; set; }
+        public int? KorisnikId { get; set; }
+        public virtual Korisnik? Korisnik { get; set; }
     }
 }

@@ -27,6 +27,8 @@ public partial class PodrziMeContext : DbContext
 
     public virtual DbSet<PodKategorija> PodKategorijas { get; set; }
 
+    public virtual DbSet<TakmicarProfil> TakmicarProfils { get; set; }
+
     public virtual DbSet<Uloga> Ulogas { get; set; }
 
     public virtual DbSet<UspjesnaPrica> UspjesnaPricas { get; set; }
@@ -64,9 +66,12 @@ public partial class PodrziMeContext : DbContext
             entity.ToTable("Donor");
 
             entity.Property(e => e.Ime).HasMaxLength(100);
-            entity.Property(e => e.KandidatId).HasMaxLength(100);
             entity.Property(e => e.Prezime).HasMaxLength(100);
             entity.Property(e => e.Zanimanje).HasMaxLength(255);
+
+            entity.HasOne(d => d.Korisnik).WithMany(p => p.Donors)
+                .HasForeignKey(d => d.KorisnikId)
+                .HasConstraintName("FK_Donor_Korisnik");
         });
 
         modelBuilder.Entity<Kandidat>(entity =>
@@ -80,13 +85,15 @@ public partial class PodrziMeContext : DbContext
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Ime).HasMaxLength(50);
             entity.Property(e => e.Link).HasMaxLength(255);
-            entity.Property(e => e.Omeni).HasMaxLength(255);
             entity.Property(e => e.Prezime).HasMaxLength(50);
-            entity.Property(e => e.Uspjesi).HasMaxLength(255);
 
             entity.HasOne(d => d.Kategorija).WithMany(p => p.Kandidats)
                 .HasForeignKey(d => d.KategorijaId)
                 .HasConstraintName("FK_Kategorija");
+
+            entity.HasOne(d => d.TakmicarProfil).WithMany(p => p.Kandidats)
+                .HasForeignKey(d => d.TakmicarProfilId)
+                .HasConstraintName("FK_Kandidat_TakmicarProfil");
         });
 
         modelBuilder.Entity<Kategorija>(entity =>
@@ -112,6 +119,8 @@ public partial class PodrziMeContext : DbContext
 
             entity.HasIndex(e => e.UlogaId, "IX_Korisnik_UlogaId");
 
+            entity.HasIndex(e => e.KorisnickoIme, "UQ_Korisnik_KorisnickoIme").IsUnique();
+
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.KorisnickoIme).HasMaxLength(100);
             entity.Property(e => e.LozinkaHash).HasMaxLength(200);
@@ -130,6 +139,21 @@ public partial class PodrziMeContext : DbContext
             entity.ToTable("PodKategorija");
 
             entity.Property(e => e.NazivPodKategorije).HasMaxLength(255);
+        });
+
+        modelBuilder.Entity<TakmicarProfil>(entity =>
+        {
+            entity.HasKey(e => e.TakmicarProfilId).HasName("PK__Takmicar__E312D62A7B519C4A");
+
+            entity.ToTable("TakmicarProfil");
+
+            entity.Property(e => e.Ime).HasMaxLength(50);
+            entity.Property(e => e.Prezime).HasMaxLength(50);
+
+            entity.HasOne(d => d.Korisnik).WithMany(p => p.TakmicarProfils)
+                .HasForeignKey(d => d.KorisnikId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__TakmicarP__Koris__6FE99F9F");
         });
 
         modelBuilder.Entity<Uloga>(entity =>

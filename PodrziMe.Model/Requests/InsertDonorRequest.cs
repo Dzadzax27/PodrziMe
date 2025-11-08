@@ -19,5 +19,7 @@ namespace PodrziMe.Model.Requests
         public int? UkupnoDonacija { get; set; }
         [Required]
         public DateOnly? DatumRodjenja { get; set; }
+
+        public int? KorisnikId { get; set; }
     }
 }
