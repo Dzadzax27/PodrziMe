@@ -12,11 +12,12 @@ using PodrziMe.Services.Database;
 
 namespace PodrziMe.Services
 {
-    public class KategorijaService : BaseService<Model.Kategorija,Database.Kategorija, KategorijaSearchObject>, IKategorijaService
+    public class KategorijaService : BaseService<Model.Kategorija, Database.Kategorija, KategorijaSearchObject>, IKategorijaService
     {
         PodrziMeContext _dbContext;
         public IMapper Mapper { get; set; }
-        public KategorijaService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext,mapper) {
+        public KategorijaService(PodrziMeContext dbContext, IMapper mapper) : base(dbContext, mapper)
+        {
             _dbContext = dbContext;
             Mapper = mapper;
         }

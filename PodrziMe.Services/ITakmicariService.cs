@@ -12,5 +12,6 @@ namespace PodrziMe.Services
 {
     public interface ITakmicariService : ICRUDService<Model.Kandidat, KandidatiSearchObject, InsertKandidatRequest, UpdateKandidatRequest>
     {
+        List<Model.Kandidat> Recommend(int id);
     }
 }

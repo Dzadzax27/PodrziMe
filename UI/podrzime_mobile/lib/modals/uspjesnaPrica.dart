@@ -4,6 +4,7 @@ part 'uspjesnaPrica.g.dart';
 
 @JsonSerializable()
 class UspjesnaPrica {
+  int? uspjesnaPricaId;
   String naslovPrice;
   String prica;
   int? ukupnaDonacija;
@@ -11,6 +12,7 @@ class UspjesnaPrica {
   String? slika; // For byte arrays
 
   UspjesnaPrica({
+    this.uspjesnaPricaId,
     required this.naslovPrice,
     required this.prica,
     this.ukupnaDonacija,

@@ -188,107 +188,104 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
   }
 
   Widget _buildTakmicarView() {
-    return MasterScreenWidget(
-      title: "Moj profil",
-      child: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : korisnikProfil == null
-          ? const Center(child: Text("Profil nije pronađen"))
-          : SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Profil korisnika
-                  Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Ime: ${korisnikProfil!.ime}",
-                            style: const TextStyle(fontSize: 18),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            "Prezime: ${korisnikProfil!.prezime}",
-                            style: const TextStyle(fontSize: 18),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            "Datum rođenja: ${korisnikProfil!.datumRodjenja != null ? DateFormat('dd.MM.yyyy').format(korisnikProfil!.datumRodjenja!) : 'Nije unesen'}",
-                            style: const TextStyle(fontSize: 18),
-                          ),
-                        ],
-                      ),
+    return isLoading
+        ? const Center(child: CircularProgressIndicator())
+        : korisnikProfil == null
+        ? const Center(child: Text("Profil nije pronađen"))
+        : SingleChildScrollView(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Profil korisnika
+                Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Ime: ${korisnikProfil!.ime}",
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          "Prezime: ${korisnikProfil!.prezime}",
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          "Datum rođenja: ${korisnikProfil!.datumRodjenja != null ? DateFormat('dd.MM.yyyy').format(korisnikProfil!.datumRodjenja!) : 'Nije unesen'}",
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 16),
+                ),
+                const SizedBox(height: 16),
 
-                  // Pending takmicari
+                // Pending takmicari
+                const Text(
+                  'Zahtjevi na čekanju',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                if (pendingTakmicar == null || pendingTakmicar!.isEmpty)
                   const Text(
-                    'Zahtjevi na čekanju',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    "Nema takmicara na čekanju",
+                    style: TextStyle(color: Colors.grey),
+                  )
+                else
+                  Column(
+                    children: pendingTakmicar!
+                        .map((e) => TakmicarCard(e))
+                        .toList(),
                   ),
-                  const SizedBox(height: 8),
-                  if (pendingTakmicar == null || pendingTakmicar!.isEmpty)
-                    const Text(
-                      "Nema takmicara na čekanju",
-                      style: TextStyle(color: Colors.grey),
-                    )
-                  else
-                    Column(
-                      children: pendingTakmicar!
-                          .map((e) => TakmicarCard(e))
-                          .toList(),
-                    ),
 
-                  const SizedBox(height: 16),
-                  // Prihvaceni takmicari
+                const SizedBox(height: 16),
+                // Prihvaceni takmicari
+                const Text(
+                  'Prihvaćeni zahtjevi',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                if (prihvaceniTakmicar == null || prihvaceniTakmicar!.isEmpty)
                   const Text(
-                    'Prihvaćeni zahtjevi',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    "Nema prihvaćenih takmicara",
+                    style: TextStyle(color: Colors.grey),
+                  )
+                else
+                  Column(
+                    children: prihvaceniTakmicar!
+                        .map((e) => TakmicarCard(e))
+                        .toList(),
                   ),
-                  const SizedBox(height: 8),
-                  if (prihvaceniTakmicar == null || prihvaceniTakmicar!.isEmpty)
-                    const Text(
-                      "Nema prihvaćenih takmicara",
-                      style: TextStyle(color: Colors.grey),
-                    )
-                  else
-                    Column(
-                      children: prihvaceniTakmicar!
-                          .map((e) => TakmicarCard(e))
-                          .toList(),
-                    ),
 
-                  const SizedBox(height: 16),
-                  // Odbijeni takmicari
+                const SizedBox(height: 16),
+                // Odbijeni takmicari
+                const Text(
+                  'Odbijeni zahtjevi',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                if (odbijeniTakmicar == null || odbijeniTakmicar!.isEmpty)
                   const Text(
-                    'Odbijeni zahtjevi',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    "Nema odbijenih takmicara",
+                    style: TextStyle(color: Colors.grey),
+                  )
+                else
+                  Column(
+                    children: odbijeniTakmicar!
+                        .map((e) => TakmicarCard(e))
+                        .toList(),
                   ),
-                  const SizedBox(height: 8),
-                  if (odbijeniTakmicar == null || odbijeniTakmicar!.isEmpty)
-                    const Text(
-                      "Nema odbijenih takmicara",
-                      style: TextStyle(color: Colors.grey),
-                    )
-                  else
-                    Column(
-                      children: odbijeniTakmicar!
-                          .map((e) => TakmicarCard(e))
-                          .toList(),
-                    ),
-                ],
-              ),
+              ],
             ),
-    );
+          );
   }
 
   Widget _buildDonorView() {

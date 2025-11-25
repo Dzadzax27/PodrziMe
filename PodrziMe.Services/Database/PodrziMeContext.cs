@@ -23,7 +23,11 @@ public partial class PodrziMeContext : DbContext
 
     public virtual DbSet<Kategorija> Kategorijas { get; set; }
 
+    public virtual DbSet<Komentar> Komentars { get; set; }
+
     public virtual DbSet<Korisnik> Korisniks { get; set; }
+
+    public virtual DbSet<Obavijest> Obavijests { get; set; }
 
     public virtual DbSet<PodKategorija> PodKategorijas { get; set; }
 
@@ -33,9 +37,9 @@ public partial class PodrziMeContext : DbContext
 
     public virtual DbSet<UspjesnaPrica> UspjesnaPricas { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=localhost;Database=PodrziMe;Trusted_Connection=True;TrustServerCertificate=True");
+//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+//        => optionsBuilder.UseSqlServer("Server=localhost;Database=PodrziMe;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -65,6 +69,7 @@ public partial class PodrziMeContext : DbContext
 
             entity.ToTable("Donor");
 
+            entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Ime).HasMaxLength(100);
             entity.Property(e => e.Prezime).HasMaxLength(100);
             entity.Property(e => e.Zanimanje).HasMaxLength(255);
@@ -111,6 +116,26 @@ public partial class PodrziMeContext : DbContext
                 .HasConstraintName("FK_PodKategorija");
         });
 
+        modelBuilder.Entity<Komentar>(entity =>
+        {
+            entity.HasKey(e => e.KomentarId).HasName("PK__Komentar__C0C3049CAD6F3E08");
+
+            entity.ToTable("Komentar");
+
+            entity.Property(e => e.Komentar1)
+                .HasColumnType("text")
+                .HasColumnName("Komentar");
+
+            entity.HasOne(d => d.Korisnik).WithMany(p => p.Komentars)
+                .HasForeignKey(d => d.KorisnikId)
+                .HasConstraintName("FK_Komentar_Korisnik");
+
+            entity.HasOne(d => d.UspjesnaPrica).WithMany(p => p.Komentars)
+                .HasForeignKey(d => d.UspjesnaPricaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Komentar_UspjesnaPrica");
+        });
+
         modelBuilder.Entity<Korisnik>(entity =>
         {
             entity.HasKey(e => e.KorisnikId).HasName("PK__Korisnik__80B06D4132BAFC0E");
@@ -130,6 +155,20 @@ public partial class PodrziMeContext : DbContext
             entity.HasOne(d => d.Uloga).WithMany(p => p.Korisniks)
                 .HasForeignKey(d => d.UlogaId)
                 .HasConstraintName("FK__Korisnik__UlogaI__6383C8BA");
+        });
+
+        modelBuilder.Entity<Obavijest>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Obavijes__3214EC079C03D296");
+
+            entity.ToTable("Obavijest");
+
+            entity.Property(e => e.DatumKreiranja).HasDefaultValueSql("(getdate())");
+
+            entity.HasOne(d => d.Kandidat).WithMany(p => p.Obavijests)
+                .HasForeignKey(d => d.KandidatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Obavijest_Kandidat");
         });
 
         modelBuilder.Entity<PodKategorija>(entity =>

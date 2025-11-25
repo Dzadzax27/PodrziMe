@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public interface ITakmicarProfilService : ICRUDService<Model.TakmicarProfil, NazivSearchObject, InsertTakmicarProfilRequest, UpdateTakmicarProfileRequest>
+    public interface ITakmicarProfilService : ICRUDService<Model.TakmicarProfil, NazivSearchObject, InsertTakmicarProfilRequest, UpdateTakmicarProfilRequest>
     {
     }
 }

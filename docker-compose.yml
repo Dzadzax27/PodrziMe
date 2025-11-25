@@ -1,35 +1,46 @@
-version: '3'
 services:
-#mssql docker
   podrzime-sql:
-    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-    restart: unless-stopped
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: podrzime-sql
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=QWElkj132!
       - MSSQL_PID=Developer
     ports:
-      - 1401:1433
-    expose:
-      - 1433
+      - "1401:1433"
     networks:
-      - podrzimenet2023
+      - podrzimenet2025
 
   podrzime-api:
-    restart: unless-stopped
+    container_name: podrzime-api
     build:
       context: .
     environment:
-      - ConnectionStrings:ePodrziMeConnection=Server=podrzime-sql;Database=PodrziMe;User=sa;Password=QWElkj132!;Trusted_Connection=True;TrustServerCertificate=True
+      - ConnectionStrings:ePodrziMeConnection=Server=podrzime-sql;Database=PodrziMe;User=sa;Password=QWElkj132!;TrustServerCertificate=True
+      - RabbitMQ:Host=rabbitmq
+      - RabbitMQ:Username=guest
+      - RabbitMQ:Password=guest
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - 8080:8080
-    networks:
-      - podrzimenet2023
-    links:
-      - podrzime-sql
+      - "7220:7220"
     depends_on:
       - podrzime-sql
-      
+      - rabbitmq
+    networks:
+      - podrzimenet2025
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: podrzime-rabbitmq
+    ports:
+      - "5672:5672"     # Main message port
+      - "15672:15672"   # Web dashboard
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - podrzimenet2025
+
 networks:
-  podrzimenet2023:
-    driver: bridge      
+  podrzimenet2025:
+    driver: bridge

@@ -127,6 +127,10 @@
               "target": "Package",
               "version": "[7.8.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -137,13 +141,21 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.5.5, )"
+            },
+            "Microsoft.ML.Recommender": {
+              "target": "Package",
+              "version": "[0.17.5, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[7.1.2, )"
             }
           },
           "imports": [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podrzime_admin/screens/all_takmicars.dart';
 import 'package:podrzime_admin/screens/dodaj_uspjesnu_pricu.dart';
 import 'package:podrzime_admin/screens/home_page.dart';
 import 'package:podrzime_admin/screens/pregled_donora.dart';
@@ -182,6 +183,27 @@ class _PocetnaStranica extends State<PocetnaStranica> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) => PregledDonora(),
+                            ),
+                          ),
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 300, // card width
+                      height: 130, // card height
+                      child: KandidatiCard(
+                        title: "Svi kandidati",
+                        icon: Icons.people,
+                        iconBackground: const Color.fromARGB(
+                          255,
+                          130,
+                          209,
+                          200,
+                        ),
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PregledSvihTakmicara(),
                             ),
                           ),
                         },

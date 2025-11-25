@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Model.Requests
 {
-    public class UpdateTakmicarProfileRequest
+    public class UpdateTakmicarProfilRequest
     {
         public string? Ime { get; set; } = null!;
 

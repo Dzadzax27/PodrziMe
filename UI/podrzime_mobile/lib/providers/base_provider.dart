@@ -5,6 +5,7 @@ import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 import 'package:podrzime_mobile/modals/searchResults.dart';
+import 'package:podrzime_mobile/modals/takmicar.dart';
 import 'package:podrzime_mobile/utils/authorization.dart';
 import 'package:podrzime_mobile/utils/errorCode.dart';
 
@@ -39,6 +40,8 @@ class ApiProvider<T> with ChangeNotifier {
     }
 
     var uri = Uri.parse(url);
+
+    print('uriii ${uri}');
 
     Map<String, String> headers = createHeaders();
     var response = await http!.get(uri, headers: headers);
@@ -151,6 +154,27 @@ class ApiProvider<T> with ChangeNotifier {
       return fromJson(data);
     } else {
       throw new Exception("Unknown error");
+    }
+  }
+
+  Future<List<Takmicar>> getRecommendations(
+    int donorId, [
+    dynamic additionalData,
+  ]) async {
+    var url = Uri.parse("$_baseUrl$_endpoint/$donorId/recommend");
+    var headers = createHeaders();
+
+    final response = await http!.get(url, headers: headers);
+
+    if (isValidResponse(response)) {
+      final data = jsonDecode(response.body);
+
+      // mapiramo JSON listu na List<Kandidat>
+      return (data as List)
+          .map((x) => Takmicar.fromJson(x as Map<String, dynamic>))
+          .toList();
+    } else {
+      throw Exception("Failed to fetch recommendations");
     }
   }
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class TakmicarProfilService : BaseCRUDService<Model.TakmicarProfil, Database.TakmicarProfil, Model.SearchObjects.NazivSearchObject, InsertTakmicarProfilRequest, UpdateTakmicarProfileRequest>, ITakmicarProfilService
+    public class TakmicarProfilService : BaseCRUDService<Model.TakmicarProfil, Database.TakmicarProfil, Model.SearchObjects.NazivSearchObject, InsertTakmicarProfilRequest, UpdateTakmicarProfilRequest>, ITakmicarProfilService
     {
         PodrziMeContext _dbContext;
         public IMapper Mapper { get; set; }

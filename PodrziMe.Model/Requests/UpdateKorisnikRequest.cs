@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Model.Requests
 {
-    public class UpdateKorisnikRequest
+    public class UpdateKorisnikProfil
     {
         public string? Telefon { get; set; }
 

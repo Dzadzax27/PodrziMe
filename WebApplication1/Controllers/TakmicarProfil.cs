@@ -34,10 +34,10 @@ namespace PodrziMe.Controllers
         [AllowAnonymous]
         public async Task<Model.TakmicarProfil> Insert(InsertTakmicarProfilRequest request)
         {
-            return await _takmicarProfile.Insert(request);
+            return  await _takmicarProfile.Insert(request);
         }
         [HttpPut("{id}")]
-        public Task<Model.TakmicarProfil> Update(int id, UpdateTakmicarProfileRequest request)
+        public Task<Model.TakmicarProfil> Update(int id, UpdateTakmicarProfilRequest request)
         {
             return _takmicarProfile.Update(id, request);
         }

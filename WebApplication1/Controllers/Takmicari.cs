@@ -43,5 +43,18 @@ namespace PodrziMe.Controllers
         {
             return _takmicariService.Update(id, request);
         }
+
+        [HttpDelete("{id}")]
+        public Task<bool> Delete(int id)
+        {
+            return _takmicariService.Delete(id);
+        }
+
+        [HttpGet("{id}/recommend")]
+        [AllowAnonymous]
+        public virtual List<Model.Kandidat> Recommend(int id)
+        {
+            return _takmicariService.Recommend(id);
+        }
     }
 }

@@ -5,7 +5,9 @@ import 'package:podrzime_mobile/screens/dodaj_takmicara.dart';
 import 'package:podrzime_mobile/screens/login_page.dart';
 import 'package:podrzime_mobile/screens/oMeni_donor.dart';
 import 'package:podrzime_mobile/screens/oMeni_takmicar.dart';
+import 'package:podrzime_mobile/screens/pocetna.dart';
 import 'package:podrzime_mobile/screens/pregled_svih_takmicara.dart';
+import 'package:podrzime_mobile/screens/pregled_svih_uspjesnihPrica.dart';
 import 'package:podrzime_mobile/screens/registracija.dart';
 import 'package:podrzime_mobile/utils/authorization.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
@@ -61,7 +63,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
         if (title == 'Home') {
           Navigator.of(
             context,
-          ).push(MaterialPageRoute(builder: (context) => LoginPage()));
+          ).push(MaterialPageRoute(builder: (context) => PocetnaStranica()));
         } else if (title == 'Kandidati') {
           Navigator.of(
             context,
@@ -82,6 +84,12 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
           Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (context) => LoginPage()));
+        } else if (title == 'Pregledaj uspjesne price') {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => PregledSvihUspjesnihPrica(),
+            ),
+          );
         }
       },
       borderRadius: BorderRadius.circular(8),
@@ -237,9 +245,19 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                             const Divider(height: 1),
                             _buildMenuItem('Pregled Kandidata'),
                             const Divider(height: 1),
-                            _buildMenuItem('O meni'),
+                            _buildMenuItem('Pregledaj uspjesne price'),
                             const Divider(height: 1),
-                            _buildMenuItem('Logout'),
+                            (Authorization.username == null &&
+                                        Authorization.password == null) ||
+                                    (Authorization.username == '' &&
+                                        Authorization.password == '')
+                                ? const SizedBox.shrink()
+                                : _buildMenuItem('O meni'),
+                            const Divider(height: 1),
+                            Authorization.username == null &&
+                                    Authorization.password == null
+                                ? _buildMenuItem('Login')
+                                : _buildMenuItem('Logout'),
                           ],
                         ),
                       ),

@@ -23,6 +23,8 @@ public partial class Korisnik
 
     public virtual ICollection<Donor> Donors { get; set; } = new List<Donor>();
 
+    public virtual ICollection<Komentar> Komentars { get; set; } = new List<Komentar>();
+
     public virtual ICollection<TakmicarProfil> TakmicarProfils { get; set; } = new List<TakmicarProfil>();
 
     public virtual Uloga? Uloga { get; set; }

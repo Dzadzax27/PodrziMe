@@ -9,12 +9,15 @@
       "PodrziMe/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "EasyNetQ": "7.8.0",
+          "EasyNetQ.Serialization.NewtonsoftJson": "7.8.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.1",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
           "PodrziMe.Model": "1.0.0",
           "PodrziMe.Services": "1.0.0",
+          "RabbitMQ.Client": "6.8.1",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -67,7 +70,7 @@
           "Azure.Core": "1.38.0",
           "Microsoft.Identity.Client": "4.61.3",
           "Microsoft.Identity.Client.Extensions.Msal": "4.61.3",
-          "System.Memory": "4.5.4",
+          "System.Memory": "4.5.5",
           "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.Text.Json": "9.0.1",
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -79,12 +82,32 @@
           }
         }
       },
+      "BouncyCastle.Cryptography/2.6.1": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.1.59591"
+          }
+        }
+      },
       "EasyNetQ/7.8.0": {
         "dependencies": {
-          "RabbitMQ.Client": "7.1.2"
+          "RabbitMQ.Client": "6.8.1"
         },
         "runtime": {
           "lib/netstandard2.0/EasyNetQ.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.8.0.0"
+          }
+        }
+      },
+      "EasyNetQ.Serialization.NewtonsoftJson/7.8.0": {
+        "dependencies": {
+          "EasyNetQ": "7.8.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyNetQ.Serialization.NewtonsoftJson.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.8.0.0"
           }
@@ -95,6 +118,18 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "MailKit/4.14.1": {
+        "dependencies": {
+          "MimeKit": "4.14.0",
+          "System.Formats.Asn1": "9.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/MailKit.dll": {
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.14.1.0"
           }
         }
       },
@@ -746,6 +781,123 @@
           }
         }
       },
+      "Microsoft.ML/1.5.5": {
+        "dependencies": {
+          "Microsoft.ML.CpuMath": "1.5.5",
+          "Microsoft.ML.DataView": "1.5.5",
+          "Newtonsoft.Json": "13.0.3",
+          "System.CodeDom": "6.0.0",
+          "System.Collections.Immutable": "7.0.0",
+          "System.Memory": "4.5.5",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Threading.Channels": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.PCA.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          },
+          "lib/netstandard2.0/Microsoft.ML.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libLdaNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libLdaNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/LdaNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.521.15302"
+          },
+          "runtimes/win-x86/native/LdaNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.521.15302"
+          }
+        }
+      },
+      "Microsoft.ML.CpuMath/1.5.5": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          }
+        }
+      },
+      "Microsoft.ML.DataView/1.5.5": {
+        "dependencies": {
+          "System.Collections.Immutable": "7.0.0",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.521.15302"
+          }
+        }
+      },
+      "Microsoft.ML.Recommender/0.17.5": {
+        "dependencies": {
+          "Microsoft.ML": "1.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.Recommender.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "0.1700.521.15302"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libMatrixFactorizationNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMatrixFactorizationNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/MatrixFactorizationNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.521.15302"
+          },
+          "runtimes/win-x86/native/MatrixFactorizationNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.521.15302"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.OpenApi/1.2.3": {
@@ -781,6 +933,18 @@
           }
         }
       },
+      "MimeKit/4.14.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.1",
+          "System.Security.Cryptography.Pkcs": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/MimeKit.dll": {
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.14.0.0"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -800,15 +964,15 @@
           }
         }
       },
-      "RabbitMQ.Client/7.1.2": {
+      "RabbitMQ.Client/6.8.1": {
         "dependencies": {
-          "System.IO.Pipelines": "9.0.1",
-          "System.Threading.RateLimiting": "8.0.0"
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
         },
         "runtime": {
-          "lib/net8.0/RabbitMQ.Client.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.2.0"
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.1.0"
           }
         }
       },
@@ -996,6 +1160,15 @@
           }
         }
       },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
       "System.IO.Pipelines/9.0.1": {
         "runtime": {
           "lib/net8.0/System.IO.Pipelines.dll": {
@@ -1004,7 +1177,7 @@
           }
         }
       },
-      "System.Memory/4.5.4": {},
+      "System.Memory/4.5.5": {},
       "System.Memory.Data/1.0.2": {
         "dependencies": {
           "System.Text.Encodings.Web": "9.0.1",
@@ -1018,9 +1191,40 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.ILGeneration/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Reflection.Metadata/7.0.0": {
         "dependencies": {
           "System.Collections.Immutable": "7.0.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime/4.3.0": {
@@ -1053,6 +1257,22 @@
       "System.Security.Cryptography.Cng/5.0.0": {
         "dependencies": {
           "System.Formats.Asn1": "9.0.1"
+        }
+      },
+      "System.Security.Cryptography.Pkcs/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
         }
       },
       "System.Security.Cryptography.ProtectedData/6.0.0": {
@@ -1125,7 +1345,13 @@
         }
       },
       "System.Threading.Channels/7.0.0": {},
-      "System.Threading.RateLimiting/8.0.0": {},
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Windows.Extensions/6.0.0": {
         "dependencies": {
@@ -1158,10 +1384,13 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "EasyNetQ": "7.8.0",
+          "MailKit": "4.14.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
+          "Microsoft.ML": "1.5.5",
+          "Microsoft.ML.Recommender": "0.17.5",
+          "MimeKit": "4.14.0",
           "Newtonsoft.Json": "13.0.3",
-          "PodrziMe.Model": "1.0.0",
-          "RabbitMQ.Client": "7.1.2"
+          "PodrziMe.Model": "1.0.0"
         },
         "runtime": {
           "PodrziMe.Services.dll": {
@@ -1206,6 +1435,13 @@
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
+    "BouncyCastle.Cryptography/2.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vZsG2YILhthgRqO+ZVgRff4ZFKKTl0v7kqaVBLCtRvpREhfBP33pcWrdA3PRYgWuFL1RxiUFvjMUHTdBZlJcoA==",
+      "path": "bouncycastle.cryptography/2.6.1",
+      "hashPath": "bouncycastle.cryptography.2.6.1.nupkg.sha512"
+    },
     "EasyNetQ/7.8.0": {
       "type": "package",
       "serviceable": true,
@@ -1213,12 +1449,26 @@
       "path": "easynetq/7.8.0",
       "hashPath": "easynetq.7.8.0.nupkg.sha512"
     },
+    "EasyNetQ.Serialization.NewtonsoftJson/7.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tQCLbT5DbEVDr7obAIlcscNUHro3vlU7r5f0I0up9VPm2dJfr6hVrGOz8c1lroC30DaizwmWPKA6vPNCvPfQUA==",
+      "path": "easynetq.serialization.newtonsoftjson/7.8.0",
+      "hashPath": "easynetq.serialization.newtonsoftjson.7.8.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "MailKit/4.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rawu+h3lSSjKra0AxR+IUB99VQ7jWI+MvxThekqLhf+ic7VQ7a69lmPFW+LXuRYHla4ADcn3x16Gsvju3LTq9w==",
+      "path": "mailkit/4.14.1",
+      "hashPath": "mailkit.4.14.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1486,6 +1736,34 @@
       "path": "microsoft.identitymodel.tokens/6.35.0",
       "hashPath": "microsoft.identitymodel.tokens.6.35.0.nupkg.sha512"
     },
+    "Microsoft.ML/1.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nurKk3ABWSFEVWKxCx/c1mB+SiunzpoIUucT/f+Scann8h2ph8ETxXbQVyQq5UJQb7Q8xUwZFZPVJJrLlT7ROA==",
+      "path": "microsoft.ml/1.5.5",
+      "hashPath": "microsoft.ml.1.5.5.nupkg.sha512"
+    },
+    "Microsoft.ML.CpuMath/1.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W6wRFhZvZuy2mw1m8TIoThX/QvWRd2g4+Fgnv6tWzPDjlWaZWKtqhW93pW4hU9uGuYumJc1UZm4IzXKBAy68fQ==",
+      "path": "microsoft.ml.cpumath/1.5.5",
+      "hashPath": "microsoft.ml.cpumath.1.5.5.nupkg.sha512"
+    },
+    "Microsoft.ML.DataView/1.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O8FW8lFUdd5VRy/mCgSzhEdi8LfStMs00oyI5Yb6RwzRe0EoWFZgcta1oeBvSDRIF8SaAzFUcetKMllLzGRgNg==",
+      "path": "microsoft.ml.dataview/1.5.5",
+      "hashPath": "microsoft.ml.dataview.1.5.5.nupkg.sha512"
+    },
+    "Microsoft.ML.Recommender/0.17.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xunzHtAvY9YJi61fgi/DuhQZdkqSiBtW67xlyecQLqsE5oestBeesgl16VahiIopNH+oOPvc2jpaGG+lxVvrjA==",
+      "path": "microsoft.ml.recommender/0.17.5",
+      "hashPath": "microsoft.ml.recommender.0.17.5.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1528,6 +1806,13 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
+    "MimeKit/4.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g0LtsMC8DCTkc030C3UgVqbltOJmV5cz4AX8ASowz2ZA+lxopXSYtC1XXYmenxy606aWFLwi5Xy4cC/zyYjbjQ==",
+      "path": "mimekit/4.14.0",
+      "hashPath": "mimekit.4.14.0.nupkg.sha512"
+    },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1542,12 +1827,12 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
-    "RabbitMQ.Client/7.1.2": {
+    "RabbitMQ.Client/6.8.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
-      "path": "rabbitmq.client/7.1.2",
-      "hashPath": "rabbitmq.client.7.1.2.nupkg.sha512"
+      "sha512": "sha512-jNsmGgmCNw2S/NzskeN2ijtGywtH4Sk/G6jWUTD5sY9SrC27Xz6BsLIiB8hdsfjeyWCa4j4GvCIGkpE8wrjU1Q==",
+      "path": "rabbitmq.client/6.8.1",
+      "hashPath": "rabbitmq.client.6.8.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
@@ -1675,6 +1960,13 @@
       "path": "system.identitymodel.tokens.jwt/6.35.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512"
     },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
     "System.IO.Pipelines/9.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1682,12 +1974,12 @@
       "path": "system.io.pipelines/9.0.1",
       "hashPath": "system.io.pipelines.9.0.1.nupkg.sha512"
     },
-    "System.Memory/4.5.4": {
+    "System.Memory/4.5.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
-      "path": "system.memory/4.5.4",
-      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
     },
     "System.Memory.Data/1.0.2": {
       "type": "package",
@@ -1703,12 +1995,40 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.ILGeneration/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "path": "system.reflection.emit.ilgeneration/4.3.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
+      "path": "system.reflection.emit.lightweight/4.3.0",
+      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
+    },
     "System.Reflection.Metadata/7.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-MclTG61lsD9sYdpNz9xsKBzjsmsfCtcMZYXz/IUr2zlhaTaABonlr1ESeompTgM+Xk+IwtGYU7/voh3YWB/fWw==",
       "path": "system.reflection.metadata/7.0.0",
       "hashPath": "system.reflection.metadata.7.0.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
     },
     "System.Runtime/4.3.0": {
       "type": "package",
@@ -1744,6 +2064,13 @@
       "sha512": "sha512-jIMXsKn94T9JY7PvPq/tMfqa6GAaHpElRDpmG+SuL+D3+sTw2M8VhnibKnN8Tq+4JqbPJ/f+BwtLeDMEnzAvRg==",
       "path": "system.security.cryptography.cng/5.0.0",
       "hashPath": "system.security.cryptography.cng.5.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CoCRHFym33aUSf/NtWSVSZa99dkd0Hm7OCZUxORBjRB16LNhIEOf8THPqzIYlvKM0nNDAPTRBa1FxEECrgaxxA==",
+      "path": "system.security.cryptography.pkcs/8.0.1",
+      "hashPath": "system.security.cryptography.pkcs.8.0.1.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/6.0.0": {
       "type": "package",
@@ -1801,12 +2128,12 @@
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
-    "System.Threading.RateLimiting/8.0.0": {
+    "System.Threading.Tasks/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
-      "path": "system.threading.ratelimiting/8.0.0",
-      "hashPath": "system.threading.ratelimiting.8.0.0.nupkg.sha512"
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",

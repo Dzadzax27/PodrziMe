@@ -11,6 +11,7 @@ import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:podrzime_mobile/providers/uloga_provider.dart';
 import 'package:podrzime_mobile/providers/uspjesnaPrica_provider.dart';
 import 'package:podrzime_mobile/screens/pocetna.dart';
+import 'package:podrzime_mobile/screens/registracija.dart';
 import 'package:podrzime_mobile/utils/authorization.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/utils/uloga.dart';
@@ -164,34 +165,57 @@ class _LoginPageState extends State<LoginPage> {
                                     (x) => x?.korisnickoIme == username,
                                     orElse: () => null,
                                   );
+                              if (korisnik != null) {
+                                print('Kooorisniiik ${korisnik?.ulogaId}');
+                                Logiranikorisnik.korisnik = korisnik;
 
-                              print('Kooorisniiik ${korisnik?.ulogaId}');
-                              Logiranikorisnik.korisnik = korisnik;
+                                if (korisnik?.ulogaId == ulogaDonorId) {
+                                  UlogaLogiranogKorisnika.isDonor = true;
+                                  UlogaLogiranogKorisnika.isTakmicar = false;
+                                }
+                                if (korisnik?.ulogaId == ulogaTakmicarId) {
+                                  UlogaLogiranogKorisnika.isTakmicar = true;
+                                  UlogaLogiranogKorisnika.isDonor = false;
+                                }
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text("Uspješna prijava!"),
+                                      backgroundColor: Colors.green,
+                                    ),
+                                  );
+                                }
 
-                              if (korisnik?.ulogaId == ulogaDonorId) {
-                                UlogaLogiranogKorisnika.isDonor = true;
-                                UlogaLogiranogKorisnika.isTakmicar = false;
-                              }
-                              if (korisnik?.ulogaId == ulogaTakmicarId) {
-                                UlogaLogiranogKorisnika.isTakmicar = true;
-                                UlogaLogiranogKorisnika.isDonor = false;
-                              }
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Uspješna prijava!"),
-                                    backgroundColor: Colors.green,
+                                // TODO: Navigate to your home page here
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const PocetnaStranica(),
                                   ),
                                 );
+                              } else {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: const Text("Greška"),
+                                      content: const Text(
+                                        "Kredencijali nisu tačni",
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.of(
+                                              context,
+                                            ).pop(); // Close the dialog
+                                          },
+                                          child: const Text("OK"),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
                               }
-
-                              // TODO: Navigate to your home page here
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const PocetnaStranica(),
-                                ),
-                              );
                             } catch (e) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
@@ -217,10 +241,33 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
 
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const Registracija()),
+                    );
+                  },
                   child: const Text(
-                    "Zaboravili ste lozinku?",
+                    "Registriraj se",
                     style: TextStyle(color: Colors.green),
+                  ),
+                ),
+
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const PocetnaStranica(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    "Preskoči prijavu i idi na početnu",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ],

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure;
+using EasyNetQ;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
@@ -13,9 +15,11 @@ namespace PodrziMe.Controllers
     public class DonacijaController
     {
         private readonly IDonacijaService donacijeService;
-        public DonacijaController(ILogger<WeatherForecastController> logger, IDonacijaService donacijeService)
+        private CallRabbitMqAndCreateNotification callRabbitMqAndCreateNotification;
+        public DonacijaController(ILogger<WeatherForecastController> logger, IDonacijaService donacijeService, CallRabbitMqAndCreateNotification _callRabbitMqAndCreateNotification)
         {
             this.donacijeService = donacijeService;
+            callRabbitMqAndCreateNotification = _callRabbitMqAndCreateNotification;
         }
 
         [HttpGet("{id}")]
@@ -33,14 +37,19 @@ namespace PodrziMe.Controllers
         [HttpPost]
         public async Task<Model.Donacija> Insert(InsertDonacijeRequest request)
         {
-            return await donacijeService.Insert(request);
+            var response = await donacijeService.Insert(request);
+            Console.WriteLine($"DonacijaId: {response.DonacijaId}");
+            await callRabbitMqAndCreateNotification.SendNotificationAndCreateInDatabase(response);
+            return response;
         }
 
        
         [HttpPut("{id}")]
         public async Task<Model.Donacija> Update(int id,InsertDonacijeRequest request)
         {
-            return await donacijeService.Update(id,request);
+
+            var response = await donacijeService.Update(id, request);
+            return response;
         }
     }
 

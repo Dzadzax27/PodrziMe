@@ -6,8 +6,12 @@ import 'package:podrzime_mobile/modals/uspjesnaPrica.dart';
 import 'package:podrzime_mobile/providers/uspjesnaPrica_provider.dart';
 import 'package:podrzime_mobile/screens/dodaj_takmicara.dart';
 import 'package:podrzime_mobile/screens/login_page.dart';
+import 'package:podrzime_mobile/screens/pregled_svih_takmicara.dart';
+import 'package:podrzime_mobile/screens/pregled_svih_uspjesnihPrica.dart';
 import 'package:podrzime_mobile/screens/pregled_uspjesnih_prica.dart';
 import 'package:podrzime_mobile/utils/authorization.dart';
+import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
+import 'package:podrzime_mobile/utils/uloga.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -115,7 +119,22 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                             ),
                           ),
                           onPressed: () {
-                            // TODO: Navigate somewhere
+                            if (Authorization.password != null &&
+                                Authorization.username != null &&
+                                UlogaLogiranogKorisnika ==
+                                    UlogaLogiranogKorisnika.isDonor) {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => PregledSvihTakmicara(),
+                                ),
+                              );
+                            } else {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => LoginPage(),
+                                ),
+                              );
+                            }
                           },
                           child: const Text(
                             "Uplati odmah",
@@ -159,144 +178,183 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                 ),
                 const SizedBox(height: 12),
                 SizedBox(
-                  height: 240, // slightly taller to fit "See More"
-                  child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    itemCount: filteredListOfUspjesnaPrica.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: 12),
-                    itemBuilder: (context, index) {
-                      final item = filteredListOfUspjesnaPrica[index];
-                      final screenWidth = MediaQuery.of(context).size.width;
-                      final cardWidth = screenWidth * 0.8;
+                  height: 240,
+                  child: SizedBox(
+                    height: 240,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
 
-                      return SizedBox(
-                        width: cardWidth,
-                        child: Card(
-                          elevation: 6,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          clipBehavior: Clip.antiAlias,
-                          child: Stack(
-                            children: [
-                              // Background image
-                              Positioned.fill(
-                                child:
-                                    (item.slika != null &&
-                                        item.slika!.isNotEmpty)
-                                    ? Image.memory(
-                                        base64Decode(
-                                          item.slika!.startsWith('data:image')
-                                              ? item.slika!.split(',').last
-                                              : item.slika!,
-                                        ),
-                                        fit: BoxFit.cover,
-                                      )
-                                    : Container(
-                                        color: Colors.grey.shade300,
-                                        child: const Icon(
-                                          Icons.broken_image,
-                                          size: 60,
-                                          color: Colors.grey,
-                                        ),
-                                      ),
+                      // *** VAŽNO: prikazujemo max 3 priče + 1 strelica ako ima više ***
+                      itemCount: filteredListOfUspjesnaPrica.length > 3
+                          ? 4
+                          : filteredListOfUspjesnaPrica.length,
+
+                      separatorBuilder: (_, __) => const SizedBox(width: 12),
+
+                      itemBuilder: (context, index) {
+                        // *** ČETVRTI ELEMENT = STRELICA ***
+                        if (index == 3 &&
+                            filteredListOfUspjesnaPrica.length > 3) {
+                          return InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) =>
+                                      PregledSvihUspjesnihPrica(), // ← OVDJE OTVARAŠ SVE PRIČE
+                                ),
+                              );
+                            },
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.35,
+                              decoration: BoxDecoration(
+                                color: Colors.green.shade100,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 6,
+                                    offset: const Offset(0, 3),
+                                  ),
+                                ],
                               ),
+                              child: const Center(
+                                child: Icon(
+                                  Icons.arrow_forward,
+                                  size: 46,
+                                  color: Colors.green,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
 
-                              // Dark gradient overlay
-                              Positioned.fill(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Colors.transparent,
-                                        Colors.black.withOpacity(0.6),
-                                      ],
+                        // *** NORMALNA KARTICA PRIČE — OSTAVLJENA POTPUNO ISTA ***
+                        final item = filteredListOfUspjesnaPrica[index];
+                        final screenWidth = MediaQuery.of(context).size.width;
+                        final cardWidth = screenWidth * 0.8;
+
+                        return SizedBox(
+                          width: cardWidth,
+                          child: Card(
+                            elevation: 6,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            clipBehavior: Clip.antiAlias,
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                  child:
+                                      (item.slika != null &&
+                                          item.slika!.isNotEmpty)
+                                      ? Image.memory(
+                                          base64Decode(
+                                            item.slika!.startsWith('data:image')
+                                                ? item.slika!.split(',').last
+                                                : item.slika!,
+                                          ),
+                                          fit: BoxFit.cover,
+                                        )
+                                      : Container(
+                                          color: Colors.grey.shade300,
+                                          child: const Icon(
+                                            Icons.broken_image,
+                                            size: 60,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                ),
+
+                                Positioned.fill(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Colors.transparent,
+                                          Colors.black.withOpacity(0.6),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
 
-                              // Text overlay
-                              Positioned(
-                                left: 16,
-                                right: 16,
-                                bottom: 16,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      item.naslovPrice,
-                                      style: const TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                Positioned(
+                                  left: 16,
+                                  right: 16,
+                                  bottom: 16,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        item.naslovPrice,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Text(
-                                      item.prica.length > 80
-                                          ? '${item.prica.substring(0, 80)}...'
-                                          : item.prica,
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.white70,
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        item.prica.length > 80
+                                            ? '${item.prica.substring(0, 80)}...'
+                                            : item.prica,
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white70,
+                                        ),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                    const SizedBox(height: 8),
-                                    // See More button with icon
-                                    Align(
-                                      alignment: Alignment.centerRight,
-                                      child: TextButton.icon(
-                                        style: TextButton.styleFrom(
-                                          backgroundColor: Colors.white24,
-                                          foregroundColor: Colors.white,
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 12,
-                                            vertical: 4,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(
-                                              20,
+                                      const SizedBox(height: 8),
+                                      Align(
+                                        alignment: Alignment.centerRight,
+                                        child: TextButton.icon(
+                                          style: TextButton.styleFrom(
+                                            backgroundColor: Colors.white24,
+                                            foregroundColor: Colors.white,
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 12,
+                                              vertical: 4,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
                                             ),
                                           ),
-                                        ),
-                                        onPressed: () {
-                                          // Navigate to detail page or show full story
-                                          print(
+                                          onPressed: () {
                                             Navigator.of(context).push(
                                               MaterialPageRoute(
                                                 builder: (context) =>
                                                     PregledUspjesnihPrica(item),
                                               ),
-                                            ),
-                                          );
-                                        },
-                                        icon: const Icon(
-                                          Icons.arrow_forward,
-                                          size: 16,
-                                        ),
-                                        label: const Text(
-                                          "See More",
-                                          style: TextStyle(fontSize: 14),
+                                            );
+                                          },
+                                          icon: const Icon(
+                                            Icons.arrow_forward,
+                                            size: 16,
+                                          ),
+                                          label: const Text(
+                                            "See More",
+                                            style: TextStyle(fontSize: 14),
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
                 Container(
@@ -366,8 +424,9 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                       const SizedBox(height: 20),
                       ElevatedButton.icon(
                         onPressed: () {
-                          if (Authorization.username != null &&
-                              Authorization.password != null) {
+                          if ((Authorization.username != null &&
+                                  Authorization.password != null) &&
+                              UlogaLogiranogKorisnika.isDonor != true) {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => AddTakmicar(),

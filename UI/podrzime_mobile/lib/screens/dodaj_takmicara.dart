@@ -12,6 +12,7 @@ import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 
 class AddTakmicar extends StatefulWidget {
   final Takmicar? takmicar;
@@ -90,6 +91,13 @@ class _AddTakmicarState extends State<AddTakmicar> {
         _formKey.currentState!.value,
       );
 
+      if (_selectedImage == null) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('Molimo odaberite sliku')));
+        return; // ne nastavlja dalje dok se slika ne izabere
+      }
+
       if (datumRodjenja != null) {
         formValues['datumRodjenja'] = datumRodjenja!
             .toIso8601String()
@@ -119,6 +127,11 @@ class _AddTakmicarState extends State<AddTakmicar> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('Takmičar uspješno dodan!')));
+      _formKey.currentState?.reset();
+      setState(() {
+        _selectedImage = null;
+        datumRodjenja = null; // ako koristiš datum, resetuj i njega
+      });
     }
   }
 
@@ -190,14 +203,28 @@ class _AddTakmicarState extends State<AddTakmicar> {
                 FormBuilderTextField(
                   name: "ime",
                   decoration: InputDecoration(labelText: "Ime"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje ime je obavezno",
+                  ),
                 ),
                 FormBuilderTextField(
                   name: "prezime",
                   decoration: InputDecoration(labelText: "Prezime"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje prezime je obavezno",
+                  ),
                 ),
                 FormBuilderTextField(
                   name: "email",
                   decoration: InputDecoration(labelText: "Email"),
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(
+                      errorText: "Polje email je obavezno",
+                    ),
+                    FormBuilderValidators.email(
+                      errorText: "Unesite validnu email adresu",
+                    ),
+                  ]),
                 ),
                 FormBuilderDropdown<int>(
                   name: 'kategorijaId',
@@ -211,31 +238,44 @@ class _AddTakmicarState extends State<AddTakmicar> {
                         ),
                       )
                       .toList(),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje kategorija je obavezno",
+                  ),
                 ),
-                const SizedBox(height: 12),
-
                 FormBuilderTextField(
                   name: "omeni",
                   decoration: InputDecoration(labelText: "O meni"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje o meni je obavezno",
+                  ),
                 ),
                 FormBuilderTextField(
                   name: "uspjesi",
                   decoration: InputDecoration(labelText: "Uspjesi"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje uspjesi je obavezno",
+                  ),
                 ),
                 FormBuilderTextField(
                   name: "link",
                   decoration: InputDecoration(labelText: "Link"),
+                  // link nije obavezno, nema validatora
                 ),
-                const SizedBox(height: 8),
-                if (_selectedImage != null)
-                  FormBuilderTextField(
-                    name: "brojTelefona",
-                    decoration: InputDecoration(labelText: "Broj telefona"),
+                FormBuilderTextField(
+                  name: "brojTelefona",
+                  decoration: InputDecoration(labelText: "Broj telefona"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje broj telefona je obavezno",
                   ),
+                ),
                 FormBuilderTextField(
                   name: "zeljenaDonacija",
                   decoration: InputDecoration(labelText: "Željena donacija"),
+                  validator: FormBuilderValidators.required(
+                    errorText: "Polje željena donacija je obavezno",
+                  ),
                 ),
+
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _submitForm,

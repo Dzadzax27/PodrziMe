@@ -15,7 +15,6 @@ namespace PodrziMe.Model.Requests
         public string Prezime { get; set; } = null!;
         [Required]
         public string? Zanimanje { get; set; }
-
         public int? UkupnoDonacija { get; set; }
         [Required]
         public DateOnly? DatumRodjenja { get; set; }

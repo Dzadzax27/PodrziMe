@@ -38,7 +38,7 @@ namespace PodrziMe.Controllers
             return _takmicariService.Insert(request);
         }
         [HttpPut("{id}")]
-        public Task<Model.Korisnik> Update(int id, UpdateKorisnikRequest request)
+        public Task<Model.Korisnik> Update(int id, UpdateKorisnikProfil request)
         {
             return _takmicariService.Update(id, request);
         }

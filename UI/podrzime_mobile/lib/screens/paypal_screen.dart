@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:podrzime_mobile/modals/donacija.dart';
 import 'package:podrzime_mobile/modals/takmicar.dart';
 import 'package:podrzime_mobile/providers/donacije_provider.dart';
+import 'package:podrzime_mobile/providers/donor_provider.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:podrzime_mobile/providers/paypal_provider.dart';
@@ -26,6 +27,7 @@ class PayPalPaymentScreen extends StatefulWidget {
 class _PayPalPaymentScreenState extends State<PayPalPaymentScreen> {
   final PaypalProvider _paypalProvider = PaypalProvider();
   final DonacijaProvider _donacijaProvider = DonacijaProvider();
+  final DonorProvider _donorProvider = DonorProvider();
 
   bool _isLoading = true;
   String? _approvalUrl;
@@ -138,12 +140,16 @@ class _PayPalPaymentScreenState extends State<PayPalPaymentScreen> {
     try {
       final captureResult = await _paypalProvider.captureOrder(orderId);
       final today = DateTime.now();
-
+      var donori = await _donorProvider.get();
+      var donor = donori.firstWhere(
+        (x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId,
+      );
+      print('DONOR $donor');
       var donation = Donacija(
         datumDonacije: DateTime(today.year, today.month, today.day),
         iznosDonacije: widget.amount.toInt(),
         kandidatId: widget.takmicar.kandidatId,
-        donorId: Logiranikorisnik.korisnik?.korisnikId,
+        donorId: donor.donorId,
       );
       print('Donacija $donation');
       await _donacijaProvider.insert(donation);

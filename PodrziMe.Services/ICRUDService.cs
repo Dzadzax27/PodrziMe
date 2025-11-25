@@ -10,5 +10,6 @@ namespace PodrziMe.Services
     {
         Task<T> Insert(TInsert insert);
         Task<T> Update(int id, TUpdate update);
+        Task<bool> Delete(int id);
     }
 }

@@ -18,4 +18,6 @@ public partial class UspjesnaPrica
     public byte[]? Slika { get; set; }
 
     public virtual Kandidat? Kandidat { get; set; }
+
+    public virtual ICollection<Komentar> Komentars { get; set; } = new List<Komentar>();
 }

@@ -1,9 +1,11 @@
+using EasyNetQ;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using PodrziMe;
 using PodrziMe.Filters;
+using PodrziMe.Model;
 using PodrziMe.Services;
 using PodrziMe.Services.Database;
 
@@ -19,6 +21,13 @@ builder.Services.AddTransient<IUspjesnaPrica, UspjesnaPricaService>();
 builder.Services.AddTransient<IKorisnikService, KorisnikService>();
 builder.Services.AddTransient<IUlogaService, UlogaService>();
 builder.Services.AddTransient<ITakmicarProfilService, TakmicarProfilService>();
+builder.Services.AddTransient<IKomentarService, KomentarService>();
+builder.Services.AddScoped<MessageService>();
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddSingleton(RabbitHutch.CreateBus("host=localhost"));
+builder.Services.AddTransient<CallRabbitMqAndCreateNotification>();
+
 
 builder.Services.AddControllers(x =>
 {
@@ -74,5 +83,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dataContext = scope.ServiceProvider.GetRequiredService<PodrziMeContext>();
+   //dataContext.Database.EnsureCreated();
+
+    dataContext.Database.Migrate();
+}
 
 app.Run();

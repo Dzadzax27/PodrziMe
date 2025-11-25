@@ -31,6 +31,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getKorisniciWithoutFilter();
+    });
+  }
+
+  @override
   void dispose() {
     _ftsEditingController.dispose();
     _sifraController.dispose();
@@ -284,9 +292,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 Column(
                   children: [
                     TextButton(
-                      onPressed: () {
+                      onPressed: () async {
                         e.odobren = true;
-                        _takmicarProvider.update(e.kandidatId!, e.toJson());
+                        await _takmicarProvider.update(
+                          e.kandidatId!,
+                          e.toJson(),
+                        );
+                        _getKorisniciWithoutFilter();
                       },
                       child: const Text("Prihvati"),
                     ),
@@ -294,6 +306,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       onPressed: () {
                         e.odobren = false;
                         _takmicarProvider.update(e.kandidatId!, e.toJson());
+                        _getKorisniciWithoutFilter();
                       },
                       child: const Text(
                         "Odbij",
@@ -345,6 +358,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
   void _getKorisnici(Map<String, dynamic> filter) async {
     var response = await _takmicarProvider.get(filter: filter);
+    setState(() {
+      filteredList = (response.result ?? [])
+          .where((item) => item.odobren == null)
+          .toList();
+    });
+  }
+
+  Future<void> _getKorisniciWithoutFilter() async {
+    var response = await _takmicarProvider.get();
     setState(() {
       filteredList = (response.result ?? [])
           .where((item) => item.odobren == null)

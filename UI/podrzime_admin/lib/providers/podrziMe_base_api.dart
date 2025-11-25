@@ -63,6 +63,23 @@ class ApiProvider<T> with ChangeNotifier {
     }
   }
 
+  Future<bool> delete(int id) async {
+    var url = "$_baseUrl$_endpoint/$id";
+    var uri = Uri.parse(url);
+    var headers = createHeaders();
+
+    var response = await http.delete(uri, headers: headers);
+
+    if (isValidResponse(response)) {
+      if (response.body.isNotEmpty) {
+        return jsonDecode(response.body) as bool;
+      }
+      return true; // ako backend vrati prazan body (204 No Content)
+    } else {
+      throw Exception("Unknown error");
+    }
+  }
+
   bool isValidResponse(Response response) {
     if (response.statusCode < 299) {
       return true;

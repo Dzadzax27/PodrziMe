@@ -18,4 +18,6 @@ public partial class Donacija
     public virtual Donor? Donor { get; set; }
 
     public virtual Kandidat Kandidat { get; set; } = null!;
+
+    public virtual ICollection<Obavijest> Obavijests { get; set; } = new List<Obavijest>();
 }

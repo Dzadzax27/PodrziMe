@@ -39,6 +39,8 @@ public partial class Kandidat
 
     public virtual Kategorija? Kategorija { get; set; }
 
+    public virtual ICollection<Obavijest> Obavijests { get; set; } = new List<Obavijest>();
+
     public virtual TakmicarProfil? TakmicarProfil { get; set; }
 
     public virtual ICollection<UspjesnaPrica> UspjesnaPricas { get; set; } = new List<UspjesnaPrica>();

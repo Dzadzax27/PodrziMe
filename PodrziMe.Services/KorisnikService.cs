@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public class KorisnikService :BaseCRUDService<Model.Korisnik,Database.Korisnik,KorisnikSearchObject,InsertKorisnikRequest,UpdateKorisnikRequest>, IKorisnikService
+    public class KorisnikService :BaseCRUDService<Model.Korisnik,Database.Korisnik,KorisnikSearchObject,InsertKorisnikRequest,UpdateKorisnikProfil>, IKorisnikService
     {
         PodrziMeContext _context;
         IMapper _mapper;
@@ -69,7 +69,7 @@ namespace PodrziMe.Services
             return Convert.ToBase64String(inArray);
         }
 
-        public override void BeforeUpdate(UpdateKorisnikRequest request, Database.Korisnik entity)
+        public override void BeforeUpdate(UpdateKorisnikProfil request, Database.Korisnik entity)
         {
             base.BeforeUpdate(request, entity);
 

@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using EasyNetQ;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.ML;
+using Microsoft.ML.Data;
+using Microsoft.ML.Trainers;
 using PodrziMe.Model;
 using PodrziMe.Model.Requests;
 using PodrziMe.Model.SearchObjects;
@@ -48,5 +51,123 @@ namespace PodrziMe.Services
             }
             return base.AddInclude(query, search);
         }
+
+        static MLContext mlContext = null;
+        static object isLocked = new object();
+        static ITransformer model = null;
+
+        public List<Model.Kandidat> Recommend(int donorId)
+        {
+            lock (isLocked)
+            {
+                if (mlContext == null)
+                {
+                    mlContext = new MLContext();
+
+                    var donationData = _context.Donacijas.ToList();
+
+                    var data = donationData.Select(x => new DonationEntry
+                    {
+                        DonorID = (uint)x.DonorId,
+                        CandidateID = (uint)x.KandidatId,
+                        Label = (float)x.IznosDonacije
+                    }).ToList();
+
+                    var trainData = mlContext.Data.LoadFromEnumerable(data);
+
+                    var options = new MatrixFactorizationTrainer.Options
+                    {
+                        MatrixColumnIndexColumnName = nameof(DonationEntry.DonorID),
+                        MatrixRowIndexColumnName = nameof(DonationEntry.CandidateID),
+                        LabelColumnName = nameof(DonationEntry.Label),
+                        LossFunction = MatrixFactorizationTrainer.LossFunctionType.SquareLossOneClass,
+                        Alpha = 0.01,
+                        Lambda = 0.025,
+                        NumberOfIterations = 100,
+                        C = 0.00001
+                    };
+
+                    model = mlContext.Recommendation()
+                                     .Trainers
+                                     .MatrixFactorization(options)
+                                     .Fit(trainData);
+                }
+            }
+
+            if (model == null)
+                throw new Exception("Model nije učitan! Provjeri path i treniranje.");
+
+            var validCandidateIds = _context.Donacijas
+            .Select(x => x.KandidatId)
+            .Distinct()
+            .ToList();
+
+            var allCandidates = _context.Kandidats
+                .Where(x => x.Odobren == true && validCandidateIds.Contains(x.KandidatId))
+                .ToList();
+
+
+            var predictionEngine =
+                mlContext.Model.CreatePredictionEngine<DonationEntry, Copurchase_prediction>(model);
+
+            var predictionScores = new List<(Database.Kandidat kandidat, float score)>();
+
+            foreach (var candidate in allCandidates)
+            {
+                var prediction = predictionEngine.Predict(new DonationEntry
+                {
+                    DonorID = (uint)donorId,
+                    CandidateID = (uint)candidate.KandidatId
+                });
+
+                predictionScores.Add((candidate, prediction.Score));
+            }
+
+            // 2️⃣ — FILTRIRANJE NAKON PREDIKCIJA
+
+            // Kandidati kojima je donor već donirao (ne preporučivati)
+            var alreadyDonatedIds = _context.Donacijas
+                .Where(x => x.KandidatId == donorId)
+                .Select(x => x.KandidatId)
+                .ToList();
+
+            // Donorova zadnja kategorija (za kategorijski filter)
+            var lastDonation = _context.Donacijas
+                .Where(x => x.DonorId == donorId)
+                .OrderByDescending(x => x.DonacijaId)
+                .FirstOrDefault();
+
+            int? donorCategoryId = lastDonation?.Kandidat?.KategorijaId;
+
+            // 3️⃣ — filtriraj rezultate prije .Take(3)
+            var filtered = predictionScores
+                .Where(x =>
+                    !alreadyDonatedIds.Contains(x.kandidat.KandidatId) &&         // nije već donirao
+                    (donorCategoryId == null || x.kandidat.KategorijaId == donorCategoryId) // ista kategorija
+                )
+                .OrderByDescending(x => x.score)
+                .Take(3)
+                .Select(x => x.kandidat)
+                .ToList();
+
+            return _mapper.Map<List<Model.Kandidat>>(filtered);
+        }
+
     }
+
+    public class Copurchase_prediction
+        {
+            public float Score { get; set; }
+        }
+
+        public class DonationEntry
+        {
+            [KeyType(count: 1000)]
+            public uint DonorID { get; set; }
+
+            [KeyType(count: 1000)]
+            public uint CandidateID { get; set; }
+
+            public float Label { get; set; }  // iznos donacije ili 1 ako je implicitno
+        }
 }

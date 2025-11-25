@@ -330,7 +330,7 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     var response = await _takmicarProvider.get(filter);
     setState(() {
       filteredList = (response ?? [])
-          .where((item) => item.odobren == null)
+          .where((item) => item.odobren == true)
           .toList();
     });
     print('FilteredList  $filteredList');

@@ -29,7 +29,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget> {
         child: ListView(
           children: [
             ListTile(
-              title: Text('Back'),
+              title: Text('Logout'),
               onTap: () {
                 Navigator.of(
                   context,

@@ -52,5 +52,17 @@ namespace PodrziMe.Services
             await _dbContext.SaveChangesAsync();
             return Mapper.Map<T>(entity);
         }
+
+        public async Task<bool> Delete(int id)
+        {
+            var entity = await _dbContext.Kandidats.FindAsync(id);
+
+            if (entity == null)
+                return false;
+
+            _dbContext.Kandidats.Remove(entity);
+            await _dbContext.SaveChangesAsync();
+            return true;
+        }
     }
 }
