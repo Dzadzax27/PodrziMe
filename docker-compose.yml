@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   podrzime-sql:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -17,7 +19,7 @@ services:
       context: .
     environment:
       - ConnectionStrings:ePodrziMeConnection=Server=podrzime-sql;Database=PodrziMe;User=sa;Password=QWElkj132!;TrustServerCertificate=True
-      - RabbitMQ:Host=rabbitmq
+      - RabbitMQ:Host=podrzime-rabbitmq
       - RabbitMQ:Username=guest
       - RabbitMQ:Password=guest
       - ASPNETCORE_ENVIRONMENT=Development
@@ -25,19 +27,33 @@ services:
       - "7220:7220"
     depends_on:
       - podrzime-sql
-      - rabbitmq
+      - podrzime-rabbitmq
     networks:
       - podrzimenet2025
 
-  rabbitmq:
+  podrzime-rabbitmq:
     image: rabbitmq:3-management
     container_name: podrzime-rabbitmq
     ports:
-      - "5672:5672"     # Main message port
-      - "15672:15672"   # Web dashboard
+      - "5672:5672"
+      - "15672:15672"
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - podrzimenet2025
+
+  podrzime-subscriber:
+    container_name: podrzime-subscriber
+    build:
+      context: .
+      dockerfile: PodrziMe.Subscriber/Dockerfile
+    environment:
+      - RabbitMQ:Host=podrzime-rabbitmq
+      - RabbitMQ:Username=guest
+      - RabbitMQ:Password=guest
+    depends_on:
+      - podrzime-rabbitmq
     networks:
       - podrzimenet2025
 

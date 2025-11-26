@@ -63,7 +63,9 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
   Future<void> loadDonacije() async {
     donacije = await _donacijaProvider.get();
 
-    donacije = donacije?.where((x) => x.donorId == donor!.donorId).toList();
+    setState(() {
+      donacije = donacije?.where((x) => x.donorId == donor!.donorId).toList();
+    });
   }
 
   Future<void> loadDonor() async {
@@ -73,6 +75,8 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
     final lista = donorList
         .where((x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId)
         .toList();
+
+    print('Listaa ${lista}');
 
     setState(() {
       donor = lista.isNotEmpty ? lista.first : null;
@@ -140,7 +144,6 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
         _idTakmicar = k.ulogaId;
       }
     }
-    print('Kategorijeee ${idDonor}  ${_idTakmicar}');
     setState(
       () => {
         uloge = result,

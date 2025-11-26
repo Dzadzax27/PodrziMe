@@ -193,7 +193,6 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                       separatorBuilder: (_, __) => const SizedBox(width: 12),
 
                       itemBuilder: (context, index) {
-                        // *** ČETVRTI ELEMENT = STRELICA ***
                         if (index == 3 &&
                             filteredListOfUspjesnaPrica.length > 3) {
                           return InkWell(
@@ -424,9 +423,11 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                       const SizedBox(height: 20),
                       ElevatedButton.icon(
                         onPressed: () {
-                          if ((Authorization.username != null &&
-                                  Authorization.password != null) &&
-                              UlogaLogiranogKorisnika.isDonor != true) {
+                          print(
+                            (Authorization.username != null &&
+                                Authorization.password != null),
+                          );
+                          if (UlogaLogiranogKorisnika.isTakmicar == true) {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => AddTakmicar(),

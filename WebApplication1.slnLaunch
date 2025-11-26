@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PodrziMe.Subscriber\\PodrziMe.Subscriber.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

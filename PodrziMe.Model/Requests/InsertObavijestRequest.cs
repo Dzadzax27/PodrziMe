@@ -8,10 +8,11 @@ namespace PodrziMe.Model.Requests
 {
     public class InsertObavijestRequest
     {
-        public int KorisnikId { get; set; }
-
         public string Sadrzaj { get; set; } = null!;
 
         public DateTime DatumKreiranja { get; set; }
+
+        public int KandidatId { get; set; }
+
     }
 }

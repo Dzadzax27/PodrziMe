@@ -43,5 +43,11 @@ namespace PodrziMe.Controllers
         {
             return _uspjesnaPricaService.Update(id, request);
         }
+
+        [HttpDelete("{id}")]
+        public Task<bool> Delete(int id)
+        {
+            return _uspjesnaPricaService.Delete(id);
+        }
     }
 }

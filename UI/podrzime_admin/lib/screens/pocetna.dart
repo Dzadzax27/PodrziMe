@@ -118,7 +118,6 @@ class _PocetnaStranica extends State<PocetnaStranica> {
 
   Widget _buildForm() {
     return Scaffold(
-      appBar: AppBar(title: const Text('Kandidati'), centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

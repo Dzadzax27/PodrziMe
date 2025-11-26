@@ -1,17 +1,53 @@
-using System.Runtime.InteropServices;
+using EasyNetQ;
+using EasyNetQ.DI;
+using EasyNetQ.Serialization.NewtonsoftJson;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PodrziMe.Model;
+using PodrziMe.Model.Requests;
+using PodrziMe.Services;
+using WebApplication1.Controllers;
 
-// In SDK-style projects such as this one, several assembly attributes that were historically
-// defined in this file are now automatically added during build and populated with
-// values defined in project properties. For details of which attributes are included
-// and how to customise this process see: https://aka.ms/assembly-info-properties
+namespace PodrziMe.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class Obavijest
+    {
+        private readonly IObavijestService _obavijestService;
+        public Obavijest(ILogger<WeatherForecastController> logger, IObavijestService obavijest)
+        {
+            this._obavijestService = obavijest;
+        }
 
+        [HttpGet("{id}")]
+        [AllowAnonymous]
+        public async Task<Model.Obavijest> GetById(int id)
+        {
+            return await _obavijestService.GetById(id);
+        }
 
-// Setting ComVisible to false makes the types in this assembly not visible to COM
-// components.  If you need to access a type in this assembly from COM, set the ComVisible
-// attribute to true on that type.
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<PagedResult<Model.Obavijest>> Get([FromQuery] Model.SearchObjects.ObavijestSearchObject request)
+        {
+            return await _obavijestService.Get(request);
+        }
 
-[assembly: ComVisible(false)]
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<Model.Obavijest> Insert(InsertObavijestRequest request)
+        {
+            var response = await _obavijestService.Insert(request);
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM.
+            return response;
+        }
 
-[assembly: Guid("31fe4294-45b5-4639-b1ad-33bb48eeaefe")]
+        [HttpDelete("{id}")]
+        public Task<bool> Delete(int id)
+        {
+            return _obavijestService.Delete(id);
+        }
+    }
+}

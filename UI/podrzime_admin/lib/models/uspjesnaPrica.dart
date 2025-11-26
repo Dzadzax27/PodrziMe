@@ -4,6 +4,7 @@ part 'uspjesnaPrica.g.dart';
 
 @JsonSerializable()
 class UspjesnaPrica {
+  int? uspjesnaPricaId;
   String naslovPrice;
   String prica;
   int? ukupnaDonacija;
@@ -16,6 +17,7 @@ class UspjesnaPrica {
     this.ukupnaDonacija,
     this.kandidatId,
     this.slika,
+    this.uspjesnaPricaId,
   });
 
   // Factory for JSON deserialization

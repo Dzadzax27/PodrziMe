@@ -28,6 +28,11 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _takmicarProvider = context.read<TakmicarProvider>();
+    var filter = {
+      'fts': _ftsEditingController.text,
+      'isKategorijaIncluded': true,
+    };
+    _getKorisnici(filter);
   }
 
   @override
@@ -326,7 +331,7 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     });
   }
 
-  void _getKorisnici(Map<String, dynamic> filter) async {
+  Future<void> _getKorisnici(Map<String, dynamic> filter) async {
     var response = await _takmicarProvider.get(filter);
     setState(() {
       filteredList = (response ?? [])

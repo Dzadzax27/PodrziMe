@@ -45,7 +45,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget> {
               },
             ),
             ListTile(
-              title: Text('Naslovna strana'),
+              title: Text('Zahtjev za kandidatima'),
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

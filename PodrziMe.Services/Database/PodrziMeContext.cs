@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
+
 
 namespace PodrziMe.Services.Database;
 
@@ -43,6 +46,7 @@ public partial class PodrziMeContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         modelBuilder.Entity<Donacija>(entity =>
         {
             entity.HasKey(e => e.DonacijaId).HasName("PK__Donacija__9C1ECCB4383B4F42");
@@ -219,8 +223,102 @@ public partial class PodrziMeContext : DbContext
                 .HasConstraintName("FK_Kandidat");
         });
 
+
+
+        // --- Seed Uloge ---
+        modelBuilder.Entity<Uloga>().HasData(
+            new Uloga { UlogaId = 1, NazivUloge = "Admin" },
+            new Uloga { UlogaId = 2, NazivUloge = "Donor" },
+            new Uloga { UlogaId = 3, NazivUloge = "Takmicar" }
+        );
+
+        // --- Seed Kategorije ---
+        modelBuilder.Entity<Kategorija>().HasData(
+            new Kategorija { KategorijaId = 1, NazivKategorije = "Umjetnost", PodKategorijaId = null },
+            new Kategorija { KategorijaId = 2, NazivKategorije = "Sport", PodKategorijaId = null },
+            new Kategorija { KategorijaId = 3, NazivKategorije = "Edukacija", PodKategorijaId = null }
+        );
+
+        // --- Seed Korisnici ---
+        modelBuilder.Entity<Korisnik>().HasData(
+            new Korisnik { KorisnikId = 1, KorisnickoIme = "admin", Email = "sadzidadzihoburovic@gmail.com", Telefon = "062345789",  LozinkaHash = "SJW4Y+qr4aKm78tlos2v21ZiTYo=", LozinkaSalt = "xJ6xqG2Wa6vWJ3KkpUMvKQ==", UlogaId = 1 },
+            new Korisnik { KorisnikId = 2, KorisnickoIme = "donor1", Email = "sadzidadzihoburovic@gmail.com", Telefon = "062134356", LozinkaHash = "E1TAZVqPdEt9KxbkjfkflFtQPOo=", LozinkaSalt = "lNjzTD7GTj7GW1XMbDzi5g==", UlogaId = 2 },
+            new Korisnik { KorisnikId = 3, KorisnickoIme = "donor2", Email = "sadzidadzihoburovic@gmail.com", Telefon = "063567733", LozinkaHash = "NPT8rZmc+yVuV2vhcrwnvr7ycuw=", LozinkaSalt = "O87afcPNhyDohs0enN3s9w==", UlogaId = 2 },
+            new Korisnik { KorisnikId = 4, KorisnickoIme = "takmicar1", Email = "sadzidadzihoburovic@gmail.com", Telefon = "06145567", LozinkaHash = "dq7eJffewzTn7ch44lB9+okjbAY=", LozinkaSalt = "POJT/jZEcYEjxeZpkfXORg==", UlogaId = 3 }
+        );
+
+
+        // --- Seed Donor Profil ---
+        modelBuilder.Entity<Donor>().HasData(
+            new Donor
+            {
+                DonorId = 1,
+                Ime = "Marko",
+                Prezime = "Markovic",
+                KorisnikId = 2,
+                Zanimanje = "Inzenjer",
+                UkupnoDonacija = 100
+            }
+        );
+
+        // --- Seed Takmicar Profil ---
+        modelBuilder.Entity<TakmicarProfil>().HasData(
+            new TakmicarProfil
+            {
+                TakmicarProfilId = 1,
+                Ime = "Ana",
+                Prezime = "Anic",
+                KorisnikId = 4,
+                DatumRodjenja = new DateOnly(1995, 5, 10)
+            }
+        );
+
+        modelBuilder.Entity<Kandidat>().HasData(
+            new Kandidat
+            {
+                KandidatId = 1,
+                Ime = "Ana",
+                Prezime = "Anic",
+                Omeni = "Ja sam Ana volim umjetnost takmicim se u umjestnost",
+                Uspjesi = "1. mjesto na literernom konkursu za rad Bosno moja",
+                BrojTelefona = 063456644,
+                ZeljenaDonacija = 2000,
+                KategorijaId = 2,
+                Odobren = true,
+                TakmicarProfilId = 1,
+                DatumRodjenja = new DateOnly(1995, 5, 10)
+
+            }
+        );
+
+    // --- Seed Uspjesne Price ---
+    modelBuilder.Entity<UspjesnaPrica>().HasData(
+            new UspjesnaPrica
+            {
+                UspjesnaPricaId = 1,
+                NaslovPrice = "Uspjeh u umjetnosti",
+                Prica = "Ana je osvojila nagradu u slikanju.",
+                UkupnaDonacija = 50
+            },
+            new UspjesnaPrica
+            {
+                UspjesnaPricaId = 2,
+                NaslovPrice = "Sportaški uspjeh",
+                Prica = "Marko je pobijedio na maratonu.",
+                UkupnaDonacija = 75
+            },
+            new UspjesnaPrica
+            {
+                UspjesnaPricaId = 3,
+                NaslovPrice = "Edukacija za budućnost",
+                Prica = "Jovana je završila kurs programiranja.",
+                UkupnaDonacija = 120
+            }
+        );
         OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    
 }

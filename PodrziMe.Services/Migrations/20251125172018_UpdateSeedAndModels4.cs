@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace PodrziMe.Services.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class UpdateSeedAndModels4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -259,6 +261,62 @@ namespace PodrziMe.Services.Migrations
                         principalTable: "UspjesnaPrica",
                         principalColumn: "UspjesnaPricaId");
                 });
+
+            migrationBuilder.InsertData(
+                table: "Kategorija",
+                columns: new[] { "KategorijaId", "NazivKategorije", "PodKategorijaId" },
+                values: new object[,]
+                {
+                    { 1, "Umjetnost", null },
+                    { 2, "Sport", null },
+                    { 3, "Edukacija", null }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Uloga",
+                columns: new[] { "UlogaId", "NazivUloge" },
+                values: new object[,]
+                {
+                    { 1, "Admin" },
+                    { 2, "Donor" },
+                    { 3, "Takmicar" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "UspjesnaPrica",
+                columns: new[] { "UspjesnaPricaId", "KandidatId", "NaslovPrice", "Prica", "Slika", "UkupnaDonacija" },
+                values: new object[,]
+                {
+                    { 1, null, "Uspjeh u umjetnosti", "Ana je osvojila nagradu u slikanju.", null, 50 },
+                    { 2, null, "Sportaški uspjeh", "Marko je pobijedio na maratonu.", null, 75 },
+                    { 3, null, "Edukacija za budućnost", "Jovana je završila kurs programiranja.", null, 120 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Korisnik",
+                columns: new[] { "KorisnikId", "Email", "KorisnickoIme", "LozinkaHash", "LozinkaSalt", "Status", "Telefon", "UlogaId" },
+                values: new object[,]
+                {
+                    { 1, "sadzidadzihoburovic@gmail.com", "admin", "SJW4Y+qr4aKm78tlos2v21ZiTYo=", "xJ6xqG2Wa6vWJ3KkpUMvKQ==", null, "062345789", 1 },
+                    { 2, "sadzidadzihoburovic@gmail.com", "donor1", "E1TAZVqPdEt9KxbkjfkflFtQPOo=", "lNjzTD7GTj7GW1XMbDzi5g==", null, "062134356", 2 },
+                    { 3, "sadzidadzihoburovic@gmail.com", "donor2", "NPT8rZmc+yVuV2vhcrwnvr7ycuw=", "O87afcPNhyDohs0enN3s9w==", null, "063567733", 2 },
+                    { 4, "sadzidadzihoburovic@gmail.com", "takmicar1", "dq7eJffewzTn7ch44lB9+okjbAY=", "POJT/jZEcYEjxeZpkfXORg==", null, "06145567", 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Donor",
+                columns: new[] { "DonorId", "DatumRodjenja", "Email", "Ime", "KorisnikId", "Prezime", "UkupnoDonacija", "Zanimanje" },
+                values: new object[] { 1, null, null, "Marko", 2, "Markovic", 100, "Inzenjer" });
+
+            migrationBuilder.InsertData(
+                table: "TakmicarProfil",
+                columns: new[] { "TakmicarProfilId", "DatumRodjenja", "Ime", "KorisnikId", "Prezime" },
+                values: new object[] { 1, new DateOnly(1995, 5, 10), "Ana", 4, "Anic" });
+
+            migrationBuilder.InsertData(
+                table: "Kandidat",
+                columns: new[] { "KandidatId", "BrojTelefona", "DatumRodjenja", "Email", "Ime", "KategorijaId", "Link", "Odobren", "Omeni", "Prezime", "Slika", "SlikaThumb", "TakmicarProfilId", "Uspjesi", "ZeljenaDonacija" },
+                values: new object[] { 1, 63456644, new DateOnly(1995, 5, 10), null, "Ana", 2, null, true, "Ja sam Ana volim umjetnost takmicim se u umjestnost", "Anic", null, null, 1, "1. mjesto na literernom konkursu za rad Bosno moja", 2000 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Donacija_DonorId",

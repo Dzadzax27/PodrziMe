@@ -36,7 +36,7 @@ class _OMeniDonorState extends State<OMeniDonor> {
           (x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId,
         ) // ili neki ID
         .toList();
-
+    print('Listaa ${lista}');
     setState(() {
       donor = lista.isNotEmpty ? lista.first : null;
       isLoading = false;

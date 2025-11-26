@@ -22,6 +22,7 @@ class PaypalProvider extends ApiProvider<PaypalOrder> {
     var _baseUrl = AppConfig.baseApiUrl;
     var url = _baseUrl + "api/Checkout/create-order";
     var uri = Uri.parse(url);
+    print('URI ${uri}');
     var headers = createHeaders();
 
     var body = jsonEncode({

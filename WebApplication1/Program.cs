@@ -27,6 +27,7 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddSingleton(RabbitHutch.CreateBus("host=localhost"));
 builder.Services.AddTransient<CallRabbitMqAndCreateNotification>();
+builder.Services.AddTransient<IObavijestService, ObavijestService>();
 
 
 builder.Services.AddControllers(x =>

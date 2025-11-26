@@ -13,7 +13,7 @@ class ApiProvider<T> with ChangeNotifier {
     _endpoint = endpoint;
     _baseUrl = const String.fromEnvironment(
       "baseUrl",
-      defaultValue: "https://localhost:7220/",
+      defaultValue: "http://localhost:7220/",
     );
   }
 

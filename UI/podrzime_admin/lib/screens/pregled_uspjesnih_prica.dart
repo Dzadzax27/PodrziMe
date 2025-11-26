@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:podrzime_admin/models/komentar.dart';
 import 'package:podrzime_admin/models/search_result.dart';
 import 'package:podrzime_admin/models/uspjesnaPrica.dart';
+import 'package:podrzime_admin/providers/komentar_provider.dart';
 import 'package:podrzime_admin/providers/uspjesnaPrica_provider.dart';
 import 'package:podrzime_admin/screens/dodaj_uspjesnu_pricu.dart';
 import 'package:podrzime_admin/widgets/master_screen.dart';
@@ -16,6 +18,7 @@ class PregledUspjesnihPrica extends StatefulWidget {
 
 class _PregledUspjesnihPrica extends State<PregledUspjesnihPrica> {
   late UspjesnaPricaProvider _uspjesnaPricaProvider;
+  late KomentarProvider _komentarProvider;
   late SearchResult<UspjesnaPrica> listOfUsojesnaPrica;
   List<UspjesnaPrica> filteredListOfUspjesnaPrica = [];
   bool isLoading = true;
@@ -24,7 +27,16 @@ class _PregledUspjesnihPrica extends State<PregledUspjesnihPrica> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _uspjesnaPricaProvider = context.read<UspjesnaPricaProvider>();
+    _komentarProvider = context.read<KomentarProvider>();
     setUspjesnaPrica();
+  }
+
+  Future<List<Komentar>> fetchKomentari(int? uspjesnaPricaId) async {
+    var lista = await _komentarProvider.get(); // await jer je Future
+    final komentari = (lista.result ?? [])
+        .where((k) => k.uspjesnaPricaId == uspjesnaPricaId)
+        .toList();
+    return komentari;
   }
 
   Future<void> setUspjesnaPrica() async {
@@ -114,6 +126,18 @@ class _PregledUspjesnihPrica extends State<PregledUspjesnihPrica> {
                   ),
                   child: Text(e.prica),
                 ),
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    'Komentari:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ),
+                // _buildKomentare(e.uspjesnaPricaId),
               ],
             ),
           );
@@ -121,4 +145,67 @@ class _PregledUspjesnihPrica extends State<PregledUspjesnihPrica> {
       ),
     );
   }
+
+  // Widget _buildKomentare(int? uspjesnaPricaId) {
+  //   // Filtriramo komentare za trenutnu priču
+  //   var lista = _komentarProvider.get();
+  //   final komentari = (lista.result ?? [])
+  //       .where((k) => k.uspjesnaPricaId == uspjesnaPricaId)
+  //       .toList();
+
+  //   if (komentari.isEmpty) {
+  //     return const Padding(
+  //       padding: EdgeInsets.all(16.0),
+  //       child: Text('Nema komentara za prikaz.'),
+  //     );
+  //   }
+
+  //   return Padding(
+  //     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+  //     child: Column(
+  //       children: komentari.map((k) {
+  //         return Container(
+  //           margin: const EdgeInsets.only(bottom: 8),
+  //           padding: const EdgeInsets.all(8),
+  //           decoration: BoxDecoration(
+  //             color: Colors.grey[200],
+  //             borderRadius: BorderRadius.circular(8),
+  //           ),
+  //           child: Row(
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: [
+  //               CircleAvatar(
+  //                 radius: 16,
+  //                 child: Text(
+  //                   k.korisnik?.ime?.substring(0, 1) ?? '?',
+  //                   style: const TextStyle(fontSize: 14),
+  //                 ),
+  //               ),
+  //               const SizedBox(width: 8),
+  //               Expanded(
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: [
+  //                     Text(
+  //                       k.korisnik?.ime ?? 'Nepoznat korisnik',
+  //                       style: const TextStyle(
+  //                         fontWeight: FontWeight.bold,
+  //                         fontSize: 14,
+  //                       ),
+  //                     ),
+  //                     const SizedBox(height: 4),
+  //                     Text(
+  //                       k.komentar1 ?? '',
+  //                       style: const TextStyle(fontSize: 14),
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         );
+  //       }).toList(),
+  //     ),
+  //   );
+  // }
 }

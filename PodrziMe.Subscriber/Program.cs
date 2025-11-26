@@ -18,38 +18,79 @@ var options = Options.Create(emailSettings);
 
 var emailService = new EmailService(options);
 
-// 3) Kreiraj RabbitMQ bus
-using var bus = RabbitHutch.CreateBus("host=localhost");
-
-// 4) Subscribe na queue
-bus.PubSub.Subscribe<DTOKandidatDonacijaObavijest>("donacija_notification_queue", async msg =>
+// 3) Kreiraj RabbitMQ bus s retry logikom
+IBus bus = null;
+int busRetries = 10;
+for (int i = 0; i < busRetries; i++)
 {
-    Console.WriteLine($"Primljena donacija za: {msg.toEmail}, Iznos: {msg.Donacija} KM");
-
     try
     {
-        Console.WriteLine("Loaded Email Settings:");
-        Console.WriteLine($"FromEmail: {options.Value.FromEmail}");
-        Console.WriteLine($"Password: {options.Value.AppPassword}");
-        Console.WriteLine($"SmtpServer: {options.Value.SmtpHost}");
-        Console.WriteLine($"Port: {options.Value.SmtpPort}");
+        bus = RabbitHutch.CreateBus("host=podrzime-rabbitmq;username=guest;password=guest");
+        Console.WriteLine("Connected to RabbitMQ.");
+        break;
+    }
+    catch
+    {
+        Console.WriteLine($"RabbitMQ not ready ({i + 1}/{busRetries}). Retrying in 3s...");
+        Thread.Sleep(3000);
+    }
+}
 
-        string ime = msg.KandidatIme;
-        string prezime = msg.KandidatPrezime;
-        string toEmail = msg.toEmail;
-        decimal iznos = msg.Donacija;
+if (bus == null)
+{
+    Console.WriteLine("Failed to connect to RabbitMQ. Exiting.");
+    return;
+}
 
-        // Slanje personalizovanog emaila
-        await emailService.SendNewTakmicarEmail(toEmail, ime, prezime, iznos);
+// 4) Retry loop za subscribe (sprečava TaskCanceledException)
+int subscribeRetries = 10;
+for (int i = 0; i < subscribeRetries; i++)
+{
+    try
+    {
+        // Simple string subscription
+        bus.PubSub.Subscribe<string>("hello_sub", msg =>
+        {
+            Console.WriteLine("Received: " + msg);
+        });
 
-        Console.WriteLine("Email uspješno poslan!");
+        // DTO subscription s email logikom
+        bus.PubSub.Subscribe<DTOKandidatDonacijaObavijest>("donacija_notification_queue", async msg =>
+        {
+            Console.WriteLine($"Primljena donacija za: {msg.toEmail}, Iznos: {msg.Donacija} KM");
+
+            try
+            {
+                Console.WriteLine("Loaded Email Settings:");
+                Console.WriteLine($"FromEmail: {options.Value.FromEmail}");
+                Console.WriteLine($"Password: {options.Value.AppPassword}");
+                Console.WriteLine($"SmtpServer: {options.Value.SmtpHost}");
+                Console.WriteLine($"Port: {options.Value.SmtpPort}");
+
+                string ime = msg.KandidatIme;
+                string prezime = msg.KandidatPrezime;
+                string toEmail = msg.toEmail;
+                decimal iznos = msg.Donacija;
+
+                await emailService.SendNewTakmicarEmail(toEmail, ime, prezime, iznos);
+                Console.WriteLine("Email uspješno poslan!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Greška pri slanju emaila: {ex.Message}");
+            }
+        });
+
+        Console.WriteLine("Subscribed successfully.");
+        break; // Ako subscribe prođe, izlazi iz loop-a
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"Greška pri slanju emaila: {ex.Message}");
-    }
-});
+        Console.WriteLine($"Subscribe failed ({i + 1}/{subscribeRetries}), retrying in 3s: {ex.Message}");
+        Thread.Sleep(3000);
 
-// 5) Drži aplikaciju aktivnom
+    }
+}
+
 Console.WriteLine("Subscriber aktivan. Pritiskom na CTRL+C izlazite.");
 await Task.Delay(-1);

@@ -19,7 +19,7 @@ class ApiProvider<T> with ChangeNotifier {
   ApiProvider(String endpoint) {
     _baseUrl = const String.fromEnvironment(
       "baseUrl",
-      defaultValue: "https://10.0.2.2:7220/",
+      defaultValue: "http://10.0.2.2:7220/",
     );
     print("baseurl: $_baseUrl");
 
@@ -69,17 +69,27 @@ class ApiProvider<T> with ChangeNotifier {
     }
   }
 
+  Future<bool> delete(int id) async {
+    var url = '$_baseUrl$_endpoint/$id';
+    var uri = Uri.parse(url);
+    var headers = createHeaders();
+
+    print('Deleting entity with id: $id');
+
+    var response = await http!.delete(uri, headers: headers);
+
+    print('Delete response: ${response.statusCode} ${response.body}');
+
+    if (response.statusCode >= 200 && response.statusCode < 300) {
+      return true;
+    } else if (response.statusCode == 404) {
+      return false;
+    } else {
+      throw Exception('Failed to delete entity');
+    }
+  }
+
   bool isValidResponse(Response response) {
-    // final responseData = jsonDecode(response.body);
-    // final errorCode = responseData['code'];
-
-    // print('Errroooor code $errorCode');
-
-    // if (errorCode == 2627 || errorCode == 2627) {
-    //   ErrorCode.errorUniqueField = true;
-    //   print('Here i am');
-    //   return true;
-    // }
     if (response.statusCode < 299) {
       ErrorCode.errorUniqueField = false;
       return true;

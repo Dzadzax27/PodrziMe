@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:podrzime_admin/providers/donacija_provider.dart';
 import 'package:podrzime_admin/providers/donor_provider.dart';
 import 'package:podrzime_admin/providers/kategorija_provider.dart';
+import 'package:podrzime_admin/providers/komentar_provider.dart';
+import 'package:podrzime_admin/providers/korisnik_provider.dart';
 import 'package:podrzime_admin/providers/takmicar_provider.dart';
+import 'package:podrzime_admin/providers/uloga_provider.dart';
 import 'package:podrzime_admin/providers/uspjesnaPrica_provider.dart';
 import 'package:podrzime_admin/screens/login_page.dart';
 import 'package:podrzime_admin/screens/pocetna.dart';
@@ -17,6 +20,9 @@ void main() {
         ChangeNotifierProvider(create: (_) => KategorijaProvider()),
         ChangeNotifierProvider(create: (_) => UspjesnaPricaProvider()),
         ChangeNotifierProvider(create: (_) => DonorProvider()),
+        ChangeNotifierProvider(create: (_) => KorisnikProvider()),
+        ChangeNotifierProvider(create: (_) => UlogaProvider()),
+        ChangeNotifierProvider(create: (_) => KomentarProvider()),
       ],
       child: const MyApp(),
     ),

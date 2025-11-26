@@ -91,6 +91,17 @@ namespace PodrziMe.Services.Migrations
                     b.HasIndex("KorisnikId");
 
                     b.ToTable("Donor", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            DonorId = 1,
+                            Ime = "Marko",
+                            KorisnikId = 2,
+                            Prezime = "Markovic",
+                            UkupnoDonacija = 100,
+                            Zanimanje = "Inzenjer"
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Kandidat", b =>
@@ -155,6 +166,22 @@ namespace PodrziMe.Services.Migrations
                     b.HasIndex(new[] { "KategorijaId" }, "IX_Kandidat_KategorijaId");
 
                     b.ToTable("Kandidat", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KandidatId = 1,
+                            BrojTelefona = 63456644,
+                            DatumRodjenja = new DateOnly(1995, 5, 10),
+                            Ime = "Ana",
+                            KategorijaId = 2,
+                            Odobren = true,
+                            Omeni = "Ja sam Ana volim umjetnost takmicim se u umjestnost",
+                            Prezime = "Anic",
+                            TakmicarProfilId = 1,
+                            Uspjesi = "1. mjesto na literernom konkursu za rad Bosno moja",
+                            ZeljenaDonacija = 2000
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Kategorija", b =>
@@ -179,6 +206,23 @@ namespace PodrziMe.Services.Migrations
                     b.HasIndex(new[] { "PodKategorijaId" }, "IX_Kategorija_PodKategorijaId");
 
                     b.ToTable("Kategorija", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KategorijaId = 1,
+                            NazivKategorije = "Umjetnost"
+                        },
+                        new
+                        {
+                            KategorijaId = 2,
+                            NazivKategorije = "Sport"
+                        },
+                        new
+                        {
+                            KategorijaId = 3,
+                            NazivKategorije = "Edukacija"
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Komentar", b =>
@@ -256,6 +300,48 @@ namespace PodrziMe.Services.Migrations
                         .IsUnique();
 
                     b.ToTable("Korisnik", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KorisnikId = 1,
+                            Email = "sadzidadzihoburovic@gmail.com",
+                            KorisnickoIme = "admin",
+                            LozinkaHash = "SJW4Y+qr4aKm78tlos2v21ZiTYo=",
+                            LozinkaSalt = "xJ6xqG2Wa6vWJ3KkpUMvKQ==",
+                            Telefon = "062345789",
+                            UlogaId = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            Email = "sadzidadzihoburovic@gmail.com",
+                            KorisnickoIme = "donor1",
+                            LozinkaHash = "E1TAZVqPdEt9KxbkjfkflFtQPOo=",
+                            LozinkaSalt = "lNjzTD7GTj7GW1XMbDzi5g==",
+                            Telefon = "062134356",
+                            UlogaId = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            Email = "sadzidadzihoburovic@gmail.com",
+                            KorisnickoIme = "donor2",
+                            LozinkaHash = "NPT8rZmc+yVuV2vhcrwnvr7ycuw=",
+                            LozinkaSalt = "O87afcPNhyDohs0enN3s9w==",
+                            Telefon = "063567733",
+                            UlogaId = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            Email = "sadzidadzihoburovic@gmail.com",
+                            KorisnickoIme = "takmicar1",
+                            LozinkaHash = "dq7eJffewzTn7ch44lB9+okjbAY=",
+                            LozinkaSalt = "POJT/jZEcYEjxeZpkfXORg==",
+                            Telefon = "06145567",
+                            UlogaId = 3
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Obavijest", b =>
@@ -340,6 +426,16 @@ namespace PodrziMe.Services.Migrations
                     b.HasIndex("KorisnikId");
 
                     b.ToTable("TakmicarProfil", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            TakmicarProfilId = 1,
+                            DatumRodjenja = new DateOnly(1995, 5, 10),
+                            Ime = "Ana",
+                            KorisnikId = 4,
+                            Prezime = "Anic"
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Uloga", b =>
@@ -359,6 +455,23 @@ namespace PodrziMe.Services.Migrations
                         .HasName("PK__Uloga__DCAB23CB44AA88F0");
 
                     b.ToTable("Uloga", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UlogaId = 1,
+                            NazivUloge = "Admin"
+                        },
+                        new
+                        {
+                            UlogaId = 2,
+                            NazivUloge = "Donor"
+                        },
+                        new
+                        {
+                            UlogaId = 3,
+                            NazivUloge = "Takmicar"
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.UspjesnaPrica", b =>
@@ -393,6 +506,29 @@ namespace PodrziMe.Services.Migrations
                     b.HasIndex(new[] { "KandidatId" }, "IX_UspjesnaPrica_KandidatId");
 
                     b.ToTable("UspjesnaPrica", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UspjesnaPricaId = 1,
+                            NaslovPrice = "Uspjeh u umjetnosti",
+                            Prica = "Ana je osvojila nagradu u slikanju.",
+                            UkupnaDonacija = 50
+                        },
+                        new
+                        {
+                            UspjesnaPricaId = 2,
+                            NaslovPrice = "Sportaški uspjeh",
+                            Prica = "Marko je pobijedio na maratonu.",
+                            UkupnaDonacija = 75
+                        },
+                        new
+                        {
+                            UspjesnaPricaId = 3,
+                            NaslovPrice = "Edukacija za budućnost",
+                            Prica = "Jovana je završila kurs programiranja.",
+                            UkupnaDonacija = 120
+                        });
                 });
 
             modelBuilder.Entity("PodrziMe.Services.Database.Donacija", b =>

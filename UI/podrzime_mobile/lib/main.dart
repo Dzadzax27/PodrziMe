@@ -5,6 +5,7 @@ import 'package:podrzime_mobile/providers/donor_provider.dart';
 import 'package:podrzime_mobile/providers/kategorija_provider.dart';
 import 'package:podrzime_mobile/providers/komentar_provider.dart';
 import 'package:podrzime_mobile/providers/korisnik_provider.dart';
+import 'package:podrzime_mobile/providers/obavijest_provider.dart';
 import 'package:podrzime_mobile/providers/takmicarProfil_provider.dart';
 import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:podrzime_mobile/providers/uloga_provider.dart';
@@ -27,6 +28,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => DonorProvider()),
         ChangeNotifierProvider(create: (_) => TakmicarProfilProvider()),
         ChangeNotifierProvider(create: (_) => KomentarProvider()),
+        ChangeNotifierProvider(create: (_) => ObavijestProvider()),
       ],
       child: const MyApp(),
     ),

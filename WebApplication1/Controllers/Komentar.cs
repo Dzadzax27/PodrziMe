@@ -48,5 +48,11 @@ namespace PodrziMe.Controllers
         {
             return _komentarService.Update(id, request);
         }
+
+        [HttpDelete("{id}")]
+        public Task<bool> Delete(int id)
+        {
+            return _komentarService.Delete(id);
+        }
     }
 }

@@ -48,7 +48,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return MasterScreenWidget(
-      title: "Naslovna strana",
+      title: "Zahtjev za kandidatima",
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -88,7 +88,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                     controller: _ftsEditingController,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.search),
-                      labelText: "Ime, prezime ili naziv",
+                      labelText: "Ime",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -103,7 +103,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       prefixIcon: const Icon(
                         Icons.confirmation_number_outlined,
                       ),
-                      labelText: "Šifra",
+                      labelText: "Prezime",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -114,8 +114,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 ElevatedButton.icon(
                   onPressed: () {
                     var filter = {
-                      'fts': _ftsEditingController.text,
-                      'sifra': _sifraController.text,
+                      'ime': _ftsEditingController.text,
+                      'fts': _sifraController.text,
                       'isKategorijaIncluded': true,
                     };
                     _getKorisnici(filter);

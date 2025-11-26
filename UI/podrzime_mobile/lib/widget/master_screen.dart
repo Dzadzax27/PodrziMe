@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:podrzime_mobile/modals/kategorija.dart';
 import 'package:podrzime_mobile/providers/kategorija_provider.dart';
+import 'package:podrzime_mobile/screens/dodaj_TakmicarProfil.dart';
 import 'package:podrzime_mobile/screens/dodaj_takmicara.dart';
 import 'package:podrzime_mobile/screens/login_page.dart';
 import 'package:podrzime_mobile/screens/oMeni_donor.dart';
 import 'package:podrzime_mobile/screens/oMeni_takmicar.dart';
 import 'package:podrzime_mobile/screens/pocetna.dart';
+import 'package:podrzime_mobile/screens/pregled_obavijest.dart';
 import 'package:podrzime_mobile/screens/pregled_svih_takmicara.dart';
 import 'package:podrzime_mobile/screens/pregled_svih_uspjesnihPrica.dart';
 import 'package:podrzime_mobile/screens/registracija.dart';
@@ -72,6 +74,10 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => PregledSvihTakmicara()),
           );
+        } else if (title == 'Dodaj Kandidata') {
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => AddTakmicar()));
         } else if (title == 'O meni') {
           Navigator.of(
             context,
@@ -90,6 +96,10 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
               builder: (context) => PregledSvihUspjesnihPrica(),
             ),
           );
+        } else if (title == 'Pregledaj obavijesti donacija') {
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => ObavijestiPage()));
         }
       },
       borderRadius: BorderRadius.circular(8),
@@ -241,6 +251,12 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                             const Divider(height: 1),
                             UlogaLogiranogKorisnika.isTakmicar == true
                                 ? _buildMenuItem('Dodaj Kandidata')
+                                : const SizedBox.shrink(),
+                            const Divider(height: 1),
+                            UlogaLogiranogKorisnika.isTakmicar == true
+                                ? _buildMenuItem(
+                                    'Pregledaj obavijesti donacija',
+                                  )
                                 : const SizedBox.shrink(),
                             const Divider(height: 1),
                             _buildMenuItem('Pregled Kandidata'),
