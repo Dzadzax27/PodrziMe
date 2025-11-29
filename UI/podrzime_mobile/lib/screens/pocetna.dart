@@ -35,7 +35,7 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
 
   @override
   Widget build(BuildContext context) {
-    return MasterScreenWidget(title: 'Home', child: _buildBody(context));
+    return MasterScreenWidget(title: 'Pocetna', child: _buildBody(context));
   }
 
   Widget _buildBody(BuildContext context) {
@@ -119,10 +119,10 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                             ),
                           ),
                           onPressed: () {
+                            print(" Uloga ${UlogaLogiranogKorisnika.isDonor}");
                             if (Authorization.password != null &&
                                 Authorization.username != null &&
-                                UlogaLogiranogKorisnika ==
-                                    UlogaLogiranogKorisnika.isDonor) {
+                                UlogaLogiranogKorisnika.isDonor == true) {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => PregledSvihTakmicara(),
@@ -442,8 +442,10 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                           }
                         },
                         icon: const Icon(Icons.person_add_alt_1),
-                        label: const Text(
-                          "Prijavi se kao kandidat",
+                        label: Text(
+                          UlogaLogiranogKorisnika.isTakmicar ?? false
+                              ? "Prijavi takmicara koji zasluzuje donaciju!"
+                              : "Prijavi se kao kandidat",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,

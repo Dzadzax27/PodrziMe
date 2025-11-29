@@ -19,6 +19,8 @@ class _PregledDonoraState extends State<PregledDonora> {
   List<Donor> filteredDonors = [];
   bool isLoading = true;
 
+  final TextEditingController _searchController = TextEditingController();
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -42,12 +44,38 @@ class _PregledDonoraState extends State<PregledDonora> {
     }
   }
 
+  void _filterDonors(String query) {
+    final lowerQuery = query.toLowerCase();
+    setState(() {
+      filteredDonors = (listOfDonors.result ?? []).where((donor) {
+        final fullName = '${donor.ime ?? ''} ${donor.prezime ?? ''}'
+            .toLowerCase();
+        return fullName.contains(lowerQuery);
+      }).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MasterScreenWidget(
       title: 'Pregled Donora',
       child: Column(
         children: [
+          const SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: TextField(
+              controller: _searchController,
+              onChanged: _filterDonors,
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search),
+                labelText: 'Pretraga po imenu ili prezimenu',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ),
           const SizedBox(height: 16),
           Expanded(child: _buildBody()),
         ],

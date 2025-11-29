@@ -5,6 +5,10 @@
       {
         "Path": "PodrziMe.Subscriber\\PodrziMe.Subscriber.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "WebApplication1\\PodrziMe.csproj",
+        "Action": "Start"
       }
     ]
   }

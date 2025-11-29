@@ -8,7 +8,7 @@ class Kategorija {
   String? nazivKategorije;
   int? podKategorijaId;
 
-  Kategorija({this.kategorijaId});
+  Kategorija({this.kategorijaId, this.nazivKategorije, this.podKategorijaId});
 
   factory Kategorija.fromJson(Map<String, dynamic> json) =>
       _$KategorijaFromJson(json);

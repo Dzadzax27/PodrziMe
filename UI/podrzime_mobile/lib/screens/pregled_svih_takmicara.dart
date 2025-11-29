@@ -16,6 +16,7 @@ class PregledSvihTakmicara extends StatefulWidget {
 class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   late TakmicarProvider _takmicarProvider;
   List<Takmicar> filteredList = [];
+  List<Takmicar> _allItems = [];
 
   final TextEditingController _ftsEditingController = TextEditingController();
   final TextEditingController _sifraController = TextEditingController();
@@ -28,11 +29,7 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _takmicarProvider = context.read<TakmicarProvider>();
-    var filter = {
-      'fts': _ftsEditingController.text,
-      'isKategorijaIncluded': true,
-    };
-    _getKorisnici(filter);
+    _getKorisniciWithoutFilter();
   }
 
   @override
@@ -45,7 +42,7 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   @override
   Widget build(BuildContext context) {
     return MasterScreenWidget(
-      title: "Naslovna strana",
+      title: "Pregled kandidata",
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -69,61 +66,106 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "🔍 Pretraga takmičara",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 50, 70, 90),
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            // Search input field
-            TextField(
-              controller: _ftsEditingController,
-              decoration: InputDecoration(
-                hintText: "Unesi ime, prezime ili naziv...",
-                prefixIcon: const Icon(Icons.search, color: Colors.grey),
-                filled: true,
-                fillColor: Colors.grey[100],
-                contentPadding: const EdgeInsets.symmetric(
-                  vertical: 14,
-                  horizontal: 16,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-            const SizedBox(height: 12),
-
-            // Search button
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  var filter = {
-                    'fts': _ftsEditingController.text,
-                    'isKategorijaIncluded': true,
-                  };
-                  _getKorisnici(filter);
-                },
-                icon: const Icon(Icons.search),
-                label: const Text(
-                  "Pretraži",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 191, 69, 60),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "🔍 Pretraga takmičara",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 50, 70, 90),
                   ),
                 ),
-              ),
+                const SizedBox(height: 20),
+
+                // Ime
+                TextField(
+                  controller: _ftsEditingController,
+                  onChanged: (value) {
+                    var filter = {
+                      'ime': value,
+                      'fts': _sifraController.text,
+                      'isKategorijaIncluded': true,
+                    };
+                    _getKorisnici(filter);
+                  },
+                  decoration: InputDecoration(
+                    hintText: "Unesi ime",
+                    prefixIcon: const Icon(Icons.person, color: Colors.grey),
+                    filled: true,
+                    fillColor: Colors.grey[100],
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 14,
+                      horizontal: 16,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                // Prezime
+                TextField(
+                  controller: _sifraController,
+                  onChanged: (value) {
+                    var filter = {
+                      'ime': _ftsEditingController.text,
+                      'fts': value,
+                      'isKategorijaIncluded': true,
+                    };
+                    _getKorisnici(filter);
+                  },
+                  decoration: InputDecoration(
+                    hintText: "Unesi prezime",
+                    prefixIcon: const Icon(Icons.badge, color: Colors.grey),
+                    filled: true,
+                    fillColor: Colors.grey[100],
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 14,
+                      horizontal: 16,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+
+                // Dugme za pretragu
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      var filter = {
+                        'ime': _ftsEditingController.text,
+                        'fts': _sifraController.text,
+                        'isKategorijaIncluded': true,
+                      };
+                      _getKorisnici(filter);
+                    },
+                    icon: const Icon(Icons.search),
+                    label: const Text(
+                      "Pretraži",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 191, 69, 60),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
 
             const SizedBox(height: 24),
@@ -309,8 +351,15 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
         isEducationSelected = !isEducationSelected;
       }
 
-      if (isSportSelected || isArtSelected || isEducationSelected) {
-        filteredList = filteredList
+      final selectedCount = [
+        isSportSelected,
+        isArtSelected,
+        isEducationSelected,
+      ].where((x) => x).length;
+
+      if ((isSportSelected || isArtSelected || isEducationSelected) &&
+          selectedCount == 1) {
+        filteredList = _allItems
             .where(
               (item) =>
                   (isSportSelected &&
@@ -322,22 +371,43 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
             )
             .toList();
       } else {
-        var filter = {
-          'fts': _ftsEditingController.text,
-          'isKategorijaIncluded': true,
-        };
-        _getKorisnici(filter);
+        if (selectedCount > 1) {
+          filteredList = [];
+        } else {
+          var filter = {
+            'fts': _ftsEditingController.text,
+            'sifra': _sifraController.text,
+            'isKategorijaIncluded': true,
+          };
+          _getKorisnici(filter);
+        }
       }
     });
   }
 
   Future<void> _getKorisnici(Map<String, dynamic> filter) async {
     var response = await _takmicarProvider.get(filter);
+
     setState(() {
       filteredList = (response ?? [])
           .where((item) => item.odobren == true)
           .toList();
     });
-    print('FilteredList  $filteredList');
+  }
+
+  Future<void> _getKorisniciWithoutFilter() async {
+    var filter = {
+      'fts': _ftsEditingController.text,
+      'sifra': _sifraController.text,
+      'isKategorijaIncluded': true,
+    };
+    var response = await _takmicarProvider.get(filter);
+    setState(() {
+      _allItems = (response ?? [])
+          .where((item) => item.odobren == true)
+          .toList();
+
+      filteredList = _allItems;
+    });
   }
 }

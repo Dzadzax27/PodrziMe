@@ -113,7 +113,7 @@ class _PocetnaStranica extends State<PocetnaStranica> {
   String username = Authorization.username ?? '';
   @override
   Widget build(BuildContext context) {
-    return MasterScreenWidget(title: "Dodaj Takmičara", child: _buildForm());
+    return MasterScreenWidget(title: "", child: _buildForm());
   }
 
   Widget _buildForm() {

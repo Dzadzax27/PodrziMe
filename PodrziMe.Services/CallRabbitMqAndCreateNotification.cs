@@ -60,6 +60,8 @@ public class CallRabbitMqAndCreateNotification
             Donacija = response.IznosDonacije,
         };
 
+
+
         // 3) Slanje preko RabbitMQ
         await _bus.PubSub.PublishAsync(obavijestZaEmaileService);
 

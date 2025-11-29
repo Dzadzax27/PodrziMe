@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:podrzime_admin/screens/login_page.dart';
 import 'package:podrzime_admin/screens/pocetna.dart';
+import 'package:podrzime_admin/screens/pregled_donora.dart';
 import 'package:podrzime_admin/screens/pregled_uspjesnih_prica.dart';
 
 class MasterScreenWidget extends StatefulWidget {
@@ -55,11 +56,11 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget> {
               },
             ),
             ListTile(
-              title: Text('Dodaj Takmicara'),
+              title: Text('Pregled donora'),
               onTap: () {
-                Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (context) => AddTakmicar()));
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => PregledDonora()),
+                );
               },
             ),
             ListTile(

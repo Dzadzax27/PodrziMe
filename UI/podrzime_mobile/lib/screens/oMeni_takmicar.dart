@@ -154,7 +154,8 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
   }
 
   Future<void> loadZahtjeveTakmicara() async {
-    takmicari = await _takmicarProvider.get();
+    var filter = {'isKategorijaIncluded': true};
+    takmicari = await _takmicarProvider.get(filter);
 
     // filtriraj samo takmicare koji pripadaju korisnikovom profilu
     takmicari = (takmicari ?? [])
@@ -358,13 +359,13 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
                     const SizedBox(width: 10),
                     _buildFilterChip(
                       icon: Icons.calendar_today,
-                      arrowDown: sortDescendingDate,
+                      arrowDown: true,
                       label: "Datum",
                       onTap: () {
-                        sortirajPoDatumu();
-                        setState(
-                          () => sortDescendingDate = !sortDescendingDate,
-                        );
+                        setState(() {
+                          sortDescendingDate = !sortDescendingDate;
+                          sortirajPoDatumu();
+                        });
                       },
                     ),
                   ],

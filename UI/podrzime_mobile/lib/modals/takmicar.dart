@@ -41,6 +41,7 @@ class Takmicar {
     this.kategorijaId,
     this.slika,
     this.odobren,
+    this.kategorija,
   });
 
   factory Takmicar.fromJson(Map<String, dynamic> json) =>
@@ -62,6 +63,8 @@ class Takmicar {
         'zeljenaDonacija :$zeljenaDonacija'
         'email : $email'
         'takmicarProfilId: $takmicarProfilId'
+        'kategorijaId: $kategorijaId'
+        'Kategorija : $kategorija'
         ')';
   }
 }

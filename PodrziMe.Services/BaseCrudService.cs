@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PodrziMe.Services
 {
@@ -53,16 +54,19 @@ namespace PodrziMe.Services
             return Mapper.Map<T>(entity);
         }
 
-        public async Task<bool> Delete(int id)
+        public virtual async Task<bool> Delete(int id)
         {
-            var entity = await _dbContext.Kandidats.FindAsync(id);
+            var set = _dbContext.Set<TDb>();
+            var entity = await set.FindAsync(id); 
 
             if (entity == null)
                 return false;
 
-            _dbContext.Kandidats.Remove(entity);
+            set.Remove(entity); 
             await _dbContext.SaveChangesAsync();
-            return true;
+
+            return true; 
         }
+
     }
 }

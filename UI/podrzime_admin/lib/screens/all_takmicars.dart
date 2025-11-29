@@ -16,13 +16,9 @@ class PregledSvihTakmicara extends StatefulWidget {
 class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   late TakmicarProvider _takmicarProvider;
   List<Takmicar> filteredList = [];
+  List<Takmicar> allTakmicari = [];
 
-  final TextEditingController _ftsEditingController = TextEditingController();
-  final TextEditingController _sifraController = TextEditingController();
-
-  bool isSportSelected = false;
-  bool isArtSelected = false;
-  bool isEducationSelected = false;
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void didChangeDependencies() {
@@ -39,6 +35,16 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     });
   }
 
+  void _filterTakmicari(String query) {
+    final lowerQuery = query.toLowerCase();
+    setState(() {
+      filteredList = allTakmicari.where((takmicar) {
+        final fullName = '${takmicar.ime} ${takmicar.prezime}'.toLowerCase();
+        return fullName.contains(lowerQuery);
+      }).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MasterScreenWidget(
@@ -47,7 +53,21 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const SizedBox(height: 20),
+            // 🔍 Search Field
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: TextField(
+                controller: _searchController,
+                onChanged: _filterTakmicari,
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.search),
+                  labelText: "Pretraga po imenu ili prezimenu",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+            ),
             Expanded(child: _buildTable()),
           ],
         ),
@@ -55,7 +75,6 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     );
   }
 
-  /// 📋 Table/List of Participants
   Widget _buildTable() {
     if (filteredList.isEmpty) {
       return const Center(
@@ -168,9 +187,10 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   Future<void> _getKorisnici() async {
     var response = await _takmicarProvider.get();
     setState(() {
-      filteredList = (response.result ?? [])
+      allTakmicari = (response.result ?? [])
           .where((item) => item.odobren == true)
           .toList();
+      filteredList = allTakmicari;
     });
   }
 }

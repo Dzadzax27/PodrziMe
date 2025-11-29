@@ -35,7 +35,7 @@ namespace PodrziMe.Services
 
             if (!string.IsNullOrWhiteSpace(search?.FTS))
             {
-                query = query.Where(x => x.Ime.Contains(search.FTS));
+                query = query.Where(x => x.Prezime.Contains(search.FTS));
             }
 
             return base.AddFilter(search, query);
@@ -104,6 +104,7 @@ namespace PodrziMe.Services
 
             var allCandidates = _context.Kandidats
                 .Where(x => x.Odobren == true && validCandidateIds.Contains(x.KandidatId))
+                .Include(x => x.Kategorija)
                 .ToList();
 
 
@@ -123,15 +124,11 @@ namespace PodrziMe.Services
                 predictionScores.Add((candidate, prediction.Score));
             }
 
-            // 2️⃣ — FILTRIRANJE NAKON PREDIKCIJA
-
-            // Kandidati kojima je donor već donirao (ne preporučivati)
             var alreadyDonatedIds = _context.Donacijas
                 .Where(x => x.KandidatId == donorId)
                 .Select(x => x.KandidatId)
                 .ToList();
 
-            // Donorova zadnja kategorija (za kategorijski filter)
             var lastDonation = _context.Donacijas
                 .Where(x => x.DonorId == donorId)
                 .OrderByDescending(x => x.DonacijaId)
@@ -139,11 +136,10 @@ namespace PodrziMe.Services
 
             int? donorCategoryId = lastDonation?.Kandidat?.KategorijaId;
 
-            // 3️⃣ — filtriraj rezultate prije .Take(3)
             var filtered = predictionScores
                 .Where(x =>
-                    !alreadyDonatedIds.Contains(x.kandidat.KandidatId) &&         // nije već donirao
-                    (donorCategoryId == null || x.kandidat.KategorijaId == donorCategoryId) // ista kategorija
+                    !alreadyDonatedIds.Contains(x.kandidat.KandidatId) &&         
+                    (donorCategoryId == null || x.kandidat.KategorijaId == donorCategoryId) 
                 )
                 .OrderByDescending(x => x.score)
                 .Take(3)

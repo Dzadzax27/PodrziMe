@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:podrzime_admin/models/korisnik.dart';
 import 'package:podrzime_admin/models/takmicar.dart';
 import 'package:podrzime_admin/providers/takmicar_provider.dart';
 import 'package:podrzime_admin/screens/pregled_takmicara.dart';
@@ -16,6 +17,7 @@ class HomePageScreen extends StatefulWidget {
 class _HomePageScreenState extends State<HomePageScreen> {
   late TakmicarProvider _takmicarProvider;
   List<Takmicar> filteredList = [];
+  List<Takmicar> _allItems = [];
 
   final TextEditingController _ftsEditingController = TextEditingController();
   final TextEditingController _sifraController = TextEditingController();
@@ -86,6 +88,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 Expanded(
                   child: TextField(
                     controller: _ftsEditingController,
+                    onChanged: (value) {
+                      var filter = {
+                        'ime': value,
+                        'fts': _sifraController.text,
+                        'isKategorijaIncluded': true,
+                      };
+                      _getKorisnici(filter);
+                    },
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.search),
                       labelText: "Ime",
@@ -99,6 +109,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 Expanded(
                   child: TextField(
                     controller: _sifraController,
+                    onChanged: (value) {
+                      var filter = {
+                        'ime': _ftsEditingController.text,
+                        'fts': value,
+                        'isKategorijaIncluded': true,
+                      };
+                      _getKorisnici(filter);
+                    },
                     decoration: InputDecoration(
                       prefixIcon: const Icon(
                         Icons.confirmation_number_outlined,
@@ -333,8 +351,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
         isEducationSelected = !isEducationSelected;
       }
 
-      if (isSportSelected || isArtSelected || isEducationSelected) {
-        filteredList = filteredList
+      final selectedCount = [
+        isSportSelected,
+        isArtSelected,
+        isEducationSelected,
+      ].where((x) => x).length;
+
+      if ((isSportSelected || isArtSelected || isEducationSelected) &&
+          selectedCount == 1) {
+        filteredList = _allItems
             .where(
               (item) =>
                   (isSportSelected &&
@@ -346,12 +371,16 @@ class _HomePageScreenState extends State<HomePageScreen> {
             )
             .toList();
       } else {
-        var filter = {
-          'fts': _ftsEditingController.text,
-          'sifra': _sifraController.text,
-          'isKategorijaIncluded': true,
-        };
-        _getKorisnici(filter);
+        if (selectedCount > 1) {
+          filteredList = [];
+        } else {
+          var filter = {
+            'fts': _ftsEditingController.text,
+            'sifra': _sifraController.text,
+            'isKategorijaIncluded': true,
+          };
+          _getKorisnici(filter);
+        }
       }
     });
   }
@@ -366,11 +395,18 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 
   Future<void> _getKorisniciWithoutFilter() async {
-    var response = await _takmicarProvider.get();
+    var filter = {
+      'fts': _ftsEditingController.text,
+      'sifra': _sifraController.text,
+      'isKategorijaIncluded': true,
+    };
+    var response = await _takmicarProvider.get(filter: filter);
     setState(() {
-      filteredList = (response.result ?? [])
+      _allItems = (response.result ?? [])
           .where((item) => item.odobren == null)
           .toList();
+
+      filteredList = _allItems;
     });
   }
 }

@@ -2,12 +2,17 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:podrzime_mobile/modals/donacija.dart';
+import 'package:podrzime_mobile/modals/kategorija.dart';
 import 'package:podrzime_mobile/modals/takmicar.dart';
+import 'package:podrzime_mobile/modals/takmicarProfil.dart';
 import 'package:podrzime_mobile/providers/donacije_provider.dart';
+import 'package:podrzime_mobile/providers/kategorija_provider.dart';
+import 'package:podrzime_mobile/providers/takmicarProfil_provider.dart';
 import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:podrzime_mobile/screens/login_page.dart';
 import 'package:podrzime_mobile/screens/paypal_screen.dart';
 import 'package:podrzime_mobile/utils/authorization.dart';
+import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/utils/uloga.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
 
@@ -22,17 +27,24 @@ class PregledTakmicara extends StatefulWidget {
 class _PregledTakmicaraState extends State<PregledTakmicara> {
   late TakmicarProvider _takmicarProvider;
   late DonacijaProvider _donacijaProvider;
+  late TakmicarProfilProvider _takmicarProfilProvider;
+  late KategorijaProvider _kategorijaProvider;
+  TakmicarProfil? takmicarProfil;
   List<Takmicar>? _preporuceniTakmicari;
   int ukupnoDonacija = 0;
+  List<Kategorija>? kategorije;
+  Kategorija? _odabranaKategorija;
 
   @override
   void initState() {
     super.initState();
     _takmicarProvider = TakmicarProvider();
     _donacijaProvider = DonacijaProvider();
+    _takmicarProfilProvider = TakmicarProfilProvider();
+    _kategorijaProvider = KategorijaProvider();
     recommendation();
-    print('Uloga ${UlogaLogiranogKorisnika.isDonor}');
     izracunajUkupanIznosDonacije();
+    getTakmicarProfil();
   }
 
   Future<void> izracunajUkupanIznosDonacije() async {
@@ -61,7 +73,7 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
 
   Widget _buildForm(BuildContext context) {
     var takmicar = widget.takmicar;
-    print('Zeljena donacija ${widget.takmicar.zeljenaDonacija}');
+    print('Zeljena donacija ${widget.takmicar}');
     double goal = widget.takmicar.zeljenaDonacija?.toDouble() ?? 0;
     double collected = ukupnoDonacija.toDouble();
     double remaining = (goal - collected).clamp(0, goal);
@@ -366,7 +378,9 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
                             )
                           : SizedBox.shrink(),
                     ),
-                    UlogaLogiranogKorisnika.isTakmicar == true
+                    UlogaLogiranogKorisnika.isTakmicar == true &&
+                            Logiranikorisnik.korisnik?.korisnikId ==
+                                takmicarProfil?.korisnikId
                         ? Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -559,5 +573,14 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
     });
 
     print('Preporuceni $_preporuceniTakmicari');
+  }
+
+  Future<void> getTakmicarProfil() async {
+    var lista = await _takmicarProfilProvider.get();
+    setState(() {
+      takmicarProfil = lista.firstWhere(
+        (x) => x.takmicarProfilId == widget.takmicar.takmicarProfilId,
+      );
+    });
   }
 }

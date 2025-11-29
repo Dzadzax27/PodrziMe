@@ -56,6 +56,7 @@ class Takmicar {
         'brojTelefona: $brojTelefona'
         'zeljenaDonacija :$zeljenaDonacija'
         'email : $email'
+        'kategorija : $kategorija'
         ')';
   }
 }

@@ -7,6 +7,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:podrzime_admin/models/uspjesnaPrica.dart';
 import 'package:podrzime_admin/providers/uspjesnaPrica_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 
 class DodajUspjesnuPricu extends StatefulWidget {
   UspjesnaPrica? uspjesnaPrica;
@@ -22,7 +24,6 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
   Map<String, dynamic> _initialValue = {};
 
   File? _imageData;
-
   final _picker = ImagePicker();
 
   @override
@@ -43,8 +44,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
   }
 
   Future<void> pickImage() async {
-    final ImagePicker picker = ImagePicker();
-    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
 
     if (image != null) {
       setState(() {
@@ -60,15 +60,24 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
       if (_imageData != null) {
         var bytes = await _imageData!.readAsBytes();
         formValues['slika'] = base64Encode(bytes);
+      } else if (widget.uspjesnaPrica?.slika != null) {
+        formValues['slika'] = widget.uspjesnaPrica!.slika;
+      } else {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('Molimo odaberite sliku')));
+        return;
       }
 
       // Insert via provider
       await _uspjesnaPricaProvider.insert(formValues);
-    }
 
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text('Success Story Added!')));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Uspješna priča dodana!')));
+
+      Navigator.of(context).pop(); // zatvori ekran nakon dodavanja
+    }
   }
 
   @override
@@ -77,7 +86,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
       key: _formKey,
       initialValue: _initialValue,
       child: Scaffold(
-        appBar: AppBar(title: const Text('Dodaj uspjesnu pricu')),
+        appBar: AppBar(title: const Text('Dodaj uspješnu priču')),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Card(
@@ -89,7 +98,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  // Title
+                  // Naslov
                   FormBuilderTextField(
                     name: 'naslovPrice',
                     decoration: const InputDecoration(
@@ -97,30 +106,61 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                       prefixIcon: Icon(Icons.title),
                       border: OutlineInputBorder(),
                     ),
+                    validator: FormBuilderValidators.compose([
+                      FormBuilderValidators.required(
+                        errorText: 'Naslov je obavezan',
+                      ),
+                      FormBuilderValidators.maxLength(
+                        100,
+                        errorText: 'Maksimalno 100 karaktera',
+                      ),
+                    ]),
                   ),
                   const SizedBox(height: 16),
 
-                  // Description
+                  // Priča
                   FormBuilderTextField(
                     name: 'prica',
                     maxLines: 5,
                     decoration: const InputDecoration(
-                      labelText: 'Prica',
+                      labelText: 'Priča',
                       alignLabelWithHint: true,
                       prefixIcon: Icon(Icons.description),
                       border: OutlineInputBorder(),
                     ),
+                    validator: FormBuilderValidators.compose([
+                      FormBuilderValidators.required(
+                        errorText: 'Priča je obavezna',
+                      ),
+                      FormBuilderValidators.minLength(
+                        10,
+                        errorText: 'Priča mora imati barem 10 karaktera',
+                      ),
+                    ]),
                   ),
                   const SizedBox(height: 16),
 
-                  // Author
+                  // Ukupna donacija
                   FormBuilderTextField(
                     name: 'ukupnaDonacija',
                     decoration: const InputDecoration(
                       labelText: 'Ukupna donacija',
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.monetization_on),
                       border: OutlineInputBorder(),
                     ),
+                    keyboardType: TextInputType.number,
+                    validator: FormBuilderValidators.compose([
+                      FormBuilderValidators.required(
+                        errorText: 'Ukupna donacija je obavezna',
+                      ),
+                      FormBuilderValidators.numeric(
+                        errorText: 'Unesite validan broj',
+                      ),
+                      FormBuilderValidators.min(
+                        0,
+                        errorText: 'Vrijednost mora biti pozitivna',
+                      ),
+                    ]),
                   ),
                   const SizedBox(height: 16),
 
@@ -131,7 +171,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                       ElevatedButton.icon(
                         onPressed: pickImage,
                         icon: const Icon(Icons.image),
-                        label: const Text('Upload Image'),
+                        label: const Text('Odaberi sliku'),
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
@@ -141,8 +181,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                       const SizedBox(width: 16),
                       _imageData != null
                           ? FutureBuilder<Uint8List>(
-                              future: _imageData!
-                                  .readAsBytes(), // read bytes from File
+                              future: _imageData!.readAsBytes(),
                               builder: (context, snapshot) {
                                 if (snapshot.connectionState ==
                                     ConnectionState.waiting) {
@@ -154,14 +193,16 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                                     ),
                                   );
                                 } else if (snapshot.hasError) {
-                                  return const Text('Error loading image');
+                                  return const Text(
+                                    'Greška pri učitavanju slike',
+                                  );
                                 } else {
                                   return Container(
                                     width: 100,
                                     height: 100,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(12),
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           color: Colors.black26,
                                           blurRadius: 5,
@@ -182,8 +223,27 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                                 }
                               },
                             )
+                          : widget.uspjesnaPrica?.slika != null
+                          ? Container(
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.memory(
+                                  base64Decode(
+                                    widget.uspjesnaPrica!.slika!
+                                        .split(',')
+                                        .last,
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            )
                           : const Text(
-                              'No image selected',
+                              'Nije odabrana slika',
                               style: TextStyle(
                                 color: Colors.grey,
                                 fontSize: 16,
@@ -193,7 +253,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Submit Button
+                  // Submit button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -201,7 +261,7 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 16),
                         child: Text(
-                          'Add Story',
+                          'Dodaj priču',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),

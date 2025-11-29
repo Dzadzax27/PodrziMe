@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PodrziMe.Services.Database;
 
@@ -11,9 +12,11 @@ using PodrziMe.Services.Database;
 namespace PodrziMe.Services.Migrations
 {
     [DbContext(typeof(PodrziMeContext))]
-    partial class PodrziMeContextModelSnapshot : ModelSnapshot
+    [Migration("20251129104815_initialMigration24035")]
+    partial class initialMigration24035
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -147,54 +150,6 @@ namespace PodrziMe.Services.Migrations
                             DonorId = 2,
                             IznosDonacije = 600,
                             KandidatId = 2
-                        },
-                        new
-                        {
-                            DonacijaId = 13,
-                            DatumDonacije = new DateOnly(2025, 10, 15),
-                            DonorId = 1,
-                            IznosDonacije = 450,
-                            KandidatId = 8
-                        },
-                        new
-                        {
-                            DonacijaId = 14,
-                            DatumDonacije = new DateOnly(2025, 11, 20),
-                            DonorId = 3,
-                            IznosDonacije = 700,
-                            KandidatId = 8
-                        },
-                        new
-                        {
-                            DonacijaId = 15,
-                            DatumDonacije = new DateOnly(2025, 9, 30),
-                            DonorId = 2,
-                            IznosDonacije = 520,
-                            KandidatId = 9
-                        },
-                        new
-                        {
-                            DonacijaId = 16,
-                            DatumDonacije = new DateOnly(2025, 12, 5),
-                            DonorId = 4,
-                            IznosDonacije = 650,
-                            KandidatId = 9
-                        },
-                        new
-                        {
-                            DonacijaId = 17,
-                            DatumDonacije = new DateOnly(2025, 8, 18),
-                            DonorId = 4,
-                            IznosDonacije = 480,
-                            KandidatId = 10
-                        },
-                        new
-                        {
-                            DonacijaId = 18,
-                            DatumDonacije = new DateOnly(2025, 11, 28),
-                            DonorId = 2,
-                            IznosDonacije = 900,
-                            KandidatId = 10
                         });
                 });
 

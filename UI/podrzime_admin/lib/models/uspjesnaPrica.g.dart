@@ -13,10 +13,12 @@ UspjesnaPrica _$UspjesnaPricaFromJson(Map<String, dynamic> json) =>
       ukupnaDonacija: (json['ukupnaDonacija'] as num?)?.toInt(),
       kandidatId: (json['kandidatId'] as num?)?.toInt(),
       slika: json['slika'] as String?,
+      uspjesnaPricaId: (json['uspjesnaPricaId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$UspjesnaPricaToJson(UspjesnaPrica instance) =>
     <String, dynamic>{
+      'uspjesnaPricaId': instance.uspjesnaPricaId,
       'naslovPrice': instance.naslovPrice,
       'prica': instance.prica,
       'ukupnaDonacija': instance.ukupnaDonacija,

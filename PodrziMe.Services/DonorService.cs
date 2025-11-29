@@ -24,8 +24,11 @@ namespace PodrziMe.Services
         {
             if (!string.IsNullOrWhiteSpace(search?.Ime))
             {
-                query = query.Where(x => x.Ime.StartsWith(search.Ime));
+                query = query.Where(x =>
+                    x.Ime.Contains(search.Ime) || x.Prezime.Contains(search.Ime)
+                );
             }
+
 
             return base.AddFilter(search, query);
         }

@@ -62,7 +62,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
   Widget _buildMenuItem(String title) {
     return InkWell(
       onTap: () {
-        if (title == 'Home') {
+        if (title == 'Pocetna') {
           Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (context) => PocetnaStranica()));
@@ -247,7 +247,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            _buildMenuItem('Home'),
+                            _buildMenuItem('Pocetna'),
                             const Divider(height: 1),
                             UlogaLogiranogKorisnika.isTakmicar == true
                                 ? _buildMenuItem('Dodaj Kandidata')
