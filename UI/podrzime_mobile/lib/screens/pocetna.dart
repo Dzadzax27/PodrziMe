@@ -227,8 +227,6 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                             ),
                           );
                         }
-
-                        // *** NORMALNA KARTICA PRIČE — OSTAVLJENA POTPUNO ISTA ***
                         final item = filteredListOfUspjesnaPrica[index];
                         final screenWidth = MediaQuery.of(context).size.width;
                         final cardWidth = screenWidth * 0.8;

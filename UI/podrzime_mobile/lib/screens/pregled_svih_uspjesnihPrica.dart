@@ -45,7 +45,7 @@ class _PregledSvihUspjesnihPricaState extends State<PregledSvihUspjesnihPrica> {
   @override
   Widget build(BuildContext context) {
     return MasterScreenWidget(
-      title: "Naslovna strana",
+      title: "Uspjesne price",
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

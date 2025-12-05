@@ -155,6 +155,7 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
 
   Future<void> loadZahtjeveTakmicara() async {
     var filter = {'isKategorijaIncluded': true};
+    
     takmicari = await _takmicarProvider.get(filter);
 
     // filtriraj samo takmicare koji pripadaju korisnikovom profilu

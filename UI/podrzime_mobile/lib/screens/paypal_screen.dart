@@ -156,7 +156,7 @@ class _PayPalPaymentScreenState extends State<PayPalPaymentScreen> {
 
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('Payment successful!')));
+      ).showSnackBar(const SnackBar(content: Text('Uspjesna uplata!')));
 
       Navigator.of(context).pop(true);
     } catch (e) {

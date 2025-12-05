@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PodrziMe.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70192bad6950905041ff10de1ba6beedad61d4cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0094f8eac4bfb79485c724353c36991b5c28e0ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("PodrziMe.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PodrziMe.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

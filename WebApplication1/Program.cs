@@ -8,8 +8,11 @@ using PodrziMe.Filters;
 using PodrziMe.Model;
 using PodrziMe.Services;
 using PodrziMe.Services.Database;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Env.Load(Path.Combine(Directory.GetCurrentDirectory(), ".env"));
 
 // Add services to the container.
 builder.Services.AddTransient<ITakmicariService,TakmicariService>();

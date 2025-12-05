@@ -6,8 +6,8 @@ services:
     container_name: podrzime-sql
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=QWElkj132!
-      - MSSQL_PID=Developer
+      - SA_PASSWORD=${SA_PASSWORD}
+      - MSSQL_PID=${MSSQL_PID}
     ports:
       - "1401:1433"
     networks:
@@ -18,11 +18,14 @@ services:
     build:
       context: .
     environment:
-      - ConnectionStrings:ePodrziMeConnection=Server=podrzime-sql;Database=PodrziMe;User=sa;Password=QWElkj132!;TrustServerCertificate=True
-      - RabbitMQ:Host=podrzime-rabbitmq
-      - RabbitMQ:Username=guest
-      - RabbitMQ:Password=guest
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings:ePodrziMeConnection=${CONNECTION_STRING}
+      - RabbitMQ:Host=${RABBITMQ_HOST}
+      - RabbitMQ:Username=${RABBITMQ_USERNAME}
+      - RabbitMQ:Password=${RABBITMQ_PASSWORD}
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
+      - PaypalSettings__ClientId=${PAYPAL_CLIENT_ID}
+      - PaypalSettings__Secret=${PAYPAL_SECRET}
+      - PAYPAL_URL=https://api.sandbox.paypal.com
     ports:
       - "7220:7220"
     depends_on:
@@ -38,8 +41,8 @@ services:
       - "5672:5672"
       - "15672:15672"
     environment:
-      - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     networks:
       - podrzimenet2025
 
@@ -49,9 +52,9 @@ services:
       context: .
       dockerfile: PodrziMe.Subscriber/Dockerfile
     environment:
-      - RabbitMQ:Host=podrzime-rabbitmq
-      - RabbitMQ:Username=guest
-      - RabbitMQ:Password=guest
+      - RabbitMQ:Host=${RABBITMQ_HOST}
+      - RabbitMQ:Username=${RABBITMQ_USERNAME}
+      - RabbitMQ:Password=${RABBITMQ_PASSWORD}
     depends_on:
       - podrzime-rabbitmq
     networks:

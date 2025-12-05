@@ -45,18 +45,28 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
       title: "Pregled kandidata",
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        child: ListView(
           children: [
             _buildSearchSection(),
             const SizedBox(height: 20),
-            Expanded(child: _buildTable()),
+            if (filteredList.isEmpty)
+              const Center(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 40),
+                  child: Text(
+                    "Nema pronađenih takmičara.",
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
+                  ),
+                ),
+              )
+            else
+              ...filteredList.map((e) => _buildTakmicarCard(e)).toList(),
           ],
         ),
       ),
     );
   }
 
-  /// 🔍 Nicer Search + Filter UI
   Widget _buildSearchSection() {
     return Card(
       elevation: 3,
@@ -66,106 +76,98 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "🔍 Pretraga takmičara",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 50, 70, 90),
-                  ),
-                ),
-                const SizedBox(height: 20),
+            const Text(
+              "🔍 Pretraga takmičara",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 50, 70, 90),
+              ),
+            ),
+            const SizedBox(height: 20),
 
-                // Ime
-                TextField(
-                  controller: _ftsEditingController,
-                  onChanged: (value) {
-                    var filter = {
-                      'ime': value,
-                      'fts': _sifraController.text,
-                      'isKategorijaIncluded': true,
-                    };
-                    _getKorisnici(filter);
-                  },
-                  decoration: InputDecoration(
-                    hintText: "Unesi ime",
-                    prefixIcon: const Icon(Icons.person, color: Colors.grey),
-                    filled: true,
-                    fillColor: Colors.grey[100],
-                    contentPadding: const EdgeInsets.symmetric(
-                      vertical: 14,
-                      horizontal: 16,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
+            // Ime
+            TextField(
+              controller: _ftsEditingController,
+              onChanged: (value) {
+                var filter = {
+                  'ime': value,
+                  'fts': _sifraController.text,
+                  'isKategorijaIncluded': true,
+                };
+                _getKorisnici(filter);
+              },
+              decoration: InputDecoration(
+                hintText: "Unesi ime",
+                prefixIcon: const Icon(Icons.person, color: Colors.grey),
+                filled: true,
+                fillColor: Colors.grey[100],
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 14,
+                  horizontal: 16,
                 ),
-                const SizedBox(height: 12),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
 
-                // Prezime
-                TextField(
-                  controller: _sifraController,
-                  onChanged: (value) {
-                    var filter = {
-                      'ime': _ftsEditingController.text,
-                      'fts': value,
-                      'isKategorijaIncluded': true,
-                    };
-                    _getKorisnici(filter);
-                  },
-                  decoration: InputDecoration(
-                    hintText: "Unesi prezime",
-                    prefixIcon: const Icon(Icons.badge, color: Colors.grey),
-                    filled: true,
-                    fillColor: Colors.grey[100],
-                    contentPadding: const EdgeInsets.symmetric(
-                      vertical: 14,
-                      horizontal: 16,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
+            // Prezime
+            TextField(
+              controller: _sifraController,
+              onChanged: (value) {
+                var filter = {
+                  'ime': _ftsEditingController.text,
+                  'fts': value,
+                  'isKategorijaIncluded': true,
+                };
+                _getKorisnici(filter);
+              },
+              decoration: InputDecoration(
+                hintText: "Unesi prezime",
+                prefixIcon: const Icon(Icons.badge, color: Colors.grey),
+                filled: true,
+                fillColor: Colors.grey[100],
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 14,
+                  horizontal: 16,
                 ),
-                const SizedBox(height: 20),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
 
-                // Dugme za pretragu
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      var filter = {
-                        'ime': _ftsEditingController.text,
-                        'fts': _sifraController.text,
-                        'isKategorijaIncluded': true,
-                      };
-                      _getKorisnici(filter);
-                    },
-                    icon: const Icon(Icons.search),
-                    label: const Text(
-                      "Pretraži",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 191, 69, 60),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
+            // Dugme za pretragu
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  var filter = {
+                    'ime': _ftsEditingController.text,
+                    'fts': _sifraController.text,
+                    'isKategorijaIncluded': true,
+                  };
+                  _getKorisnici(filter);
+                },
+                icon: const Icon(Icons.search),
+                label: const Text(
+                  "Pretraži",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 191, 69, 60),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-              ],
+              ),
             ),
 
             const SizedBox(height: 24),
@@ -243,101 +245,80 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     );
   }
 
-  /// 📋 Table/List of Participants
-  Widget _buildTable() {
-    if (filteredList.isEmpty) {
-      return const Center(
-        child: Text(
-          "Nema pronađenih takmičara.",
-          style: TextStyle(fontSize: 16, color: Colors.grey),
-        ),
-      );
-    }
-
-    return ListView.builder(
-      itemCount: filteredList.length,
-      itemBuilder: (context, index) {
-        final e = filteredList[index];
-        return Card(
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-          elevation: 2,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                e.slika != null && e.slika!.isNotEmpty
-                    ? ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Image.memory(
-                          base64Decode(e.slika!.split(',').last),
-                          width: 80,
-                          height: 80,
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                    : const Icon(Icons.person, size: 80, color: Colors.grey),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "${e.ime} ${e.prezime}",
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        e.kategorija?.nazivKategorije ?? "",
-                        style: const TextStyle(
-                          color: Colors.grey,
-                          fontSize: 14,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => PregledTakmicara(e),
-                            ),
-                          );
-                        },
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: const [
-                              Text(
-                                "Pogledaj više",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 191, 69, 60),
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              SizedBox(width: 4),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Color.fromARGB(255, 191, 69, 60),
-                                size: 16,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+  Widget _buildTakmicarCard(Takmicar e) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          children: [
+            e.slika != null && e.slika!.isNotEmpty
+                ? ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.memory(
+                      base64Decode(e.slika!.split(',').last),
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : const Icon(Icons.person, size: 80, color: Colors.grey),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "${e.ime} ${e.prezime}",
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 4),
+                  Text(
+                    e.kategorija?.nazivKategorije ?? "",
+                    style: const TextStyle(color: Colors.grey, fontSize: 14),
+                  ),
+                  const SizedBox(height: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => PregledTakmicara(e),
+                        ),
+                      );
+                    },
+                    child: MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Text(
+                            "Pogledaj više",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 191, 69, 60),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          SizedBox(width: 4),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Color.fromARGB(255, 191, 69, 60),
+                            size: 16,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        );
-      },
+          ],
+        ),
+      ),
     );
   }
 

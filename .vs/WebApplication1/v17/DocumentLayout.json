@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\takmicariservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|SolutionFolder{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|SolutionFolder{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\donacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\donacijacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\podrzimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,14 +166,6 @@
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\takmicari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\ikomentarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\ikomentarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -234,10 +254,6 @@
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\database\\podkategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\database\\podkategorija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -264,10 +280,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.model\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A353C2D-8D1E-486F-A8D0-20932D69126A}|PodrziMe.Model\\PodrziMe.Model.csproj|solutionrelative:podrzime.model\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\donacijaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\takmicarprofilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -479,16 +491,16 @@
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\ulogaconroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A945450-57C9-439C-8BC5-CC324F4C2648}|WebApplication1\\PodrziMe.csproj|solutionrelative:webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|c:\\users\\user\\desktop\\rs2\\podrzime\\podrzime.services\\migrations\\20251129104815_initialmigration24035.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCEB94AD-F01A-4C5C-9E52-53B87C856256}|PodrziMe.Services\\PodrziMe.Services.csproj|solutionrelative:podrzime.services\\migrations\\20251129104815_initialmigration24035.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -498,7 +510,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -506,15 +518,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20251129104815_initialMigration24035.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
-              "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-03T16:58:50.854Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DonacijaController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\DonacijaController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DonacijaController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\DonacijaController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\DonacijaController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T10:48:16.604Z",
+              "WhenOpened": "2025-12-05T13:35:12.241Z",
               "EditorCaption": ""
             },
             {
@@ -523,56 +549,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TakmicarProfil.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\TakmicarProfil.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\TakmicarProfil.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\TakmicarProfil.cs",
-              "RelativeToolTip": "PodrziMe.Services\\Database\\TakmicarProfil.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:02:25.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Korisnik.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Korisnik.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Korisnik.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Korisnik.cs",
-              "RelativeToolTip": "PodrziMe.Services\\Database\\Korisnik.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:54.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Kandidat.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Kandidat.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Kandidat.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Kandidat.cs",
-              "RelativeToolTip": "PodrziMe.Services\\Database\\Kandidat.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA1wCMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:21.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TakmicariService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\TakmicariService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\TakmicariService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\TakmicariService.cs",
               "RelativeToolTip": "PodrziMe.Services\\TakmicariService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAcwGoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAcwGoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T14:16:06.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Uloga.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Uloga.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Uloga.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Uloga.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Uloga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T19:02:32.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T10:21:24.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Kandidat.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Kandidat.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Kandidat.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Kandidat.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Kandidat.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T19:01:21.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T19:16:39.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Takmicari.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Takmicari.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Takmicari.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Takmicari.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\Takmicari.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T12:43:42.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-03T16:53:01.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DonacijaService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonacijaService.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\DonacijaService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonacijaService.cs",
+              "RelativeToolTip": "PodrziMe.Services\\DonacijaService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA/wA8AAACbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:02:18.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "PodrziMeContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\PodrziMeContext.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\PodrziMeContext.cs",
@@ -585,7 +670,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
+              "Title": "Korisnik.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Korisnik.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Korisnik.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Korisnik.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\Korisnik.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T19:01:54.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TakmicarProfil.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\TakmicarProfil.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\TakmicarProfil.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\TakmicarProfil.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Database\\TakmicarProfil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T19:02:25.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 125,
+              "Title": "20251129104815_initialMigration24035.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
+              "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
+              "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251129104815_initialMigration24035.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T10:48:16.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "DonorSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\DonorSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\DonorSearchObject.cs",
@@ -593,23 +717,25 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\DonorSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:08:50.638Z"
+              "WhenOpened": "2025-11-01T19:08:50.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "DonorService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonorService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\DonorService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonorService.cs",
               "RelativeToolTip": "PodrziMe.Services\\DonorService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:20:35.098Z"
+              "WhenOpened": "2025-04-20T20:20:35.098Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "KandidatiSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\KandidatiSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\KandidatiSearchObject.cs",
@@ -617,11 +743,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\KandidatiSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:25:48.72Z"
+              "WhenOpened": "2025-09-29T17:25:48.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "Obavijest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Obavijest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Obavijest.cs",
@@ -629,11 +756,12 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\Obavijest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:27:39.32Z"
+              "WhenOpened": "2025-11-24T15:27:39.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "20251127155613_initialMigration2345909.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127155613_initialMigration2345909.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251127155613_initialMigration2345909.cs",
@@ -641,59 +769,60 @@
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251127155613_initialMigration2345909.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T15:56:14.339Z"
+              "WhenOpened": "2025-11-27T15:56:14.339Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "20251127152941_initialMigration23456.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127152941_initialMigration23456.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251127152941_initialMigration23456.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127152941_initialMigration23456.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251127152941_initialMigration23456.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T15:29:42.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "20251127153516_initialMigration234590.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127153516_initialMigration234590.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251127153516_initialMigration234590.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127153516_initialMigration234590.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251127153516_initialMigration234590.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T15:35:16.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "EmaileService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\EmaileService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\EmaileService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\EmaileService.cs",
               "RelativeToolTip": "PodrziMe.Services\\EmaileService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA+wBQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T15:22:18.935Z"
+              "WhenOpened": "2025-11-20T15:22:18.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "CallRabbitMqAndCreateNotification.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\CallRabbitMqAndCreateNotification.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\CallRabbitMqAndCreateNotification.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\CallRabbitMqAndCreateNotification.cs",
               "RelativeToolTip": "PodrziMe.Services\\CallRabbitMqAndCreateNotification.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAIBJwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:36:38.922Z"
+              "WhenOpened": "2025-11-21T17:36:38.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -701,11 +830,12 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAABUAAAAAAAAAAAAEwCcAAACVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-08-09T12:06:08.763Z"
+              "WhenOpened": "2025-08-09T12:06:08.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "DTOKandidatDonacijaObavijest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DTOKandidatDonacijaObavijest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\DTOKandidatDonacijaObavijest.cs",
@@ -713,11 +843,12 @@
               "RelativeToolTip": "PodrziMe.Services\\DTOKandidatDonacijaObavijest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T10:37:40.508Z"
+              "WhenOpened": "2025-11-22T10:37:40.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "Komentar.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Komentar.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Komentar.cs",
@@ -725,11 +856,12 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\Komentar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:45.203Z"
+              "WhenOpened": "2025-11-22T19:01:45.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "Donacija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Donacija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Donacija.cs",
@@ -737,23 +869,23 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\Donacija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:04.806Z"
+              "WhenOpened": "2025-11-22T19:01:04.806Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "20251127141733_initialMigration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127141733_initialMigration.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251127141733_initialMigration.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251127141733_initialMigration.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251127141733_initialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T14:17:34.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "PodrziMe.Services.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMe.Services.csproj",
               "RelativeDocumentMoniker": "PodrziMe.Services\\PodrziMe.Services.csproj",
@@ -761,35 +893,38 @@
               "RelativeToolTip": "PodrziMe.Services\\PodrziMe.Services.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-15T17:53:16.888Z"
+              "WhenOpened": "2025-11-15T17:53:16.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "UspjesnaPrica.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\UspjesnaPrica.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\UspjesnaPrica.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\UspjesnaPrica.cs",
               "RelativeToolTip": "PodrziMe.Services\\Database\\UspjesnaPrica.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:02:40.504Z"
+              "WhenOpened": "2025-11-22T19:02:40.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "UspjesnaPricaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\UspjesnaPricaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\UspjesnaPricaService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\UspjesnaPricaService.cs",
               "RelativeToolTip": "PodrziMe.Services\\UspjesnaPricaService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:35:27.234Z"
+              "WhenOpened": "2025-04-23T06:35:27.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Dockerfile",
               "RelativeDocumentMoniker": "WebApplication1\\Dockerfile",
@@ -797,11 +932,12 @@
               "RelativeToolTip": "WebApplication1\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-09T12:17:28.336Z"
+              "WhenOpened": "2025-08-09T12:17:28.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Subscriber\\Dockerfile",
               "RelativeDocumentMoniker": "PodrziMe.Subscriber\\Dockerfile",
@@ -809,11 +945,12 @@
               "RelativeToolTip": "PodrziMe.Subscriber\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-25T17:46:21.032Z"
+              "WhenOpened": "2025-11-25T17:46:21.032Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "BaseCrudService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\BaseCrudService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\BaseCrudService.cs",
@@ -821,11 +958,12 @@
               "RelativeToolTip": "PodrziMe.Services\\BaseCrudService.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAYwEAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T20:26:57.961Z"
+              "WhenOpened": "2025-10-15T20:26:57.961Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "UspjesnaPricaController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\UspjesnaPricaController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UspjesnaPricaController.cs",
@@ -833,11 +971,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\UspjesnaPricaController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAowC8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:38:54.79Z"
+              "WhenOpened": "2025-04-23T06:38:54.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "Komentar.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Komentar.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Komentar.cs",
@@ -845,11 +984,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\Komentar.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T20:04:41.874Z"
+              "WhenOpened": "2025-11-08T20:04:41.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "Obavijest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Obavijest.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Obavijest.cs",
@@ -857,11 +997,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\Obavijest.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAUwC4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T12:09:15.408Z"
+              "WhenOpened": "2025-11-22T12:09:15.408Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "DonorContoller.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\DonorContoller.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DonorContoller.cs",
@@ -869,11 +1010,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\DonorContoller.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAWwAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:23:29.084Z"
+              "WhenOpened": "2025-04-20T20:23:29.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "KorisnikConrtoller.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\KorisnikConrtoller.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\KorisnikConrtoller.cs",
@@ -881,11 +1023,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\KorisnikConrtoller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T14:59:32.605Z"
+              "WhenOpened": "2025-08-09T14:59:32.605Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "KorisnikService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\KorisnikService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\KorisnikService.cs",
@@ -893,11 +1036,12 @@
               "RelativeToolTip": "PodrziMe.Services\\KorisnikService.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAuwGwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T14:58:59.94Z"
+              "WhenOpened": "2025-08-09T14:58:59.94Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "IKorisnikService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IKorisnikService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IKorisnikService.cs",
@@ -905,11 +1049,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IKorisnikService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:01:24.894Z"
+              "WhenOpened": "2025-09-27T16:01:24.894Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "BasicAuthenticationHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\BasicAuthenticationHandler.cs",
               "RelativeDocumentMoniker": "WebApplication1\\BasicAuthenticationHandler.cs",
@@ -917,47 +1062,25 @@
               "RelativeToolTip": "WebApplication1\\BasicAuthenticationHandler.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAkwCgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T13:02:47.483Z"
+              "WhenOpened": "2025-08-09T13:02:47.483Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Takmicari.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Takmicari.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Takmicari.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Takmicari.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\Takmicari.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAzwC4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T12:43:42.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T19:16:39.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "ObavijestService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\ObavijestService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\ObavijestService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\ObavijestService.cs",
               "RelativeToolTip": "PodrziMe.Services\\ObavijestService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T17:28:31.722Z"
+              "WhenOpened": "2025-11-26T17:28:31.722Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "IObavijestService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IObavijestService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IObavijestService.cs",
@@ -965,11 +1088,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IObavijestService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T17:26:33.901Z"
+              "WhenOpened": "2025-11-19T17:26:33.901Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "IKomentarService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IKomentarService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IKomentarService.cs",
@@ -977,11 +1101,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IKomentarService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:52:42.679Z"
+              "WhenOpened": "2025-11-08T19:52:42.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "InsertObavijestRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertObavijestRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertObavijestRequest.cs",
@@ -989,23 +1114,25 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertObavijestRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T12:08:04.297Z"
+              "WhenOpened": "2025-11-22T12:08:04.297Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Subscriber\\Program.cs",
               "RelativeDocumentMoniker": "PodrziMe.Subscriber\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Subscriber\\Program.cs",
               "RelativeToolTip": "PodrziMe.Subscriber\\Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAEBVwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T19:09:57.26Z"
+              "WhenOpened": "2025-11-18T19:09:57.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "PodrziMe.Subscriber.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Subscriber\\PodrziMe.Subscriber.csproj",
               "RelativeDocumentMoniker": "PodrziMe.Subscriber\\PodrziMe.Subscriber.csproj",
@@ -1013,107 +1140,100 @@
               "RelativeToolTip": "PodrziMe.Subscriber\\PodrziMe.Subscriber.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-19T10:12:44.856Z"
+              "WhenOpened": "2025-11-19T10:12:44.856Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "20251125165732_UpdateSeedAndModels2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125165732_UpdateSeedAndModels2.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125165732_UpdateSeedAndModels2.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125165732_UpdateSeedAndModels2.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125165732_UpdateSeedAndModels2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:57:32.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "20251125171503_UpdateSeedAndModels3.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125171503_UpdateSeedAndModels3.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125171503_UpdateSeedAndModels3.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125171503_UpdateSeedAndModels3.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125171503_UpdateSeedAndModels3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T17:15:03.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "20251125164757_UpdateSeedAndModels.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164757_UpdateSeedAndModels.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125164757_UpdateSeedAndModels.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164757_UpdateSeedAndModels.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125164757_UpdateSeedAndModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:47:57.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "20251125164536_UpdateSeedAndModels3.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164536_UpdateSeedAndModels3.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125164536_UpdateSeedAndModels3.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164536_UpdateSeedAndModels3.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125164536_UpdateSeedAndModels3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:45:36.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "20251125164125_UpdateSeedAndModels2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164125_UpdateSeedAndModels2.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125164125_UpdateSeedAndModels2.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125164125_UpdateSeedAndModels2.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125164125_UpdateSeedAndModels2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:41:26.137Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "20251125163627_UpdateSeedAndModels.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125163627_UpdateSeedAndModels.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125163627_UpdateSeedAndModels.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125163627_UpdateSeedAndModels.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125163627_UpdateSeedAndModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:36:27.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "20251125162930_UpdateSeedAndModels2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125162930_UpdateSeedAndModels2.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125162930_UpdateSeedAndModels2.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125162930_UpdateSeedAndModels2.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125162930_UpdateSeedAndModels2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:29:30.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "20251125162900_UpdateSeedAndModels.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125162900_UpdateSeedAndModels.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20251125162900_UpdateSeedAndModels.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20251125162900_UpdateSeedAndModels.cs",
               "RelativeToolTip": "PodrziMe.Services\\Migrations\\20251125162900_UpdateSeedAndModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T16:29:00.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "PodrziMeContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodrziMeContextFactory.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\PodrziMeContextFactory.cs",
@@ -1121,11 +1241,12 @@
               "RelativeToolTip": "PodrziMe.Services\\PodrziMeContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T16:28:17.03Z"
+              "WhenOpened": "2025-11-25T16:28:17.03Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "ObavijestSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\ObavijestSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\ObavijestSearchObject.cs",
@@ -1133,11 +1254,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\ObavijestSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:26:59.224Z"
+              "WhenOpened": "2025-11-24T15:26:59.224Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "NazivSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\NazivSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\NazivSearchObject.cs",
@@ -1145,11 +1267,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\NazivSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:30:00.317Z"
+              "WhenOpened": "2025-11-24T15:30:00.317Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "KategorijaSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\KategorijaSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\KategorijaSearchObject.cs",
@@ -1157,23 +1280,25 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\KategorijaSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T15:36:13.367Z"
+              "WhenOpened": "2025-09-27T15:36:13.367Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "PodrziMe.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj",
               "RelativeDocumentMoniker": "WebApplication1\\PodrziMe.csproj",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\PodrziMe.csproj",
               "RelativeToolTip": "WebApplication1\\PodrziMe.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-08T19:05:05.587Z"
+              "WhenOpened": "2025-04-08T19:05:05.587Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "Donacija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Donacija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Donacija.cs",
@@ -1181,35 +1306,25 @@
               "RelativeToolTip": "PodrziMe.Model\\Donacija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T19:02:39.693Z"
+              "WhenOpened": "2025-04-09T19:02:39.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "Uloga.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Uloga.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Uloga.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Uloga.cs",
-              "RelativeToolTip": "PodrziMe.Services\\Database\\Uloga.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:02:32.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "Obavijest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Obavijest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Obavijest.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Obavijest.cs",
               "RelativeToolTip": "PodrziMe.Model\\Obavijest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T17:21:18.242Z"
+              "WhenOpened": "2025-11-19T17:21:18.242Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "BaseService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\BaseService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\BaseService.cs",
@@ -1217,11 +1332,12 @@
               "RelativeToolTip": "PodrziMe.Services\\BaseService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAD4vw8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:01:56.984Z"
+              "WhenOpened": "2025-09-27T16:01:56.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "PodKategorija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\PodKategorija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\PodKategorija.cs",
@@ -1229,11 +1345,12 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\PodKategorija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:02:11.904Z"
+              "WhenOpened": "2025-11-22T19:02:11.904Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "Kategorija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Kategorija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Kategorija.cs",
@@ -1241,11 +1358,12 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\Kategorija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:28.256Z"
+              "WhenOpened": "2025-11-22T19:01:28.256Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "Donor.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Database\\Donor.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Database\\Donor.cs",
@@ -1253,23 +1371,25 @@
               "RelativeToolTip": "PodrziMe.Services\\Database\\Donor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T19:01:14.417Z"
+              "WhenOpened": "2025-11-22T19:01:14.417Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "Korisnik.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Korisnik.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Korisnik.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Korisnik.cs",
               "RelativeToolTip": "PodrziMe.Model\\Korisnik.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBJwBAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:35:07.411Z"
+              "WhenOpened": "2025-08-09T12:35:07.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "InsertKorisnikRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertKorisnikRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKorisnikRequest.cs",
@@ -1277,23 +1397,25 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKorisnikRequest.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T13:26:06.961Z"
+              "WhenOpened": "2025-11-02T13:26:06.961Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "Donor.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Donor.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Donor.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Donor.cs",
               "RelativeToolTip": "PodrziMe.Model\\Donor.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T08:51:22.066Z"
+              "WhenOpened": "2025-11-22T08:51:22.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\EmailSettings.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\EmailSettings.cs",
@@ -1301,23 +1423,12 @@
               "RelativeToolTip": "PodrziMe.Model\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T10:25:08.962Z"
+              "WhenOpened": "2025-11-22T10:25:08.962Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "DonacijaService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonacijaService.cs",
-              "RelativeDocumentMoniker": "PodrziMe.Services\\DonacijaService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\DonacijaService.cs",
-              "RelativeToolTip": "PodrziMe.Services\\DonacijaService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswA8AAACbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:02:18.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "TakmicarProfilService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\TakmicarProfilService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\TakmicarProfilService.cs",
@@ -1325,11 +1436,12 @@
               "RelativeToolTip": "PodrziMe.Services\\TakmicarProfilService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:25:48.492Z"
+              "WhenOpened": "2025-11-03T14:25:48.492Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 119,
               "Title": "Kategorija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\Kategorija.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Kategorija.cs",
@@ -1337,23 +1449,25 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\Kategorija.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAmwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:13:35.047Z"
+              "WhenOpened": "2025-04-10T18:13:35.047Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\MappingProfile.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\MappingProfile.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\MappingProfile.cs",
               "RelativeToolTip": "PodrziMe.Services\\MappingProfile.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACcAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAIBJwCcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T19:36:30.448Z"
+              "WhenOpened": "2025-04-09T19:36:30.448Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "ITakmicariService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\ITakmicariService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\ITakmicariService.cs",
@@ -1361,11 +1475,12 @@
               "RelativeToolTip": "PodrziMe.Services\\ITakmicariService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwAwAAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:13:01.264Z"
+              "WhenOpened": "2025-01-05T14:13:01.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "IPodKategorijaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IPodKategorijaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IPodKategorijaService.cs",
@@ -1373,11 +1488,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IPodKategorijaService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAADgvwkAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:30:12.453Z"
+              "WhenOpened": "2025-04-10T18:30:12.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PagedResult.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\PagedResult.cs",
@@ -1385,23 +1501,25 @@
               "RelativeToolTip": "PodrziMe.Model\\PagedResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T17:21:35.137Z"
+              "WhenOpened": "2025-11-19T17:21:35.137Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "KategorijaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\KategorijaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\KategorijaService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\KategorijaService.cs",
               "RelativeToolTip": "PodrziMe.Services\\KategorijaService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:02:58.304Z"
+              "WhenOpened": "2025-04-10T18:02:58.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "MessageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\MessageService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\MessageService.cs",
@@ -1409,11 +1527,12 @@
               "RelativeToolTip": "PodrziMe.Services\\MessageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T19:06:33.022Z"
+              "WhenOpened": "2025-11-18T19:06:33.022Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "Komentar.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Komentar.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Komentar.cs",
@@ -1421,11 +1540,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Komentar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:41:47.983Z"
+              "WhenOpened": "2025-11-08T17:41:47.983Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 120,
               "Title": "TakmicarProfil.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\TakmicarProfil.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TakmicarProfil.cs",
@@ -1433,11 +1553,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\TakmicarProfil.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAmwCIAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:50:33.604Z"
+              "WhenOpened": "2025-11-03T14:50:33.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "InsertTakmicarProfil.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertTakmicarProfil.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertTakmicarProfil.cs",
@@ -1445,11 +1566,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertTakmicarProfil.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:16:57.32Z"
+              "WhenOpened": "2025-11-03T14:16:57.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "ICRUDService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\ICRUDService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\ICRUDService.cs",
@@ -1457,11 +1579,12 @@
               "RelativeToolTip": "PodrziMe.Services\\ICRUDService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T13:06:31.16Z"
+              "WhenOpened": "2025-08-09T13:06:31.16Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "UpdateKorisnikRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateKorisnikRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateKorisnikRequest.cs",
@@ -1469,11 +1592,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateKorisnikRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T20:03:04.596Z"
+              "WhenOpened": "2025-11-08T20:03:04.596Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "UpdateTakmicarProfileRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateTakmicarProfileRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateTakmicarProfileRequest.cs",
@@ -1481,11 +1605,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateTakmicarProfileRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:10:52.333Z"
+              "WhenOpened": "2025-11-05T19:10:52.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "InsertKomentarRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertKomentarRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKomentarRequest.cs",
@@ -1493,11 +1618,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKomentarRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:43:07.871Z"
+              "WhenOpened": "2025-11-08T17:43:07.871Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "UpdateKomentarRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateKomentarRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateKomentarRequest.cs",
@@ -1505,11 +1631,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateKomentarRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:44:36.924Z"
+              "WhenOpened": "2025-11-08T17:44:36.924Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "KomentarService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\KomentarService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\KomentarService.cs",
@@ -1517,11 +1644,12 @@
               "RelativeToolTip": "PodrziMe.Services\\KomentarService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAtwA0AAACbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:45:32.442Z"
+              "WhenOpened": "2025-11-08T17:45:32.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "UpdateKandidatRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateKandidatRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateKandidatRequest.cs",
@@ -1529,11 +1657,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateKandidatRequest.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAmwAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T16:49:34.975Z"
+              "WhenOpened": "2025-09-29T16:49:34.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "KomentarSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\KomentarSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\KomentarSearchObject.cs",
@@ -1541,11 +1670,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\KomentarSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:58:38.819Z"
+              "WhenOpened": "2025-11-08T17:58:38.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "IDonacijaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IDonacijaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IDonacijaService.cs",
@@ -1553,11 +1683,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IDonacijaService.cs",
               "ViewState": "AgIAAAUAAADIzMzMzMwowA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:14:34.83Z"
+              "WhenOpened": "2025-04-20T10:14:34.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "IDonorService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IDonorService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IDonorService.cs",
@@ -1565,11 +1696,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IDonorService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAYwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:16:23.589Z"
+              "WhenOpened": "2025-04-20T20:16:23.589Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "DonacijaSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\DonacijaSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\DonacijaSearchObject.cs",
@@ -1577,11 +1709,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\DonacijaSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:58:46.237Z"
+              "WhenOpened": "2025-11-08T17:58:46.237Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "IKategorijaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IKategorijaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IKategorijaService.cs",
@@ -1589,11 +1722,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IKategorijaService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:22:14.321Z"
+              "WhenOpened": "2025-04-10T18:22:14.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "TakmicarProfil.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\TakmicarProfil.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\TakmicarProfil.cs",
@@ -1601,11 +1735,12 @@
               "RelativeToolTip": "PodrziMe.Model\\TakmicarProfil.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:15:16.863Z"
+              "WhenOpened": "2025-11-03T14:15:16.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 92,
               "Title": "InsertKandidatRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
@@ -1613,11 +1748,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKandidatRequest.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowCIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:40:19.758Z"
+              "WhenOpened": "2025-04-10T17:40:19.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 93,
               "Title": "Kandidat.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Kandidat.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Kandidat.cs",
@@ -1625,11 +1761,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Kandidat.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAQwCMAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T19:31:36.038Z"
+              "WhenOpened": "2025-09-29T19:31:36.038Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 94,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Class1.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Class1.cs",
@@ -1637,11 +1774,12 @@
               "RelativeToolTip": "PodrziMe.Services\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:57:13.785Z"
+              "WhenOpened": "2025-01-05T13:57:13.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 121,
               "Title": "PodKategorijaController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\PodKategorijaController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PodKategorijaController.cs",
@@ -1649,11 +1787,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\PodKategorijaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T19:13:25.045Z"
+              "WhenOpened": "2025-04-10T19:13:25.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 97,
               "Title": "InsertDonacijeRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
@@ -1661,11 +1800,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertDonacijeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:00:09.512Z"
+              "WhenOpened": "2025-04-20T20:00:09.512Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 95,
               "Title": "UlogaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\UlogaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\UlogaService.cs",
@@ -1673,11 +1813,12 @@
               "RelativeToolTip": "PodrziMe.Services\\UlogaService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:04:37.199Z"
+              "WhenOpened": "2025-11-01T19:04:37.199Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 96,
               "Title": "UlogaSearchRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UlogaSearchRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UlogaSearchRequest.cs",
@@ -1685,11 +1826,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UlogaSearchRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:02:13.219Z"
+              "WhenOpened": "2025-11-01T19:02:13.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 98,
               "Title": "UlogaSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\UlogaSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\UlogaSearchObject.cs",
@@ -1697,11 +1839,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\UlogaSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:09:51.897Z"
+              "WhenOpened": "2025-11-01T19:09:51.897Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 122,
               "Title": "UlogaConroller.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\UlogaConroller.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UlogaConroller.cs",
@@ -1709,23 +1852,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\UlogaConroller.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAowA8AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T18:59:11.279Z"
+              "WhenOpened": "2025-11-01T18:59:11.279Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CheckoutController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\CheckoutController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGQAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T10:21:24.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 99,
               "Title": "IUlogaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IUlogaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IUlogaService.cs",
@@ -1733,11 +1865,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IUlogaService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:01:14.985Z"
+              "WhenOpened": "2025-11-01T19:01:14.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 101,
               "Title": "PodKategorijaService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\PodKategorijaService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\PodKategorijaService.cs",
@@ -1745,11 +1878,12 @@
               "RelativeToolTip": "PodrziMe.Services\\PodKategorijaService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwA0AAACVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:31:34.911Z"
+              "WhenOpened": "2025-04-10T18:31:34.911Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 100,
               "Title": "IUspjesnaPrica.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IUspjesnaPrica.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IUspjesnaPrica.cs",
@@ -1757,11 +1891,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IUspjesnaPrica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:29:47.045Z"
+              "WhenOpened": "2025-04-23T06:29:47.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 102,
               "Title": "UpdateDonorRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateDonorRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateDonorRequest.cs",
@@ -1769,11 +1904,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateDonorRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:02:34.474Z"
+              "WhenOpened": "2025-11-01T19:02:34.474Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 103,
               "Title": "InsertUspjesnaPricaRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
@@ -1781,11 +1917,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertUspjesnaPricaRequest.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:30:36.699Z"
+              "WhenOpened": "2025-04-23T06:30:36.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 105,
               "Title": "IService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\IService.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\IService.cs",
@@ -1793,11 +1930,12 @@
               "RelativeToolTip": "PodrziMe.Services\\IService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T13:11:17.686Z"
+              "WhenOpened": "2025-08-09T13:11:17.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 104,
               "Title": "UpdateUspjesnaPricaRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\UpdateUspjesnaPricaRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\UpdateUspjesnaPricaRequest.cs",
@@ -1805,11 +1943,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\UpdateUspjesnaPricaRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T16:10:02.946Z"
+              "WhenOpened": "2025-10-17T16:10:02.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 106,
               "Title": "PodrziMeContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\model\\PodrziMeContext.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\model\\PodrziMeContext.cs",
@@ -1820,7 +1959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 107,
               "Title": "PodrziMeContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Models\\PodrziMeContext.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\PodrziMeContext.cs",
@@ -1831,7 +1970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 108,
               "Title": "KorisnikSearchObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\SearchObjects\\KorisnikSearchObject.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\SearchObjects\\KorisnikSearchObject.cs",
@@ -1839,11 +1978,12 @@
               "RelativeToolTip": "PodrziMe.Model\\SearchObjects\\KorisnikSearchObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T15:35:54.857Z"
+              "WhenOpened": "2025-09-27T15:35:54.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 109,
               "Title": "20250927151305_AddedKorisnik.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Services\\Migrations\\20250927151305_AddedKorisnik.cs",
               "RelativeDocumentMoniker": "PodrziMe.Services\\Migrations\\20250927151305_AddedKorisnik.cs",
@@ -1854,7 +1994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 123,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WebApplication1\\Properties\\launchSettings.json",
@@ -1862,11 +2002,12 @@
               "RelativeToolTip": "WebApplication1\\Properties\\launchSettings.json",
               "ViewState": "AgIAAA8AAAAAAAAAAADwvygAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-09T12:17:30.322Z"
+              "WhenOpened": "2025-08-09T12:17:30.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 118,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -1874,11 +2015,12 @@
               "RelativeToolTip": ".dockerignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-09T12:17:23.779Z"
+              "WhenOpened": "2025-08-09T12:17:23.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 110,
               "Title": "PodKategorija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\PodKategorija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\PodKategorija.cs",
@@ -1886,11 +2028,12 @@
               "RelativeToolTip": "PodrziMe.Model\\PodKategorija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:33:05.321Z"
+              "WhenOpened": "2025-04-10T18:33:05.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 111,
               "Title": "InsertKategorijaRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
@@ -1898,11 +2041,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertKategorijaRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:01:28.718Z"
+              "WhenOpened": "2025-04-10T18:01:28.718Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 112,
               "Title": "Kategorija.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Kategorija.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Kategorija.cs",
@@ -1910,11 +2054,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Kategorija.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T19:10:00.71Z"
+              "WhenOpened": "2025-04-09T19:10:00.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 113,
               "Title": "InsertPodKategorijaRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
@@ -1922,11 +2067,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Requests\\InsertPodKategorijaRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:38:16.436Z"
+              "WhenOpened": "2025-04-10T18:38:16.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 114,
               "Title": "20250408193227_InitialCreate2.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193227_InitialCreate2.cs",
@@ -1937,7 +2083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 115,
               "Title": "20250408193100_InitialCreate2.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408193100_InitialCreate2.cs",
@@ -1948,7 +2094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 116,
               "Title": "20250408192653_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Administrator\\Desktop\\WebApplication1 (1)\\WebApplication1\\PodrziMe.Services\\Migrations\\20250408192653_InitialCreate.cs",
@@ -1959,7 +2105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 124,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\WebApplication1\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WeatherForecastController.cs",
@@ -1967,11 +2113,12 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:22:32.739Z"
+              "WhenOpened": "2025-01-05T14:22:32.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 117,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\RS2\\PodrziMe\\PodrziMe.Model\\Class1.cs",
               "RelativeDocumentMoniker": "PodrziMe.Model\\Class1.cs",
@@ -1979,15 +2126,12 @@
               "RelativeToolTip": "PodrziMe.Model\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:55:55.124Z"
+              "WhenOpened": "2025-01-05T13:55:55.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
