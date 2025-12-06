@@ -6,6 +6,8 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:podrzime_admin/models/uspjesnaPrica.dart';
 import 'package:podrzime_admin/providers/uspjesnaPrica_provider.dart';
+import 'package:podrzime_admin/screens/home_page.dart';
+import 'package:podrzime_admin/screens/pregled_uspjesnih_prica.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
@@ -76,7 +78,9 @@ class _DodajUspjesnuPricu extends State<DodajUspjesnuPricu> {
         context,
       ).showSnackBar(const SnackBar(content: Text('Uspješna priča dodana!')));
 
-      Navigator.of(context).pop(); // zatvori ekran nakon dodavanja
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => PregledUspjesnihPrica()),
+      ); // zatvori ekran nakon dodavanja
     }
   }
 

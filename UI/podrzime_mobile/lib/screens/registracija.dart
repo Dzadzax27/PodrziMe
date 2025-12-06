@@ -183,7 +183,9 @@ class _RegistracijaState extends State<Registracija> {
                         errorText: "Odabir uloge je obavezan",
                       ),
                       items: (uloge ?? [])
-                          .where((k) => k.ulogaId != null)
+                          .where(
+                            (k) => k.ulogaId != null && k.nazivUloge != 'Admin',
+                          )
                           .map<DropdownMenuItem<int>>(
                             (k) => DropdownMenuItem<int>(
                               value: k.ulogaId!,
@@ -197,6 +199,7 @@ class _RegistracijaState extends State<Registracija> {
                         });
                       },
                     ),
+
                     const SizedBox(height: 16),
 
                     // Username

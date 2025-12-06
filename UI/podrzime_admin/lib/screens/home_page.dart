@@ -316,7 +316,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                           e.kandidatId!,
                           e.toJson(),
                         );
-                        _getKorisniciWithoutFilter();
+                        await _getKorisniciWithoutFilter();
                       },
                       child: const Text("Prihvati"),
                     ),

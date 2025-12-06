@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:podrzime_admin/providers/takmicar_provider.dart';
+import 'package:podrzime_admin/screens/home_page.dart';
 import 'package:podrzime_admin/widgets/master_screen.dart';
 import 'package:intl/intl.dart';
 
@@ -283,11 +284,16 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton(
-                            onPressed: () {
+                            onPressed: () async {
                               takmicar.odobren = true;
-                              _takmicarProvider.update(
+                              await _takmicarProvider.update(
                                 takmicar.kandidatId!,
                                 takmicar.toJson(),
+                              );
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => HomePageScreen(),
+                                ),
                               );
                             },
                             child: const Text(

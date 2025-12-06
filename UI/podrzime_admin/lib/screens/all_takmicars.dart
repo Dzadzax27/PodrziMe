@@ -167,10 +167,10 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
                 Column(
                   children: [
                     TextButton(
-                      onPressed: () {
+                      onPressed: () async {
                         e.odobren = false;
-                        _takmicarProvider.update(e.kandidatId!, e);
-                        _getKorisnici();
+                        await _takmicarProvider.update(e.kandidatId!, e);
+                        await _getKorisnici();
                       },
                       child: const Text("Izbrisi"),
                     ),

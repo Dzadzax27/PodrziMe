@@ -90,6 +90,14 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
           Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (context) => LoginPage()));
+        } else if (title == 'Login') {
+          Authorization.username = '';
+          Authorization.password = '';
+          UlogaLogiranogKorisnika.isDonor = false;
+          UlogaLogiranogKorisnika.isTakmicar = false;
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => LoginPage()));
         } else if (title == 'Pregledaj uspjesne price') {
           Navigator.of(context).push(
             MaterialPageRoute(
