@@ -164,6 +164,6 @@ namespace PodrziMe.Services
             [KeyType(count: 1000)]
             public uint CandidateID { get; set; }
 
-            public float Label { get; set; }  // iznos donacije ili 1 ako je implicitno
+            public float Label { get; set; }  
         }
 }
