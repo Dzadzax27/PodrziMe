@@ -4,7 +4,7 @@ Seminarski rad iz predmeta Razvoj softvera 2 na Fakultetu informacijskih tehnolo
 
 ## Upute za pokretanje
 
-Buildati docker komandom: docker-compose up -build -d
+Buildati docker komandom: docker-compose up --build -d
 
 Pokrenuti docker komandom: docker-compose up
 
