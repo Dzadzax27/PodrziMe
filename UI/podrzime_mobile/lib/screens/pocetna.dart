@@ -35,7 +35,11 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
 
   @override
   Widget build(BuildContext context) {
-    return MasterScreenWidget(title: 'Pocetna', child: _buildBody(context));
+    return MasterScreenWidget(
+      title: 'Pocetna',
+      showBackButton: false,
+      child: _buildBody(context),
+    );
   }
 
   Widget _buildBody(BuildContext context) {
@@ -119,7 +123,6 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
                             ),
                           ),
                           onPressed: () {
-                            print(" Uloga ${UlogaLogiranogKorisnika.isDonor}");
                             if (Authorization.password != null &&
                                 Authorization.username != null &&
                                 UlogaLogiranogKorisnika.isDonor == true) {
@@ -152,8 +155,6 @@ class _PocetnaStranicaState extends State<PocetnaStranica> {
               ],
             ),
           ),
-
-          // ✨ Dashed line separator
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
             child: CustomPaint(

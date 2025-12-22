@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:podrzime_mobile/modals/takmicar.dart';
-import 'package:podrzime_mobile/providers/takmicarProfil_provider.dart';
-import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:provider/provider.dart';
+
 import 'package:podrzime_mobile/modals/obavijest.dart';
+import 'package:podrzime_mobile/modals/takmicar.dart';
 import 'package:podrzime_mobile/providers/obavijest_provider.dart';
+import 'package:podrzime_mobile/providers/takmicar_provider.dart';
+import 'package:podrzime_mobile/providers/takmicarProfil_provider.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
 
@@ -17,12 +18,15 @@ class ObavijestiPage extends StatefulWidget {
 }
 
 class _ObavijestiPageState extends State<ObavijestiPage> {
-  late TakmicarProfilProvider _takmicarProfilProvider;
   late ObavijestProvider _obavijestProvider;
+  late TakmicarProfilProvider _takmicarProfilProvider;
   late TakmicarProvider _takmicarProvider;
+
   List<Obavijest> obavijesti = [];
   List<Takmicar>? takmicari;
+
   bool isLoading = true;
+  final Set<int> expandedObavijesti = {};
 
   @override
   void didChangeDependencies() {
@@ -34,44 +38,64 @@ class _ObavijestiPageState extends State<ObavijestiPage> {
   }
 
   Future<void> loadObavijesti() async {
-    setState(() {
-      isLoading = true;
-    });
+    setState(() => isLoading = true);
 
-    var korisnikProfilList = await _takmicarProfilProvider.get();
-    final lista = korisnikProfilList
+    final profilList = await _takmicarProfilProvider.get();
+    final korisnikProfil = profilList
         .where((x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId)
         .toList();
 
-    List<Obavijest> listaKorisnika = [];
-    var listaSvih = await _obavijestProvider.get();
-
-    var korisnikProfil = lista.isNotEmpty ? lista.first : null;
-
-    print('Lista obavijesti ${korisnikProfil}');
+    final aktivniProfil = korisnikProfil.isNotEmpty
+        ? korisnikProfil.first
+        : null;
 
     takmicari = await _takmicarProvider.get();
-
     takmicari = (takmicari ?? [])
-        .where((x) => x.takmicarProfilId == korisnikProfil?.takmicarProfilId)
+        .where((x) => x.takmicarProfilId == aktivniProfil?.takmicarProfilId)
         .toList();
 
-    print('Lista takmicara ${takmicari}');
+    final sveObavijesti = await _obavijestProvider.get();
+    final korisnickeObavijesti = <Obavijest>[];
 
-    for (var obavijest in listaSvih) {
-      for (var profil in takmicari ?? []) {
-        if (obavijest.kandidatId != null &&
-            obavijest.kandidatId == profil.kandidatId) {
-          listaKorisnika.add(obavijest);
+    for (final o in sveObavijesti) {
+      for (final t in takmicari ?? []) {
+        if (o.kandidatId != null && o.kandidatId == t.kandidatId) {
+          korisnickeObavijesti.add(o);
           break;
         }
       }
     }
 
     setState(() {
-      obavijesti = listaKorisnika;
+      obavijesti = korisnickeObavijesti;
       isLoading = false;
     });
+  }
+
+  Future<void> _markAsSeen(Obavijest o) async {
+    if (o.id == null || o.hasBeenSeen == true) return;
+
+    final updated = Obavijest(
+      id: o.id,
+      sadrzaj: o.sadrzaj,
+      datumKreiranja: o.datumKreiranja,
+      kandidatId: o.kandidatId,
+      hasBeenSeen: true,
+    );
+
+    await _obavijestProvider.update(o.id!, updated);
+
+    setState(() {
+      o.hasBeenSeen = true;
+    });
+  }
+
+  IconData _getIcon(String text) {
+    final t = text.toLowerCase();
+    if (t.contains('donacija')) return Icons.volunteer_activism;
+    if (t.contains('poruka')) return Icons.message;
+    if (t.contains('poziv')) return Icons.call;
+    return Icons.notifications;
   }
 
   @override
@@ -81,115 +105,123 @@ class _ObavijestiPageState extends State<ObavijestiPage> {
       child: isLoading
           ? const Center(child: CircularProgressIndicator())
           : obavijesti.isEmpty
-          ? const Center(child: Text("Nema novih obavijesti"))
+          ? const Center(child: Text("Nema obavijesti"))
           : SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16),
               child: Column(
-                children: obavijesti
-                    .map(
-                      (o) => Card(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        margin: const EdgeInsets.only(bottom: 12),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      o.sadrzaj ?? '',
-                                      style: const TextStyle(fontSize: 16),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      o.sadrzaj ?? '',
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Text(
-                                      "Datum: ${o.datumKreiranja != null ? DateFormat('dd.MM.yyyy').format(o.datumKreiranja!) : '-'}",
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              IconButton(
-                                icon: const Icon(
-                                  Icons.delete,
-                                  color: Colors.red,
-                                ),
-                                onPressed: () async {
-                                  // Potvrda prije brisanja
-                                  bool? confirmed = await showDialog(
-                                    context: context,
-                                    builder: (ctx) => AlertDialog(
-                                      title: const Text('Potvrdi brisanje'),
-                                      content: const Text(
-                                        'Da li ste sigurni da želite obrisati obavijest?',
-                                      ),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () =>
-                                              Navigator.of(ctx).pop(false),
-                                          child: const Text('Ne'),
-                                        ),
-                                        TextButton(
-                                          onPressed: () =>
-                                              Navigator.of(ctx).pop(true),
-                                          child: const Text('Da'),
-                                        ),
-                                      ],
-                                    ),
-                                  );
+                children: obavijesti.map((o) {
+                  final isRead = o.hasBeenSeen == true;
+                  final isExpanded = expandedObavijesti.contains(o.id);
+                  final icon = _getIcon(o.sadrzaj ?? '');
 
-                                  if (confirmed == true) {
-                                    try {
-                                      bool deleted = await _obavijestProvider
-                                          .delete(o.id!);
-                                      if (deleted) {
-                                        setState(() {
-                                          obavijesti.remove(o);
-                                        });
-                                        ScaffoldMessenger.of(
-                                          context,
-                                        ).showSnackBar(
-                                          const SnackBar(
-                                            content: Text('Obavijest obrisana'),
-                                          ),
-                                        );
-                                      }
-                                    } catch (e) {
-                                      ScaffoldMessenger.of(
-                                        context,
-                                      ).showSnackBar(
-                                        SnackBar(
-                                          content: Text(
-                                            'Greška prilikom brisanja: $e',
+                  return GestureDetector(
+                    onTap: () async {
+                      await _markAsSeen(o);
+
+                      setState(() {
+                        isExpanded
+                            ? expandedObavijesti.remove(o.id)
+                            : expandedObavijesti.add(o.id!);
+                      });
+                    },
+                    child: Card(
+                      elevation: isRead ? 2 : 6,
+                      color: isRead ? Colors.white : Colors.green.shade50,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      margin: const EdgeInsets.only(bottom: 16),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 48,
+                              height: 48,
+                              decoration: BoxDecoration(
+                                color: Colors.green.withOpacity(0.1),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Icon(icon, color: Colors.green, size: 28),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                        child: Text(
+                                          "Nova obavijest",
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                      );
-                                    }
-                                  }
-                                },
+                                      ),
+                                      if (!isRead)
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 10,
+                                            vertical: 4,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: Colors.green,
+                                            borderRadius: BorderRadius.circular(
+                                              12,
+                                            ),
+                                          ),
+                                          child: const Text(
+                                            "Novo",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    o.sadrzaj ?? '',
+                                    maxLines: isExpanded ? null : 1,
+                                    overflow: isExpanded
+                                        ? null
+                                        : TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: isRead
+                                          ? FontWeight.normal
+                                          : FontWeight.w500,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    o.datumKreiranja != null
+                                        ? DateFormat(
+                                            'dd.MM.yyyy',
+                                          ).format(o.datumKreiranja!)
+                                        : '-',
+                                    style: const TextStyle(color: Colors.grey),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            Icon(
+                              isExpanded
+                                  ? Icons.keyboard_arrow_up
+                                  : Icons.keyboard_arrow_down,
+                              color: Colors.grey,
+                            ),
+                          ],
                         ),
                       ),
-                    )
-                    .toList(),
+                    ),
+                  );
+                }).toList(),
               ),
             ),
     );

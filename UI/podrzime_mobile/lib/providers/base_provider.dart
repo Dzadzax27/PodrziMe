@@ -151,7 +151,7 @@ class ApiProvider<T> with ChangeNotifier {
   }
 
   Future<T> update(int id, [dynamic request]) async {
-    print('here i am noww');
+    print('here i am noww ${request}');
     var url = "$_baseUrl$_endpoint/$id";
     var uri = Uri.parse(url);
     var headers = createHeaders();

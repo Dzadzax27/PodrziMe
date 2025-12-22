@@ -19,9 +19,14 @@ import 'package:provider/provider.dart';
 class MasterScreenWidget extends StatefulWidget {
   final Widget? child;
   final String? title;
+  final bool showBackButton;
 
-  const MasterScreenWidget({Key? key, this.child, this.title})
-    : super(key: key);
+  const MasterScreenWidget({
+    Key? key,
+    this.child,
+    this.title,
+    this.showBackButton = true,
+  }) : super(key: key);
 
   @override
   State<MasterScreenWidget> createState() => _MasterScreenWidgetState();
@@ -32,7 +37,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
   bool _showMenu = false;
   late AnimationController _controller;
   late Animation<double> _opacityAnimation;
-  String? _hoveredItem; // for hover effect
+  String? _hoveredItem;
 
   @override
   void initState() {
@@ -138,6 +143,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title ?? ""),
+        automaticallyImplyLeading: widget.showBackButton,
         actions: [
           (UlogaLogiranogKorisnika.isDonor == false &&
                       UlogaLogiranogKorisnika?.isTakmicar == false) ||
@@ -147,8 +153,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                   padding: const EdgeInsets.symmetric(horizontal: 4),
 
                   child: MouseRegion(
-                    cursor:
-                        SystemMouseCursors.click, // 👈 makes cursor a pointer
+                    cursor: SystemMouseCursors.click,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         foregroundColor: const Color.fromARGB(255, 0, 0, 0),

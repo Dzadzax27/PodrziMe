@@ -14,11 +14,13 @@ Obavijest _$ObavijestFromJson(Map<String, dynamic> json) => Obavijest(
     const DateOnlyConverter().fromJson,
   ),
   kandidatId: (json['kandidatId'] as num?)?.toInt(),
+  hasBeenSeen: json['hasBeenSeen'] as bool?,
 );
 
 Map<String, dynamic> _$ObavijestToJson(Obavijest instance) => <String, dynamic>{
   'id': instance.id,
   'sadrzaj': instance.sadrzaj,
+  'hasBeenSeen': instance.hasBeenSeen,
   'datumKreiranja': _$JsonConverterToJson<String, DateTime>(
     instance.datumKreiranja,
     const DateOnlyConverter().toJson,

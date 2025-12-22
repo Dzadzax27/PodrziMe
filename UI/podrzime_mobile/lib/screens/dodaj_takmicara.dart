@@ -13,6 +13,7 @@ import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:flutter/services.dart';
 
 class AddTakmicar extends StatefulWidget {
   final Takmicar? takmicar;
@@ -95,7 +96,7 @@ class _AddTakmicarState extends State<AddTakmicar> {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(const SnackBar(content: Text('Molimo odaberite sliku')));
-        return; // ne nastavlja dalje dok se slika ne izabere
+        return;
       }
 
       if (datumRodjenja != null) {
@@ -263,17 +264,46 @@ class _AddTakmicarState extends State<AddTakmicar> {
                 ),
                 FormBuilderTextField(
                   name: "brojTelefona",
-                  decoration: InputDecoration(labelText: "Broj telefona"),
-                  validator: FormBuilderValidators.required(
-                    errorText: "Polje broj telefona je obavezno",
+                  decoration: InputDecoration(
+                    labelText: "Broj telefona (Molimo kucajte samo brojeve)",
                   ),
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter
+                        .digitsOnly, // dozvoljava samo cifre
+                  ],
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(
+                      errorText: "Polje broj telefona je obavezno",
+                    ),
+                    FormBuilderValidators.minLength(
+                      6,
+                      errorText: "Broj telefona mora imati najmanje 6 cifara",
+                    ),
+                  ]),
                 ),
+
+                // Željena donacija
                 FormBuilderTextField(
                   name: "zeljenaDonacija",
-                  decoration: InputDecoration(labelText: "Željena donacija"),
-                  validator: FormBuilderValidators.required(
-                    errorText: "Polje željena donacija je obavezno",
+                  decoration: InputDecoration(
+                    labelText:
+                        "Željena donacija (Molimo da kucate samo brojeve)",
                   ),
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter
+                        .digitsOnly, // dozvoljava samo cifre
+                  ],
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(
+                      errorText: "Polje željena donacija je obavezno",
+                    ),
+                    FormBuilderValidators.minLength(
+                      2,
+                      errorText: "Željena donacija mora imati najmanje 2 cifre",
+                    ),
+                  ]),
                 ),
 
                 const SizedBox(height: 20),
