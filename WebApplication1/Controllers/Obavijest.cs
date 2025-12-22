@@ -44,6 +44,11 @@ namespace PodrziMe.Controllers
             return response;
         }
 
+        [HttpPut("{id}")]
+        public Task<Model.Obavijest> Update(int id, UpdateObavijest request)
+        {
+            return _obavijestService.Update(id, request);
+        }
         [HttpDelete("{id}")]
         public Task<bool> Delete(int id)
         {

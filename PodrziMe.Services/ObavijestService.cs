@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace PodrziMe.Services
 {
     public class ObavijestService : BaseCRUDService<Model.Obavijest, Database.Obavijest, ObavijestSearchObject
-        , InsertObavijestRequest, UpdateKandidatRequest>, IObavijestService
+        , InsertObavijestRequest, UpdateObavijest>, IObavijestService
     {
         PodrziMeContext _context;
         IMapper _mapper;

@@ -16,6 +16,8 @@ namespace PodrziMe.Model
 
         public int KandidatId { get; set; }
 
+        public bool? hasBeenSeen { get; set; }
+
         public virtual Kandidat Kandidat { get; set; } = null!;
     }
 }

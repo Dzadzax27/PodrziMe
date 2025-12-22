@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PodrziMe.Services
 {
-    public interface IObavijestService : ICRUDService<Model.Obavijest, ObavijestSearchObject, InsertObavijestRequest, UpdateKandidatRequest>
+    public interface IObavijestService : ICRUDService<Model.Obavijest, ObavijestSearchObject, InsertObavijestRequest, UpdateObavijest>
     {
     }
 }

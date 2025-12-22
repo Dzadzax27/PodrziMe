@@ -38,6 +38,7 @@ namespace PodrziMe.Services
             CreateMap<Komentar, Model.Komentar>();
             CreateMap<InsertKomentarRequest, Komentar>();
             CreateMap<UpdateKomentarRequest, Komentar>();
+            CreateMap<UpdateObavijest, Obavijest>();
             CreateMap<Obavijest, Model.Obavijest>();
             CreateMap<InsertObavijestRequest, Obavijest>();
         }

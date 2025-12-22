@@ -11,6 +11,8 @@ public partial class Obavijest
 
     public DateTime DatumKreiranja { get; set; }
 
+    public bool? hasBeenSeen { get; set; }
+
     public int KandidatId { get; set; }
 
     public virtual Kandidat Kandidat { get; set; } = null!;
