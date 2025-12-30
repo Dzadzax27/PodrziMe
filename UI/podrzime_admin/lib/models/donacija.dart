@@ -9,8 +9,9 @@ class Donacija {
   int? iznosDonacije;
   int? donorId;
   double? cijena;
+  int? kandidatId;
 
-  Donacija({this.donacijaId});
+  Donacija({this.donacijaId, this.kandidatId});
 
   factory Donacija.fromJson(Map<String, dynamic> json) =>
       _$DonacijaFromJson(json);

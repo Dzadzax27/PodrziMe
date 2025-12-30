@@ -75,11 +75,11 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
           Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (context) => AddTakmicar()));
-        } else if (title == 'Pregled Kandidata') {
+        } else if (title == 'Pregled kandidata') {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => PregledSvihTakmicara()),
           );
-        } else if (title == 'Dodaj Kandidata') {
+        } else if (title == 'Dodaj kandidata') {
           Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (context) => AddTakmicar()));
@@ -263,7 +263,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                             _buildMenuItem('Pocetna'),
                             const Divider(height: 1),
                             UlogaLogiranogKorisnika.isTakmicar == true
-                                ? _buildMenuItem('Dodaj Kandidata')
+                                ? _buildMenuItem('Dodaj kandidata')
                                 : const SizedBox.shrink(),
                             const Divider(height: 1),
                             UlogaLogiranogKorisnika.isTakmicar == true
@@ -272,7 +272,7 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget>
                                   )
                                 : const SizedBox.shrink(),
                             const Divider(height: 1),
-                            _buildMenuItem('Pregled Kandidata'),
+                            _buildMenuItem('Pregled kandidata'),
                             const Divider(height: 1),
                             _buildMenuItem('Pregledaj uspjesne price'),
                             const Divider(height: 1),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:podrzime_admin/screens/all_takmicars.dart';
 import 'package:podrzime_admin/screens/dodaj_uspjesnu_pricu.dart';
 import 'package:podrzime_admin/screens/home_page.dart';
+import 'package:podrzime_admin/screens/pregled_donacija.dart';
 import 'package:podrzime_admin/screens/pregled_donora.dart';
 import 'package:podrzime_admin/screens/pregled_uspjesnih_prica.dart';
 import 'package:podrzime_admin/utils/util.dart';
@@ -208,7 +209,22 @@ class _PocetnaStranica extends State<PocetnaStranica> {
                         },
                       ),
                     ),
-                    // you can add more cards laterr
+                    SizedBox(
+                      width: 300,
+                      height: 130,
+                      child: KandidatiCard(
+                        title: "Sve donacije",
+                        icon: Icons.payments,
+                        iconBackground: const Color(0xFFD1F2EB), // soft green
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PregledDonacijaScreen(),
+                            ),
+                          ),
+                        },
+                      ),
+                    ),
                   ],
                 ),
               ),

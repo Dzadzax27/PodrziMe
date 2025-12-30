@@ -63,6 +63,9 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/podrziMe_logo.png
+    - assets/images/sport.jpg
+    - assets/images/education.jpg
+    - assets/images/art.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -265,7 +265,7 @@ class _AddTakmicarState extends State<AddTakmicar> {
                 FormBuilderTextField(
                   name: "brojTelefona",
                   decoration: InputDecoration(
-                    labelText: "Broj telefona (Molimo kucajte samo brojeve)",
+                    labelText: "Broj telefona (unesite samo brojeve)",
                   ),
                   keyboardType: TextInputType.number,
                   inputFormatters: [
@@ -287,8 +287,7 @@ class _AddTakmicarState extends State<AddTakmicar> {
                 FormBuilderTextField(
                   name: "zeljenaDonacija",
                   decoration: InputDecoration(
-                    labelText:
-                        "Željena donacija (Molimo da kucate samo brojeve)",
+                    labelText: "Željena donacija (unesite samo brojeve)",
                   ),
                   keyboardType: TextInputType.number,
                   inputFormatters: [

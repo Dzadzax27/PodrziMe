@@ -7,7 +7,10 @@ part of 'donacija.dart';
 // **************************************************************************
 
 Donacija _$DonacijaFromJson(Map<String, dynamic> json) =>
-    Donacija(donacijaId: (json['donacijaId'] as num?)?.toInt())
+    Donacija(
+        donacijaId: (json['donacijaId'] as num?)?.toInt(),
+        kandidatId: (json['kandidatId'] as num?)?.toInt(),
+      )
       ..datumDonacije = json['datumDonacije'] == null
           ? null
           : DateTime.parse(json['datumDonacije'] as String)
@@ -21,4 +24,5 @@ Map<String, dynamic> _$DonacijaToJson(Donacija instance) => <String, dynamic>{
   'iznosDonacije': instance.iznosDonacije,
   'donorId': instance.donorId,
   'cijena': instance.cijena,
+  'kandidatId': instance.kandidatId,
 };
