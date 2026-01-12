@@ -68,6 +68,11 @@ class _ObavijestiPageState extends State<ObavijestiPage> {
 
     setState(() {
       obavijesti = korisnickeObavijesti;
+      obavijesti.sort((a, b) {
+        if (a.datumKreiranja == null) return 1;
+        if (b.datumKreiranja == null) return -1;
+        return b.datumKreiranja!.compareTo(a.datumKreiranja!);
+      });
       isLoading = false;
     });
   }
@@ -207,6 +212,35 @@ class _ObavijestiPageState extends State<ObavijestiPage> {
                                         : '-',
                                     style: const TextStyle(color: Colors.grey),
                                   ),
+                                  if (isExpanded) ...[
+                                    const SizedBox(height: 12),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: TextButton.icon(
+                                        onPressed: () async {
+                                          if (o.id != null) {
+                                            await _obavijestProvider.delete(
+                                              o.id!,
+                                            );
+                                            setState(() {
+                                              obavijesti.removeWhere(
+                                                (x) => x.id == o.id,
+                                              );
+                                              expandedObavijesti.remove(o.id);
+                                            });
+                                          }
+                                        },
+                                        icon: const Icon(
+                                          Icons.delete,
+                                          color: Colors.red,
+                                        ),
+                                        label: const Text(
+                                          "Izbriši obavijest",
+                                          style: TextStyle(color: Colors.red),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ],
                               ),
                             ),

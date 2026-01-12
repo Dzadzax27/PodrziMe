@@ -62,6 +62,7 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
 
     return MasterScreenWidget(
       title: "Zahtjev za takmičarom",
+      showBackButton: true,
       child: SingleChildScrollView(
         child: Align(
           alignment: Alignment.topCenter,
@@ -81,7 +82,6 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // 🖼 Slika i osnovni podaci
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

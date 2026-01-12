@@ -124,7 +124,6 @@ class _PocetnaStranica extends State<PocetnaStranica> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Dobrodošlica
             Text(
               'Dobrodošao, $username!',
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),

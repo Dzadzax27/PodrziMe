@@ -137,27 +137,52 @@ class _PayPalPaymentScreenState extends State<PayPalPaymentScreen> {
 
   Future<void> _handleCapture(String orderId) async {
     setState(() => _isLoading = true);
+
     try {
-      final captureResult = await _paypalProvider.captureOrder(orderId);
+      await _paypalProvider.captureOrder(orderId);
+
       final today = DateTime.now();
       var donori = await _donorProvider.get();
       var donor = donori.firstWhere(
         (x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId,
       );
-      print('DONOR $donor');
+
       var donation = Donacija(
         datumDonacije: DateTime(today.year, today.month, today.day),
         iznosDonacije: widget.amount.toInt(),
         kandidatId: widget.takmicar.kandidatId,
         donorId: donor.donorId,
       );
-      print('Donacija $donation');
+
       await _donacijaProvider.insert(donation);
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Uspjesna uplata!')));
+      // 🔑 WAIT for dialog to close
+      await showDialog(
+        context: context,
+        barrierDismissible: false, // user must press OK
+        builder: (context) => AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          content: Row(
+            children: const [
+              Icon(Icons.check_circle, color: Colors.green),
+              SizedBox(width: 12),
+              Expanded(
+                child: Text('Hvala vam! Donacija je uspješno evidentirana.'),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
 
+      // ✅ NOW safely return to previous screen
       Navigator.of(context).pop(true);
     } catch (e) {
       ScaffoldMessenger.of(

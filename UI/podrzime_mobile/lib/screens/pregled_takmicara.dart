@@ -363,8 +363,16 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
                                   );
                                 }
                               },
-                              icon: const Icon(Icons.attach_money),
-                              label: const Text("Uplati odmah"),
+                              icon: const Icon(
+                                Icons.attach_money,
+                                color: Color.fromARGB(255, 16, 17, 16),
+                              ),
+                              label: const Text(
+                                "Uplati odmah",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 7, 7, 7),
+                                ),
+                              ),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.green.shade700,
                                 padding: const EdgeInsets.symmetric(
@@ -460,7 +468,9 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
           ),
           // ⭐ PREPORUČENI TAKMIČARI
           if (_preporuceniTakmicari != null &&
-              _preporuceniTakmicari!.isNotEmpty)
+              _preporuceniTakmicari!.isNotEmpty &&
+              widget.takmicar.odobren != null &&
+              widget.takmicar.odobren != false)
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -571,8 +581,6 @@ class _PregledTakmicaraState extends State<PregledTakmicara> {
     setState(() {
       _preporuceniTakmicari = result;
     });
-
-    print('Preporuceni $_preporuceniTakmicari');
   }
 
   Future<void> getTakmicarProfil() async {

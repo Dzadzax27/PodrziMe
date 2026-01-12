@@ -217,7 +217,6 @@ class _HomePageScreenState extends State<HomePageScreen> {
     );
   }
 
-  /// 📋 Table/List of Participants
   Widget _buildTable() {
     if (filteredList.isEmpty) {
       return const Center(
@@ -321,10 +320,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       child: const Text("Prihvati"),
                     ),
                     TextButton(
-                      onPressed: () {
+                      onPressed: () async {
                         e.odobren = false;
-                        _takmicarProvider.update(e.kandidatId!, e.toJson());
-                        _getKorisniciWithoutFilter();
+                        await _takmicarProvider.update(
+                          e.kandidatId!,
+                          e.toJson(),
+                        );
+                        await _getKorisniciWithoutFilter();
                       },
                       child: const Text(
                         "Odbij",

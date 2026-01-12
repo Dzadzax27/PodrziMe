@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:podrzime_admin/screens/all_takmicars.dart';
 import 'package:provider/provider.dart';
 import 'package:podrzime_admin/widgets/master_screen.dart';
 import 'package:podrzime_admin/models/donacija.dart';
 import 'package:podrzime_admin/models/takmicar.dart';
 import 'package:podrzime_admin/providers/donacija_provider.dart';
 import 'package:podrzime_admin/providers/takmicar_provider.dart';
+import 'package:podrzime_admin/screens/all_takmicars.dart';
 
 class PregledDonacijaScreen extends StatefulWidget {
   const PregledDonacijaScreen({super.key});
@@ -58,9 +58,9 @@ class _PregledDonacijaScreenState extends State<PregledDonacijaScreen> {
     for (var t in _takmicari) {
       if (t.kandidatId != null && t.kategorijaId != null) {
         kandidatKategorija[t.kandidatId!] = t.kategorijaId!;
-        final cilj = t.zeljenaDonacija ?? 0;
         _ciljPoKategoriji[t.kategorijaId!] =
-            (_ciljPoKategoriji[t.kategorijaId!] ?? 0) + cilj;
+            (_ciljPoKategoriji[t.kategorijaId!] ?? 0) +
+            (t.zeljenaDonacija ?? 0);
       }
     }
 
@@ -71,107 +71,185 @@ class _PregledDonacijaScreenState extends State<PregledDonacijaScreen> {
       final kategorijaId = kandidatKategorija[kandidatId];
       if (kategorijaId == null) continue;
 
-      final iznos = d.iznosDonacije ?? 0;
       _skupljenoPoKategoriji[kategorijaId] =
-          (_skupljenoPoKategoriji[kategorijaId] ?? 0) + iznos;
+          (_skupljenoPoKategoriji[kategorijaId] ?? 0) + (d.iznosDonacije ?? 0);
     }
 
-    _ukupnoSkupljeno = _skupljenoPoKategoriji.values.fold(0.0, (a, b) => a + b);
-    _ukupnoZeljeno = _ciljPoKategoriji.values.fold(0.0, (a, b) => a + b);
+    _ukupnoSkupljeno = _skupljenoPoKategoriji.values.fold(0, (a, b) => a + b);
+    _ukupnoZeljeno = _ciljPoKategoriji.values.fold(0, (a, b) => a + b);
   }
 
   double _progressZaKategoriju(int kategorijaId) {
     final skupljeno = _skupljenoPoKategoriji[kategorijaId] ?? 0;
     final cilj = _ciljPoKategoriji[kategorijaId] ?? 0;
-
     if (cilj == 0) return 0;
     return (skupljeno / cilj).clamp(0.0, 1.0);
+  }
+
+  Widget _ukupniProgressCard(double progress) {
+    return Container(
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'Ukupne donacije',
+            style: TextStyle(fontSize: 14, color: Colors.grey),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'BAM ${_ukupnoSkupljeno.toStringAsFixed(0)}',
+            style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+          LinearProgressIndicator(
+            value: progress,
+            minHeight: 6,
+            backgroundColor: Colors.grey.shade300,
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Text(
+                'Goal\nBAM ${_ukupnoZeljeno.toStringAsFixed(0)}',
+                style: const TextStyle(fontSize: 12),
+              ),
+              const SizedBox(width: 4),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _kategorijaCard({
     required String naziv,
     required int kategorijaId,
     required String imageAsset,
-    required IconData icon,
     required String filterNaziv,
+    required String citat,
   }) {
     final progress = _progressZaKategoriju(kategorijaId);
     final skupljeno = _skupljenoPoKategoriji[kategorijaId] ?? 0;
     final cilj = _ciljPoKategoriji[kategorijaId] ?? 0;
 
-    return Expanded(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) =>
-                  PregledSvihTakmicara(initialCategory: filterNaziv),
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => PregledSvihTakmicara(initialCategory: filterNaziv),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
             ),
-          );
-        },
-        child: Card(
-          elevation: 6,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          clipBehavior: Clip.antiAlias,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 120,
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min, // kompaktna kartica
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ClipRRect(
+              borderRadius: const BorderRadius.vertical(
+                top: Radius.circular(16),
+              ),
+              child: Image.asset(
+                imageAsset,
                 width: double.infinity,
-                child: Image.asset(imageAsset, fit: BoxFit.cover),
+                height: 100,
+                fit: BoxFit.cover,
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(icon, color: Colors.green),
-                        const SizedBox(width: 8),
-                        Text(
-                          naziv,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    naziv,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    citat,
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 13, color: Colors.grey),
+                  ),
+                  const SizedBox(height: 8),
+                  LinearProgressIndicator(
+                    value: progress,
+                    minHeight: 6,
+                    backgroundColor: Colors.grey.shade300,
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Colors.green,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          const Text(
+                            'Skupljeno',
+                            style: TextStyle(fontSize: 14),
                           ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: LinearProgressIndicator(
-                        value: progress,
-                        minHeight: 14,
-                        backgroundColor: Colors.grey.shade300,
-                        valueColor: const AlwaysStoppedAnimation<Color>(
-                          Colors.green,
-                        ),
+                          Text(
+                            'BAM ${skupljeno.toStringAsFixed(0)}',
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${(progress * 100).toStringAsFixed(1)}% ostvareno',
-                      style: TextStyle(color: Colors.grey.shade700),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Skupljeno: ${skupljeno.toInt()} / ${cilj.toInt()}',
-                      style: TextStyle(
-                        color: Colors.grey.shade600,
-                        fontWeight: FontWeight.w500,
+                      Column(
+                        children: [
+                          const Text('Goal', style: TextStyle(fontSize: 12)),
+                          Text(
+                            'BAM ${cilj.toStringAsFixed(0)}',
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -180,80 +258,52 @@ class _PregledDonacijaScreenState extends State<PregledDonacijaScreen> {
   @override
   Widget build(BuildContext context) {
     final ukupniProgress = _ukupnoZeljeno == 0
-        ? 0
+        ? 0.0
         : (_ukupnoSkupljeno / _ukupnoZeljeno).clamp(0.0, 1.0);
 
     return MasterScreenWidget(
-      title: "Pregled donacija",
+      title: "Donacije",
       child: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
               padding: const EdgeInsets.all(24),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+
                 children: [
-                  Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                  _ukupniProgressCard(ukupniProgress),
+                  const SizedBox(height: 90),
+
+                  GridView(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3, // uvijek 3 kolone
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      childAspectRatio: 1.7, // ⚡ kompaktna visina kartice
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Ukupni napredak donacija',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(height: 16),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: LinearProgressIndicator(
-                              value: ukupniProgress.toDouble(),
-                              minHeight: 18,
-                              backgroundColor: Colors.grey.shade300,
-                              valueColor: const AlwaysStoppedAnimation<Color>(
-                                Colors.green,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            '${(ukupniProgress * 100).toStringAsFixed(1)}% ukupno '
-                            '(${_ukupnoSkupljeno.toInt()} / ${_ukupnoZeljeno.toInt()})',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 32),
-                  Row(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
                     children: [
-                      _kategorijaCard(
-                        naziv: 'Sport',
-                        kategorijaId: 1,
-                        icon: Icons.sports_soccer,
-                        imageAsset: 'assets/images/sport.jpg',
-                        filterNaziv: 'Sport',
-                      ),
-                      const SizedBox(width: 16),
                       _kategorijaCard(
                         naziv: 'Edukacija',
                         kategorijaId: 2,
-                        icon: Icons.school,
                         imageAsset: 'assets/images/education.jpg',
                         filterNaziv: 'Edukacija',
+                        citat: 'Edukacija je investicija u budućnost.',
                       ),
-                      const SizedBox(width: 16),
+                      _kategorijaCard(
+                        naziv: 'Sport',
+                        kategorijaId: 1,
+                        imageAsset: 'assets/images/sport.jpg',
+                        filterNaziv: 'Sport',
+                        citat: 'Sportisti su naši najveći ambasadori.',
+                      ),
                       _kategorijaCard(
                         naziv: 'Umjetnost',
                         kategorijaId: 3,
-                        icon: Icons.brush,
                         imageAsset: 'assets/images/art.jpg',
                         filterNaziv: 'Umjetnost',
+                        citat: 'Umjetnost je srce društva.',
                       ),
                     ],
                   ),

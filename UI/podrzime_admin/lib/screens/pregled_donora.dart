@@ -171,30 +171,6 @@ class _PregledDonoraState extends State<PregledDonora> {
                       ],
                     ),
                   ),
-
-                  // Right side – Donation info
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      const Text(
-                        'Ukupno donacija',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        donor.ukupnoDonacija?.toString() ?? '0',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFBF453C),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),

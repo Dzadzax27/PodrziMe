@@ -21,6 +21,8 @@ class PregledSvihTakmicara extends StatefulWidget {
 class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
   late TakmicarProvider _takmicarProvider;
   late DonacijaProvider _donacijaProvider;
+  final TextEditingController _imeController = TextEditingController();
+  final TextEditingController _prezimeController = TextEditingController();
 
   List<Takmicar> allTakmicari = [];
   List<Takmicar> filteredList = [];
@@ -53,7 +55,6 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     super.dispose();
   }
 
-  /// 📡 API
   Future<void> _getKorisnici() async {
     var filter = {'isKategorijaIncluded': true};
     var response = await _takmicarProvider.get(filter: filter);
@@ -62,7 +63,6 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
         .where((item) => item.odobren == true)
         .toList();
 
-    // Učitaj sve donacije i saberi po takmičaru
     var sveDonacije = await _donacijaProvider.get();
     Map<int, int> donacijeMap = {};
     for (var d in sveDonacije.result) {
@@ -122,18 +122,54 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
               ),
             ),
             const SizedBox(height: 16),
-            TextField(
-              controller: _searchController,
-              onChanged: (_) => _applyFilters(),
-              decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.search),
-                labelText: "Ime ili prezime",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+            Row(
+              children: [
+                // First name filter
+                Expanded(
+                  child: TextField(
+                    controller: _imeController, // separate controller
+                    onChanged: (value) {
+                      var filter = {
+                        'ime': value,
+                        'fts': _prezimeController.text,
+                        'isKategorijaIncluded': true,
+                      };
+                      _getFilteredKorisnici(filter);
+                    },
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.search),
+                      labelText: "Ime",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+
+                const SizedBox(width: 16),
+                Expanded(
+                  child: TextField(
+                    controller: _prezimeController,
+                    onChanged: (value) {
+                      var filter = {
+                        'ime': _imeController.text,
+                        'fts': value,
+                        'isKategorijaIncluded': true,
+                      };
+                      _getFilteredKorisnici(filter);
+                    },
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.search),
+                      labelText: "Prezime",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(width: 16, height: 20),
             _buildFilterButtons(),
           ],
         ),
@@ -141,7 +177,6 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     );
   }
 
-  /// 🧭 Filter buttons
   Widget _buildFilterButtons() {
     return Row(
       children: [
@@ -192,7 +227,6 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
     );
   }
 
-  /// 📋 List
   Widget _buildTable() {
     if (filteredList.isEmpty) {
       return const Center(
@@ -236,6 +270,7 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
                         ),
                       )
                     : const Icon(Icons.person, size: 80, color: Colors.grey),
+
                 const SizedBox(width: 16),
 
                 // 🧾 Info lijevo
@@ -259,31 +294,36 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => PregledTakmicara(e),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: const [
-                            Text(
-                              "Pogledaj više",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 191, 69, 60),
-                                fontWeight: FontWeight.w500,
+
+                      // 👉 Pogledaj više (clickable)
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => PregledTakmicara(e),
                               ),
-                            ),
-                            SizedBox(width: 4),
-                            Icon(
-                              Icons.arrow_forward,
-                              color: Color.fromARGB(255, 191, 69, 60),
-                              size: 16,
-                            ),
-                          ],
+                            );
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: const [
+                              Text(
+                                "Pogledaj više",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 191, 69, 60),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(width: 4),
+                              Icon(
+                                Icons.arrow_forward,
+                                color: Color.fromARGB(255, 191, 69, 60),
+                                size: 16,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -298,7 +338,13 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
                     await _takmicarProvider.update(e.kandidatId!, e);
                     await _getKorisnici();
                   },
-                  child: const Text("Izbriši"),
+                  child: const Text(
+                    "Izbriši",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -315,6 +361,15 @@ class _PregledSvihTakmicaraState extends State<PregledSvihTakmicara> {
       if (category == "Umjetnost") isArtSelected = !isArtSelected;
       if (category == "Edukacija") isEducationSelected = !isEducationSelected;
       _applyFilters();
+    });
+  }
+
+  void _getFilteredKorisnici(Map<String, dynamic> filter) async {
+    var response = await _takmicarProvider.get(filter: filter);
+    setState(() {
+      filteredList = (response.result ?? [])
+          .where((item) => item.odobren == true)
+          .toList();
     });
   }
 

@@ -1,22 +1,23 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+
 import 'package:podrzime_mobile/modals/donacija.dart';
 import 'package:podrzime_mobile/modals/donor.dart';
-import 'package:podrzime_mobile/modals/kategorija.dart';
 import 'package:podrzime_mobile/modals/takmicar.dart';
 import 'package:podrzime_mobile/modals/takmicarProfil.dart';
 import 'package:podrzime_mobile/modals/uloga.dart';
+
 import 'package:podrzime_mobile/providers/donacije_provider.dart';
 import 'package:podrzime_mobile/providers/donor_provider.dart';
-import 'package:podrzime_mobile/providers/kategorija_provider.dart';
 import 'package:podrzime_mobile/providers/takmicarProfil_provider.dart';
 import 'package:podrzime_mobile/providers/takmicar_provider.dart';
 import 'package:podrzime_mobile/providers/uloga_provider.dart';
+
 import 'package:podrzime_mobile/screens/pregled_takmicara.dart';
 import 'package:podrzime_mobile/utils/logiraniKorisnik.dart';
 import 'package:podrzime_mobile/widget/master_screen.dart';
-import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
 
 class OMeniTakmicar extends StatefulWidget {
   const OMeniTakmicar({super.key});
@@ -28,154 +29,125 @@ class OMeniTakmicar extends StatefulWidget {
 class _OMeniTakmicarState extends State<OMeniTakmicar> {
   late TakmicarProfilProvider _takmicarProfilProvider;
   late TakmicarProvider _takmicarProvider;
+  late UlogaProvider _ulogaProvider;
+  late DonorProvider _donorProvider;
+  late DonacijaProvider _donacijaProvider;
+
   TakmicarProfil? korisnikProfil;
+  Donor? donor;
+
   List<Takmicar>? takmicari;
   List<Takmicar>? pendingTakmicar;
   List<Takmicar>? prihvaceniTakmicar;
   List<Takmicar>? odbijeniTakmicar;
-  late UlogaProvider _ulogaProvider;
-  List<Uloga>? uloge = [];
-  int? _kategorijaDonorId;
-  int? _kategorijaTakmicarId;
-  late DonorProvider _donorProvider;
-  Donor? donor;
-  late DonacijaProvider _donacijaProvider;
+
   List<Donacija>? donacije;
+
   bool sortDescending = true;
   bool sortDescendingDate = true;
+  String? activeSort; // 'iznos' | 'datum'
+
+  int? _kategorijaDonorId;
+  int? _kategorijaTakmicarId;
 
   bool isLoading = true;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
     _takmicarProfilProvider = context.read<TakmicarProfilProvider>();
     _takmicarProvider = context.read<TakmicarProvider>();
     _ulogaProvider = context.read<UlogaProvider>();
     _donorProvider = context.read<DonorProvider>();
     _donacijaProvider = context.read<DonacijaProvider>();
+
     _loadKategorije();
     loadKorisnika();
     loadZahtjeveTakmicara();
     loadDonor();
   }
 
-  Future<void> loadDonacije() async {
-    donacije = await _donacijaProvider.get();
-
-    setState(() {
-      donacije = donacije?.where((x) => x.donorId == donor!.donorId).toList();
-    });
-  }
-
   Future<void> loadDonor() async {
     setState(() => isLoading = true);
 
-    var donorList = await _donorProvider.get();
+    final donorList = await _donorProvider.get();
     final lista = donorList
         .where((x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId)
         .toList();
 
-    print('Listaa ${lista}');
+    donor = lista.isNotEmpty ? lista.first : null;
+    isLoading = false;
 
-    setState(() {
-      donor = lista.isNotEmpty ? lista.first : null;
-      isLoading = false;
-    });
-
-    // Only load donacije after donor is loaded
     if (donor != null) {
       await loadDonacije();
     }
+    setState(() {});
+  }
+
+  Future<void> loadDonacije() async {
+    donacije = await _donacijaProvider.get();
+    donacije = donacije?.where((x) => x.donorId == donor!.donorId).toList();
+    setState(() {});
   }
 
   void sortirajDonacije() {
-    setState(() {
-      if (donacije != null) {
-        donacije!.sort(
-          (a, b) => sortDescending
-              ? (b.iznosDonacije ?? 0).compareTo(a.iznosDonacije ?? 0)
-              : (a.iznosDonacije ?? 0).compareTo(b.iznosDonacije ?? 0),
-        );
-      }
-    });
+    if (donacije == null) return;
+    donacije!.sort(
+      (a, b) => sortDescending
+          ? (b.iznosDonacije ?? 0).compareTo(a.iznosDonacije ?? 0)
+          : (a.iznosDonacije ?? 0).compareTo(b.iznosDonacije ?? 0),
+    );
   }
 
   void sortirajPoDatumu() {
-    setState(() {
-      if (donacije != null) {
-        donacije!.sort(
-          (a, b) => sortDescending
-              ? (b.datumDonacije ?? DateTime(1900)).compareTo(
-                  a.datumDonacije ?? DateTime(1900),
-                )
-              : (a.datumDonacije ?? DateTime(1900)).compareTo(
-                  b.datumDonacije ?? DateTime(1900),
-                ),
-        );
-      }
-    });
+    if (donacije == null) return;
+    donacije!.sort(
+      (a, b) => sortDescendingDate
+          ? (b.datumDonacije ?? DateTime(1900)).compareTo(
+              a.datumDonacije ?? DateTime(1900),
+            )
+          : (a.datumDonacije ?? DateTime(1900)).compareTo(
+              b.datumDonacije ?? DateTime(1900),
+            ),
+    );
   }
 
   Future<void> loadKorisnika() async {
-    setState(() {
-      isLoading = true;
-    });
+    setState(() => isLoading = true);
 
-    var korisnikProfilList = await _takmicarProfilProvider.get();
-    final lista = korisnikProfilList
+    final list = await _takmicarProfilProvider.get();
+    final filtered = list
         .where((x) => x.korisnikId == Logiranikorisnik.korisnik?.korisnikId)
         .toList();
 
-    setState(() {
-      korisnikProfil = lista.isNotEmpty ? lista.first : null;
-      isLoading = false;
-    });
+    korisnikProfil = filtered.isNotEmpty ? filtered.first : null;
+
+    setState(() => isLoading = false);
   }
 
   Future<void> _loadKategorije() async {
     final result = await _ulogaProvider.get();
-    var _idTakmicar;
-    var idDonor;
     for (var k in result) {
-      if (k.nazivUloge == 'Donor') {
-        idDonor = k.ulogaId;
-      } else if (k.nazivUloge == 'Takmicar') {
-        _idTakmicar = k.ulogaId;
-      }
+      if (k.nazivUloge == 'Donor') _kategorijaDonorId = k.ulogaId;
+      if (k.nazivUloge == 'Takmicar') _kategorijaTakmicarId = k.ulogaId;
     }
-    setState(
-      () => {
-        uloge = result,
-        _kategorijaDonorId = idDonor,
-        _kategorijaTakmicarId = _idTakmicar,
-      },
-    );
+    setState(() {});
   }
 
   Future<void> loadZahtjeveTakmicara() async {
-    var filter = {'isKategorijaIncluded': true};
-    
+    final filter = {'isKategorijaIncluded': true};
     takmicari = await _takmicarProvider.get(filter);
 
-    // filtriraj samo takmicare koji pripadaju korisnikovom profilu
-    takmicari = (takmicari ?? [])
-        .where((x) => x.takmicarProfilId == korisnikProfil?.takmicarProfilId)
+    takmicari = takmicari
+        ?.where((x) => x.takmicarProfilId == korisnikProfil?.takmicarProfilId)
         .toList();
 
-    pendingTakmicar = (takmicari ?? [])
-        .where((x) => x.odobren == null)
-        .toList();
+    pendingTakmicar = takmicari?.where((x) => x.odobren == null).toList();
+    prihvaceniTakmicar = takmicari?.where((x) => x.odobren == true).toList();
+    odbijeniTakmicar = takmicari?.where((x) => x.odobren == false).toList();
 
-    prihvaceniTakmicar = (takmicari ?? [])
-        .where((x) => x.odobren == true)
-        .toList();
-
-    odbijeniTakmicar = (takmicari ?? [])
-        .where((x) => x.odobren == false)
-        .toList();
-
-    setState(() {}); // trigger UI update
+    setState(() {});
   }
 
   @override
@@ -185,9 +157,9 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
       child: isLoading
           ? const Center(child: CircularProgressIndicator())
           : _kategorijaTakmicarId == Logiranikorisnik.korisnik?.ulogaId
-          ? _buildTakmicarView() // postojaći kod za takmičara
+          ? _buildTakmicarView()
           : _kategorijaDonorId == Logiranikorisnik.korisnik?.ulogaId
-          ? _buildDonorView() // donor layout
+          ? _buildDonorView()
           : const Center(child: Text("Profil nije pronađen")),
     );
   }
@@ -204,33 +176,56 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
               children: [
                 // Profil korisnika
                 Card(
-                  elevation: 4,
+                  elevation: 6,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(16),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(24), // ⬅ veći padding
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Ime + Prezime kao naslov
                         Text(
-                          "Ime: ${korisnikProfil!.ime}",
-                          style: const TextStyle(fontSize: 18),
+                          "${korisnikProfil!.ime} ${korisnikProfil!.prezime}",
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                        const SizedBox(height: 8),
-                        Text(
-                          "Prezime: ${korisnikProfil!.prezime}",
-                          style: const TextStyle(fontSize: 18),
+
+                        const SizedBox(height: 20),
+
+                        _infoRowTakmicar(
+                          Icons.person,
+                          "Ime",
+                          korisnikProfil!.ime ?? "Nije uneseno",
                         ),
-                        const SizedBox(height: 8),
-                        Text(
-                          "Datum rođenja: ${korisnikProfil!.datumRodjenja != null ? DateFormat('dd.MM.yyyy').format(korisnikProfil!.datumRodjenja!) : 'Nije unesen'}",
-                          style: const TextStyle(fontSize: 18),
+
+                        const SizedBox(height: 12),
+
+                        _infoRowTakmicar(
+                          Icons.badge,
+                          "Prezime",
+                          korisnikProfil!.prezime ?? "Nije uneseno",
+                        ),
+
+                        const SizedBox(height: 12),
+
+                        _infoRowTakmicar(
+                          Icons.cake,
+                          "Datum rođenja",
+                          korisnikProfil!.datumRodjenja != null
+                              ? DateFormat(
+                                  'dd.MM.yyyy',
+                                ).format(korisnikProfil!.datumRodjenja!)
+                              : "Nije unesen",
                         ),
                       ],
                     ),
                   ),
                 ),
+
                 const SizedBox(height: 16),
 
                 // Pending takmicari
@@ -293,151 +288,212 @@ class _OMeniTakmicarState extends State<OMeniTakmicar> {
           );
   }
 
-  Widget _buildDonorView() {
-    final donorDonacije = (donor != null && donacije != null)
-        ? donacije!.where((x) => x.donorId == donor!.donorId).toList()
-        : [];
-
-    return donor == null
-        ? const Center(child: Text("Donor profil nije pronađen"))
-        : SingleChildScrollView(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ime: ${donor!.ime}",
-                          style: const TextStyle(fontSize: 18),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          "Prezime: ${donor!.prezime}",
-                          style: const TextStyle(fontSize: 18),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          "Zanimanje: ${donor!.zanimanje ?? 'Nije uneseno'}",
-                          style: const TextStyle(fontSize: 18),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          "Datum rođenja: ${donor!.datumRodjenja != null ? DateFormat('dd.MM.yyyy').format(donor!.datumRodjenja!) : 'Nije unesen'}",
-                          style: const TextStyle(fontSize: 18),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                const Text(
-                  "Donacije",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8),
-
-                Row(
-                  children: [
-                    _buildFilterChip(
-                      icon: Icons.attach_money,
-                      arrowDown: sortDescending,
-                      label: "Iznos",
-                      onTap: () {
-                        sortirajDonacije();
-                        setState(() => sortDescending = !sortDescending);
-                      },
-                    ),
-                    const SizedBox(width: 10),
-                    _buildFilterChip(
-                      icon: Icons.calendar_today,
-                      arrowDown: true,
-                      label: "Datum",
-                      onTap: () {
-                        setState(() {
-                          sortDescendingDate = !sortDescendingDate;
-                          sortirajPoDatumu();
-                        });
-                      },
-                    ),
-                  ],
-                ),
-
-                const SizedBox(height: 12),
-
-                donorDonacije.isEmpty
-                    ? const Text(
-                        "Nema donacija",
-                        style: TextStyle(color: Colors.grey),
-                      )
-                    : Column(
-                        children: donorDonacije.map((d) {
-                          return Card(
-                            margin: const EdgeInsets.symmetric(vertical: 4),
-                            child: ListTile(
-                              title: Text("Donacija: ${d.iznosDonacije ?? 0}"),
-                              subtitle: Text(
-                                "Datum: ${d.datumDonacije != null ? DateFormat('dd.MM.yyyy').format(d.datumDonacije!) : 'Nije unesen'}",
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-              ],
-            ),
-          );
+  Widget _infoRowTakmicar(IconData icon, String label, String value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(icon, size: 20, color: Colors.grey),
+        const SizedBox(width: 12),
+        SizedBox(
+          width: 120,
+          child: Text(
+            label,
+            style: const TextStyle(color: Colors.grey, fontSize: 14),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+        ),
+      ],
+    );
   }
+
+  // ===================== DONOR VIEW =====================
+
+  Widget _buildDonorView() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _profileCard(
+            donor!.ime,
+            donor!.prezime,
+            donor!.zanimanje,
+            donor!.datumRodjenja,
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            "Donacije",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              _buildFilterChip(
+                icon: Icons.attach_money,
+                label: "Iznos",
+                arrowDown: sortDescending,
+                isActive: activeSort == 'iznos',
+                onTap: () {
+                  setState(() {
+                    activeSort = 'iznos';
+                    sortDescending = !sortDescending;
+                    sortirajDonacije();
+                  });
+                },
+              ),
+              const SizedBox(width: 10),
+              _buildFilterChip(
+                icon: Icons.calendar_today,
+                label: "Datum",
+                arrowDown: sortDescendingDate,
+                isActive: activeSort == 'datum',
+                onTap: () {
+                  setState(() {
+                    activeSort = 'datum';
+                    sortDescendingDate = !sortDescendingDate;
+                    sortirajPoDatumu();
+                  });
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          if (donacije == null || donacije!.isEmpty)
+            const Text("Nema donacija", style: TextStyle(color: Colors.grey))
+          else
+            Column(
+              children: donacije!.map((d) {
+                return Card(
+                  child: ListTile(
+                    title: Text(
+                      "BAM ${d.iznosDonacije}",
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      DateFormat(
+                        'dd.MM.yyyy',
+                      ).format(d.datumDonacije ?? DateTime.now()),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+        ],
+      ),
+    );
+  }
+
+  // ===================== FILTER CHIP =====================
 
   Widget _buildFilterChip({
     required IconData icon,
     required bool arrowDown,
     required VoidCallback onTap,
     required String label,
+    required bool isActive,
   }) {
-    return GestureDetector(
+    final Color color = arrowDown ? Colors.green : Colors.blue;
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          border: Border.all(color: Colors.grey.shade300),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 4,
-              offset: const Offset(0, 2),
-            ),
-          ],
+          color: isActive ? color.withOpacity(0.12) : Colors.white,
+          border: Border.all(color: isActive ? color : Colors.grey.shade300),
         ),
         child: Row(
           children: [
-            Icon(icon, size: 16, color: Colors.black87),
+            Icon(icon, size: 16, color: isActive ? color : Colors.grey),
             const SizedBox(width: 6),
-            Text(label, style: const TextStyle(fontSize: 14)),
-            const SizedBox(width: 6),
-            Icon(
-              arrowDown ? Icons.arrow_downward : Icons.arrow_upward,
-              size: 14,
-              color: Colors.black54,
+            Text(
+              label,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: isActive ? color : Colors.grey,
+              ),
+            ),
+            const SizedBox(width: 4),
+            AnimatedRotation(
+              turns: arrowDown ? 0.5 : 0,
+              duration: const Duration(milliseconds: 200),
+              child: Icon(
+                Icons.expand_more,
+                color: isActive ? color : Colors.grey,
+              ),
             ),
           ],
         ),
       ),
     );
   }
+
+  Widget _profileCard(
+    String ime,
+    String prezime,
+    String? zanimanje,
+    DateTime? datum,
+  ) {
+    return Card(
+      elevation: 6,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Padding(
+        padding: const EdgeInsets.all(24), // ⬅ VEĆI PADDING
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "$ime $prezime",
+              style: const TextStyle(
+                fontSize: 22, // ⬅ VEĆI FONT
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 16),
+
+            _infoRow("Zanimanje", zanimanje ?? "Nije uneseno"),
+            const SizedBox(height: 12),
+            _infoRow(
+              "Datum rođenja",
+              datum != null
+                  ? DateFormat('dd.MM.yyyy').format(datum)
+                  : "Nije unesen",
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _infoRow(String label, String value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 130,
+          child: Text(
+            label,
+            style: const TextStyle(color: Colors.grey, fontSize: 14),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
-// Widget za prikaz jednog takmicara
 class TakmicarCard extends StatelessWidget {
   final Takmicar e;
   const TakmicarCard(this.e, {super.key});

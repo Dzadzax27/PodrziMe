@@ -125,13 +125,32 @@ class _AddTakmicarState extends State<AddTakmicar> {
       formValues['takmicarProfilId'] = korisnikProfil?.takmicarProfilId;
       await _takmicarProvider.insert(formValues);
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Takmičar uspješno dodan!')));
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          content: Row(
+            children: const [
+              Icon(Icons.check_circle, color: Colors.green),
+              SizedBox(width: 12),
+              Expanded(child: Text('Takmičar uspješno dodan!')),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+
       _formKey.currentState?.reset();
       setState(() {
         _selectedImage = null;
-        datumRodjenja = null; // ako koristiš datum, resetuj i njega
+        datumRodjenja = null;
       });
     }
   }
@@ -279,6 +298,10 @@ class _AddTakmicarState extends State<AddTakmicar> {
                     FormBuilderValidators.minLength(
                       6,
                       errorText: "Broj telefona mora imati najmanje 6 cifara",
+                    ),
+                    FormBuilderValidators.maxLength(
+                      9,
+                      errorText: "Broj telefona mora imati najvise 9 cifara",
                     ),
                   ]),
                 ),
