@@ -83,4 +83,12 @@ Lozinka: Test123
 
 ## RabbitMQ
 
-RabbitMQ je korišten za slanje mailova donorima kada njihovo placanje se uspjesno zavrsi
+RabbitMQ je korišten za slanje mailova donorima kada njihovo placanje se uspjesno zavrsi.
+
+Kako bi provjerili slanje mailova preko RabbitMQ-a, potrebno je napraviti account sa ulogom donor i svojim emailom, te ce na taj nacin nakon uplate odredjenom korisniku stici mail potvrde.
+
+## Paypal kredencijali
+
+Email: sb-rnp7047232982@business.example.com
+
+Lozinka: (eEf.2Bv
