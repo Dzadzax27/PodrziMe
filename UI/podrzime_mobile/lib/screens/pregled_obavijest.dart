@@ -159,7 +159,7 @@ class _ObavijestiPageState extends State<ObavijestiPage> {
                                     children: [
                                       const Expanded(
                                         child: Text(
-                                          "Nova obavijest",
+                                          "Obavijest",
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
